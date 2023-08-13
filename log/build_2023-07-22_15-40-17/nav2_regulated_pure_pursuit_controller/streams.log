@@ -1,0 +1,47 @@
+[0.301s] Invoking command in '/ws/src/nav2/build/nav2_regulated_pure_pursuit_controller': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_regulated_pure_pursuit_controller -- -j16 -l16
+[0.458s] [35m[1mScanning dependencies of target gtest_main[0m
+[0.494s] [35m[1mScanning dependencies of target gtest[0m
+[0.500s] [35m[1mScanning dependencies of target nav2_regulated_pure_pursuit_controller[0m
+[0.535s] [ 12%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[0.629s] [ 25%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[0.831s] [ 37%] [32mBuilding CXX object CMakeFiles/nav2_regulated_pure_pursuit_controller.dir/src/regulated_pure_pursuit_controller.cpp.o[0m
+[5.151s] [ 50%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[5.317s] [ 50%] Built target gtest_main
+[22.311s] [ 62%] [32m[1mLinking CXX shared library libnav2_regulated_pure_pursuit_controller.so[0m
+[22.658s] [ 62%] Built target nav2_regulated_pure_pursuit_controller
+[22.695s] [ 75%] [32m[1mLinking CXX static library libgtest.a[0m
+[22.752s] [ 75%] Built target gtest
+[22.770s] [35m[1mScanning dependencies of target test_regulated_pp[0m
+[22.888s] [ 87%] [32mBuilding CXX object test/CMakeFiles/test_regulated_pp.dir/test_regulated_pp.cpp.o[0m
+[40.844s] [100%] [32m[1mLinking CXX executable test_regulated_pp[0m
+[43.003s] [100%] Built target test_regulated_pp
+[43.038s] Invoked command in '/ws/src/nav2/build/nav2_regulated_pure_pursuit_controller' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_regulated_pure_pursuit_controller -- -j16 -l16
+[43.285s] Invoking command in '/ws/src/nav2/build/nav2_regulated_pure_pursuit_controller': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_regulated_pure_pursuit_controller
+[43.306s] -- Install configuration: "Release"
+[43.308s] -- Execute custom install script
+[43.310s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/lib/libnav2_regulated_pure_pursuit_controller.so
+[43.333s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/include//nav2_regulated_pure_pursuit_controller/regulated_pure_pursuit_controller.hpp
+[43.360s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/environment/library_path.sh
+[43.378s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/environment/library_path.dsv
+[43.396s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller//nav2_regulated_pure_pursuit_controller.xml
+[43.415s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/ament_index/resource_index/package_run_dependencies/nav2_regulated_pure_pursuit_controller
+[43.435s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/ament_index/resource_index/parent_prefix_path/nav2_regulated_pure_pursuit_controller
+[43.452s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/environment/ament_prefix_path.sh
+[43.470s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/environment/ament_prefix_path.dsv
+[43.488s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/environment/path.sh
+[43.508s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/environment/path.dsv
+[43.531s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/local_setup.bash
+[43.554s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/local_setup.sh
+[43.582s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/local_setup.zsh
+[43.604s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/local_setup.dsv
+[43.626s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/package.dsv
+[43.650s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/ament_index/resource_index/packages/nav2_regulated_pure_pursuit_controller
+[43.672s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_regulated_pure_pursuit_controller
+[43.690s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/cmake/ament_cmake_export_include_directories-extras.cmake
+[43.710s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/cmake/ament_cmake_export_libraries-extras.cmake
+[43.730s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/cmake/ament_cmake_export_dependencies-extras.cmake
+[43.752s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/cmake/ament_cmake_export_definitions-extras.cmake
+[43.779s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/cmake/nav2_regulated_pure_pursuit_controllerConfig.cmake
+[43.800s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/cmake/nav2_regulated_pure_pursuit_controllerConfig-version.cmake
+[43.823s] -- Symlinking: /ws/src/nav2/install/nav2_regulated_pure_pursuit_controller/share/nav2_regulated_pure_pursuit_controller/package.xml
+[43.864s] Invoked command in '/ws/src/nav2/build/nav2_regulated_pure_pursuit_controller' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_regulated_pure_pursuit_controller

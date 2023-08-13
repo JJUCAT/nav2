@@ -1,0 +1,48 @@
+[0.042s] Invoking command in '/ws/src/nav2/build/nav2_amcl': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_amcl -- -j16 -l16
+[0.099s] [ 50%] Built target map_lib
+[0.099s] [ 50%] Built target pf_lib
+[0.125s] [ 69%] Built target sensors_lib
+[0.129s] [ 84%] Built target motions_lib
+[0.176s] [ 92%] Built target amcl_core
+[0.224s] [100%] Built target amcl
+[0.236s] Invoked command in '/ws/src/nav2/build/nav2_amcl' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_amcl -- -j16 -l16
+[0.273s] Invoking command in '/ws/src/nav2/build/nav2_amcl': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_amcl
+[0.283s] -- Install configuration: "Release"
+[0.283s] -- Execute custom install script
+[0.284s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/lib/libpf_lib.so
+[0.293s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/lib/libmap_lib.so
+[0.304s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/lib/libmotions_lib.so
+[0.314s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/lib/libsensors_lib.so
+[0.325s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/lib/libamcl_core.so
+[0.336s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/lib/nav2_amcl/amcl
+[0.347s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/include//nav2_amcl/amcl_node.hpp
+[0.356s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/include//nav2_amcl/angleutils.hpp
+[0.368s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/include//nav2_amcl/map/map.hpp
+[0.379s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/include//nav2_amcl/motion_model/motion_model.hpp
+[0.391s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/include//nav2_amcl/pf/eig3.hpp
+[0.401s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/include//nav2_amcl/pf/pf.hpp
+[0.411s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/include//nav2_amcl/pf/pf_kdtree.hpp
+[0.432s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/include//nav2_amcl/pf/pf_pdf.hpp
+[0.443s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/include//nav2_amcl/pf/pf_vector.hpp
+[0.454s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/include//nav2_amcl/sensors/laser/laser.hpp
+[0.465s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/environment/library_path.sh
+[0.476s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/environment/library_path.dsv
+[0.486s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/ament_index/resource_index/package_run_dependencies/nav2_amcl
+[0.500s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/ament_index/resource_index/parent_prefix_path/nav2_amcl
+[0.510s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/environment/ament_prefix_path.sh
+[0.521s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/environment/ament_prefix_path.dsv
+[0.530s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/environment/path.sh
+[0.541s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/environment/path.dsv
+[0.550s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/local_setup.bash
+[0.561s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/local_setup.sh
+[0.571s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/local_setup.zsh
+[0.586s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/local_setup.dsv
+[0.596s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/package.dsv
+[0.603s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/ament_index/resource_index/packages/nav2_amcl
+[0.615s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.624s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_libraries-extras.cmake
+[0.635s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.648s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/cmake/nav2_amclConfig.cmake
+[0.660s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/cmake/nav2_amclConfig-version.cmake
+[0.671s] -- Symlinking: /ws/src/nav2/install/nav2_amcl/share/nav2_amcl/package.xml
+[0.685s] Invoked command in '/ws/src/nav2/build/nav2_amcl' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_amcl

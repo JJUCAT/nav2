@@ -1,0 +1,47 @@
+[0.042s] Invoking command in '/ws/src/nav2/build/nav2_map_server': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_map_server -- -j16 -l16
+[0.129s] [  6%] Built target gtest
+[0.132s] [ 12%] Built target gtest_main
+[0.183s] [ 22%] Built target map_io
+[0.267s] [ 32%] Built target test_map_saver_cli
+[0.287s] [ 41%] Built target test_map_saver_publisher
+[0.306s] [ 51%] Built target test_map_io
+[0.317s] [ 61%] Built target map_server_core
+[0.486s] [ 67%] Built target map_server
+[0.492s] [ 74%] Built target map_saver_cli
+[0.510s] [ 83%] Built target test_map_saver_node
+[0.510s] [ 93%] Built target test_map_server_node
+[0.518s] [100%] Built target map_saver_server
+[0.576s] Invoked command in '/ws/src/nav2/build/nav2_map_server' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_map_server -- -j16 -l16
+[1.056s] Invoking command in '/ws/src/nav2/build/nav2_map_server': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_map_server
+[1.072s] -- Install configuration: "Release"
+[1.072s] -- Execute custom install script
+[1.073s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/lib/libmap_server_core.so
+[1.073s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/lib/libmap_io.so
+[1.083s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/lib/nav2_map_server/map_server
+[1.083s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/lib/nav2_map_server/map_saver_cli
+[1.084s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/lib/nav2_map_server/map_saver_server
+[1.085s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/include//nav2_map_server/map_io.hpp
+[1.085s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/include//nav2_map_server/map_mode.hpp
+[1.085s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/include//nav2_map_server/map_saver.hpp
+[1.086s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/include//nav2_map_server/map_server.hpp
+[1.087s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/launch/map_saver_server.launch.py
+[1.087s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/environment/library_path.sh
+[1.088s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/environment/library_path.dsv
+[1.088s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/ament_index/resource_index/package_run_dependencies/nav2_map_server
+[1.089s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/ament_index/resource_index/parent_prefix_path/nav2_map_server
+[1.089s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/environment/ament_prefix_path.sh
+[1.095s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/environment/ament_prefix_path.dsv
+[1.095s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/environment/path.sh
+[1.102s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/environment/path.dsv
+[1.102s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/local_setup.bash
+[1.102s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/local_setup.sh
+[1.102s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/local_setup.zsh
+[1.102s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/local_setup.dsv
+[1.102s] -- Symlinking: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/package.dsv
+[1.136s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/ament_index/resource_index/packages/nav2_map_server
+[1.137s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.137s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/cmake/ament_cmake_export_libraries-extras.cmake
+[1.137s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/cmake/nav2_map_serverConfig.cmake
+[1.137s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/cmake/nav2_map_serverConfig-version.cmake
+[1.138s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_map_server/share/nav2_map_server/package.xml
+[1.165s] Invoked command in '/ws/src/nav2/build/nav2_map_server' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_map_server

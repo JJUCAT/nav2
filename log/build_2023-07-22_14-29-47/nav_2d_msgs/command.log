@@ -1,0 +1,6 @@
+Invoking command in '/ws/src/nav2/build/nav_2d_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /ws/src/nav2/nav2_dwb_controller/nav_2d_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav_2d_msgs
+Invoked command in '/ws/src/nav2/build/nav_2d_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /ws/src/nav2/nav2_dwb_controller/nav_2d_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav_2d_msgs
+Invoking command in '/ws/src/nav2/build/nav_2d_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /ws/src/nav2/build/nav_2d_msgs -- -j16 -l16
+Invoked command in '/ws/src/nav2/build/nav_2d_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /ws/src/nav2/build/nav_2d_msgs -- -j16 -l16
+Invoking command in '/ws/src/nav2/build/nav_2d_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /ws/src/nav2/build/nav_2d_msgs
+Invoked command in '/ws/src/nav2/build/nav_2d_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /ws/src/nav2/build/nav_2d_msgs

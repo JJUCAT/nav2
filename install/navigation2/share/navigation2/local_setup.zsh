@@ -1,0 +1,1 @@
+/ws/src/nav2/build/navigation2/ament_cmake_environment_hooks/local_setup.zsh

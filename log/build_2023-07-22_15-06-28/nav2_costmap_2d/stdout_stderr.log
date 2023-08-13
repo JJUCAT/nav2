@@ -1,0 +1,78 @@
+[35m[1mScanning dependencies of target gtest[0m
+[35m[1mScanning dependencies of target gtest_main[0m
+[35m[1mScanning dependencies of target nav2_costmap_2d_core[0m
+[  2%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[  4%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[  6%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/array_parser.cpp.o[0m
+[  8%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d.cpp.o[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/layer.cpp.o[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/layered_costmap.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_math.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d_publisher.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d_ros.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/footprint.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_layer.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/observation_buffer.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/clear_costmap_service.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/footprint_collision_checker.cpp.o[0m
+[ 31%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 31%] Built target gtest_main
+[ 33%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 33%] Built target gtest
+[ 35%] [32m[1mLinking CXX shared library libnav2_costmap_2d_core.so[0m
+[ 35%] Built target nav2_costmap_2d_core
+[35m[1mScanning dependencies of target nav2_costmap_2d_markers[0m
+[35m[1mScanning dependencies of target collision_footprint_test[0m
+[35m[1mScanning dependencies of target nav2_costmap_2d_cloud[0m
+[35m[1mScanning dependencies of target layers[0m
+[35m[1mScanning dependencies of target array_parser_test[0m
+[35m[1mScanning dependencies of target nav2_costmap_2d_client[0m
+[ 37%] [32mBuilding CXX object test/unit/CMakeFiles/array_parser_test.dir/array_parser_test.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_cloud.dir/src/costmap_2d_cloud.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_markers.dir/src/costmap_2d_markers.cpp.o[0m
+[ 43%] [32mBuilding CXX object test/unit/CMakeFiles/collision_footprint_test.dir/footprint_collision_checker_test.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/footprint_subscriber.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/costmap_subscriber.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/costmap_topic_collision_checker.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/inflation_layer.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/static_layer.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/voxel_layer.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/layers.dir/src/observation_buffer.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/obstacle_layer.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/range_sensor_layer.cpp.o[0m
+[ 64%] [32m[1mLinking CXX executable array_parser_test[0m
+[ 64%] Built target array_parser_test
+[ 66%] [32m[1mLinking CXX executable collision_footprint_test[0m
+[ 66%] Built target collision_footprint_test
+[ 68%] [32m[1mLinking CXX shared library libnav2_costmap_2d_client.so[0m
+[ 68%] Built target nav2_costmap_2d_client
+[ 70%] [32m[1mLinking CXX executable nav2_costmap_2d_markers[0m
+[ 70%] Built target nav2_costmap_2d_markers
+[ 72%] [32m[1mLinking CXX executable nav2_costmap_2d_cloud[0m
+[ 72%] Built target nav2_costmap_2d_cloud
+[ 75%] [32m[1mLinking CXX shared library liblayers.so[0m
+[ 75%] Built target layers
+[35m[1mScanning dependencies of target footprint_tests_exec[0m
+[35m[1mScanning dependencies of target nav2_costmap_2d[0m
+[35m[1mScanning dependencies of target inflation_tests_exec[0m
+[35m[1mScanning dependencies of target range_tests_exec[0m
+[35m[1mScanning dependencies of target test_collision_checker_exec[0m
+[35m[1mScanning dependencies of target obstacle_tests_exec[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d.dir/src/costmap_2d_node.cpp.o[0m
+[ 79%] [32mBuilding CXX object test/integration/CMakeFiles/footprint_tests_exec.dir/footprint_tests.cpp.o[0m
+[ 85%] [32mBuilding CXX object test/integration/CMakeFiles/range_tests_exec.dir/range_tests.cpp.o[0m
+[ 85%] [32mBuilding CXX object test/integration/CMakeFiles/inflation_tests_exec.dir/inflation_tests.cpp.o[0m
+[ 85%] [32mBuilding CXX object test/integration/CMakeFiles/obstacle_tests_exec.dir/obstacle_tests.cpp.o[0m
+[ 87%] [32mBuilding CXX object test/integration/CMakeFiles/test_collision_checker_exec.dir/test_costmap_topic_collision_checker.cpp.o[0m
+[ 89%] [32m[1mLinking CXX executable footprint_tests_exec[0m
+[ 91%] [32m[1mLinking CXX executable nav2_costmap_2d[0m
+[ 91%] Built target footprint_tests_exec
+[ 91%] Built target nav2_costmap_2d
+[ 93%] [32m[1mLinking CXX executable range_tests_exec[0m
+[ 95%] [32m[1mLinking CXX executable obstacle_tests_exec[0m
+[ 95%] Built target range_tests_exec
+[ 95%] Built target obstacle_tests_exec
+[ 97%] [32m[1mLinking CXX executable inflation_tests_exec[0m
+[ 97%] Built target inflation_tests_exec
+[100%] [32m[1mLinking CXX executable test_collision_checker_exec[0m
+[100%] Built target test_collision_checker_exec

@@ -1,0 +1,63 @@
+[0.013s] Invoking command in '/ws/src/nav2/build/nav2_util': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_util -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_util
+[0.073s] -- The C compiler identification is GNU 9.4.0
+[0.131s] -- The CXX compiler identification is GNU 9.4.0
+[0.142s] -- Check for working C compiler: /usr/bin/cc
+[0.233s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.235s] -- Detecting C compiler ABI info
+[0.332s] -- Detecting C compiler ABI info - done
+[0.346s] -- Detecting C compile features
+[0.346s] -- Detecting C compile features - done
+[0.348s] -- Check for working CXX compiler: /usr/bin/c++
+[0.432s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.435s] -- Detecting CXX compiler ABI info
+[0.541s] -- Detecting CXX compiler ABI info - done
+[0.552s] -- Detecting CXX compile features
+[0.553s] -- Detecting CXX compile features - done
+[0.556s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.586s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.586s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.727s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.766s] -- Found nav2_common: 0.4.7 (/ws/src/nav2/install/nav2_common/share/nav2_common/cmake)
+[0.766s] -- Found nav2_msgs: 0.4.7 (/ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake)
+[0.797s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.806s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.907s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.936s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.014s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.389s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[1.449s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.451s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.451s] -- Looking for pthread.h
+[1.536s] -- Looking for pthread.h - found
+[1.536s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.631s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.631s] -- Looking for pthread_create in pthreads
+[1.707s] -- Looking for pthread_create in pthreads - not found
+[1.708s] -- Looking for pthread_create in pthread
+[1.797s] -- Looking for pthread_create in pthread - found
+[1.799s] -- Found Threads: TRUE  
+[2.172s] -- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[2.181s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[2.197s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[2.229s] -- Found lifecycle_msgs: 1.0.0 (/opt/ros/foxy/share/lifecycle_msgs/cmake)
+[2.248s] CMake Error at CMakeLists.txt:15 (find_package):
+[2.249s]   By not providing "Findtest_msgs.cmake" in CMAKE_MODULE_PATH this project
+[2.249s]   has asked CMake to find a package configuration file provided by
+[2.249s]   "test_msgs", but CMake did not find one.
+[2.249s] 
+[2.249s]   Could not find a package configuration file provided by "test_msgs" with
+[2.249s]   any of the following names:
+[2.249s] 
+[2.249s]     test_msgsConfig.cmake
+[2.249s]     test_msgs-config.cmake
+[2.249s] 
+[2.249s]   Add the installation prefix of "test_msgs" to CMAKE_PREFIX_PATH or set
+[2.249s]   "test_msgs_DIR" to a directory containing one of the above files.  If
+[2.249s]   "test_msgs" provides a separate development package or SDK, be sure it has
+[2.249s]   been installed.
+[2.250s] 
+[2.250s] 
+[2.251s] -- Configuring incomplete, errors occurred!
+[2.251s] See also "/ws/src/nav2/build/nav2_util/CMakeFiles/CMakeOutput.log".
+[2.251s] See also "/ws/src/nav2/build/nav2_util/CMakeFiles/CMakeError.log".
+[2.258s] Invoked command in '/ws/src/nav2/build/nav2_util' returned '1': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_util -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_util

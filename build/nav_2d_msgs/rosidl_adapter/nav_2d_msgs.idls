@@ -1,0 +1,6 @@
+/ws/src/nav2/build/nav_2d_msgs/rosidl_adapter/nav_2d_msgs:msg/Path2D.idl
+/ws/src/nav2/build/nav_2d_msgs/rosidl_adapter/nav_2d_msgs:msg/Pose2D32.idl
+/ws/src/nav2/build/nav_2d_msgs/rosidl_adapter/nav_2d_msgs:msg/Pose2DStamped.idl
+/ws/src/nav2/build/nav_2d_msgs/rosidl_adapter/nav_2d_msgs:msg/Twist2D.idl
+/ws/src/nav2/build/nav_2d_msgs/rosidl_adapter/nav_2d_msgs:msg/Twist2D32.idl
+/ws/src/nav2/build/nav_2d_msgs/rosidl_adapter/nav_2d_msgs:msg/Twist2DStamped.idl

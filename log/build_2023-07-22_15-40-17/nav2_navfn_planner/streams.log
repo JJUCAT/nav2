@@ -1,0 +1,38 @@
+[0.235s] Invoking command in '/ws/src/nav2/build/nav2_navfn_planner': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_navfn_planner -- -j16 -l16
+[0.394s] [35m[1mScanning dependencies of target nav2_navfn_planner[0m
+[0.655s] [ 33%] [32mBuilding CXX object CMakeFiles/nav2_navfn_planner.dir/src/navfn_planner.cpp.o[0m
+[0.667s] [ 66%] [32mBuilding CXX object CMakeFiles/nav2_navfn_planner.dir/src/navfn.cpp.o[0m
+[26.705s] [100%] [32m[1mLinking CXX shared library libnav2_navfn_planner.so[0m
+[28.260s] [100%] Built target nav2_navfn_planner
+[28.326s] Invoked command in '/ws/src/nav2/build/nav2_navfn_planner' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_navfn_planner -- -j16 -l16
+[28.737s] Invoking command in '/ws/src/nav2/build/nav2_navfn_planner': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_navfn_planner
+[28.778s] -- Install configuration: "Release"
+[28.779s] -- Execute custom install script
+[28.779s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner//global_planner_plugin.xml
+[28.827s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/lib/libnav2_navfn_planner.so
+[28.881s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/include//nav2_navfn_planner/navfn.hpp
+[28.933s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/include//nav2_navfn_planner/navfn_planner.hpp
+[28.982s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/global_planner_plugin.xml
+[28.984s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/library_path.sh
+[29.037s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/library_path.dsv
+[29.099s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/ament_index/resource_index/package_run_dependencies/nav2_navfn_planner
+[29.146s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/ament_index/resource_index/parent_prefix_path/nav2_navfn_planner
+[29.201s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/ament_prefix_path.sh
+[29.258s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/ament_prefix_path.dsv
+[29.309s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/path.sh
+[29.358s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/path.dsv
+[29.402s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/local_setup.bash
+[29.449s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/local_setup.sh
+[29.494s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/local_setup.zsh
+[29.546s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/local_setup.dsv
+[29.585s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/package.dsv
+[29.630s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/ament_index/resource_index/packages/nav2_navfn_planner
+[29.674s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_navfn_planner
+[29.731s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/ament_cmake_export_include_directories-extras.cmake
+[29.764s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/ament_cmake_export_libraries-extras.cmake
+[29.793s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/ament_cmake_export_dependencies-extras.cmake
+[29.844s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/ament_cmake_export_definitions-extras.cmake
+[29.885s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/nav2_navfn_plannerConfig.cmake
+[29.903s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/nav2_navfn_plannerConfig-version.cmake
+[29.950s] -- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/package.xml
+[30.005s] Invoked command in '/ws/src/nav2/build/nav2_navfn_planner' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_navfn_planner

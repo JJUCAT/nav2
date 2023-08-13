@@ -140,7 +140,7 @@ BtNavigator::on_configure(const rclcpp_lifecycle::State & /*state*/)
 
   // Get the BT filename to use from the node parameter
   get_parameter("default_bt_xml_filename", default_bt_xml_filename_);
-
+  RCLCPP_INFO(get_logger(), "[BT] default XML file: %s", default_bt_xml_filename_.c_str());
   if (!loadBehaviorTree(default_bt_xml_filename_)) {
     RCLCPP_ERROR(get_logger(), "Error loading XML file: %s", default_bt_xml_filename_.c_str());
     return nav2_util::CallbackReturn::FAILURE;
@@ -152,6 +152,8 @@ BtNavigator::on_configure(const rclcpp_lifecycle::State & /*state*/)
 bool
 BtNavigator::loadBehaviorTree(const std::string & bt_xml_filename)
 {
+  RCLCPP_INFO(get_logger(), "[BT] loading XML file: %s", bt_xml_filename.c_str());
+
   // Use previous BT if it is the existing one
   if (current_bt_xml_filename_ == bt_xml_filename) {
     RCLCPP_DEBUG(get_logger(), "BT will not be reloaded as the given xml is already loaded");
@@ -267,8 +269,9 @@ BtNavigator::navigateToPose()
   std::string bt_xml_filename = action_server_->get_current_goal()->behavior_tree;
 
   // Empty id in request is default for backward compatibility
+  RCLCPP_INFO(get_logger(), "[BT] nav2pose XML file: %s", bt_xml_filename.c_str());  
   bt_xml_filename = bt_xml_filename == "" ? default_bt_xml_filename_ : bt_xml_filename;
-
+  RCLCPP_INFO(get_logger(), "[BT] nav2pose use XML file: %s", bt_xml_filename.c_str()); 
   if (!loadBehaviorTree(bt_xml_filename)) {
     RCLCPP_ERROR(
       get_logger(), "BT file not found: %s. Navigation canceled.",

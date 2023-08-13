@@ -1,0 +1,34 @@
+[35m[1mScanning dependencies of target planner_server_core[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/planner_server_core.dir/src/planner_server.cpp.o[0m
+[ 50%] [32m[1mLinking CXX shared library libplanner_server_core.so[0m
+[ 50%] Built target planner_server_core
+[35m[1mScanning dependencies of target planner_server[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/planner_server.dir/src/main.cpp.o[0m
+[100%] [32m[1mLinking CXX executable planner_server[0m
+[100%] Built target planner_server
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /ws/src/nav2/install/nav2_planner/lib/libplanner_server_core.so
+-- Symlinking: /ws/src/nav2/install/nav2_planner/lib/nav2_planner/planner_server
+-- Symlinking: /ws/src/nav2/install/nav2_planner/include//nav2_planner/planner_server.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/environment/library_path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/environment/library_path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/ament_index/resource_index/package_run_dependencies/nav2_planner
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/ament_index/resource_index/parent_prefix_path/nav2_planner
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/environment/ament_prefix_path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/environment/ament_prefix_path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/environment/path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/environment/path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/local_setup.bash
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/local_setup.sh
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/local_setup.zsh
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/local_setup.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/package.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/ament_index/resource_index/packages/nav2_planner
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/cmake/ament_cmake_export_definitions-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/cmake/nav2_plannerConfig.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/cmake/nav2_plannerConfig-version.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_planner/share/nav2_planner/package.xml

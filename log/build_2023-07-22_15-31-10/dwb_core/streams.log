@@ -1,0 +1,62 @@
+[0.047s] Invoking command in '/ws/src/nav2/build/dwb_core': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav_2d_utils:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/dwb_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav_2d_utils:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/dwb_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav_2d_utils/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:/ws/src/nav2/install/dwb_msgs/lib:/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_dwb_controller/dwb_core -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/dwb_core
+[0.098s] -- The C compiler identification is GNU 9.4.0
+[0.154s] -- The CXX compiler identification is GNU 9.4.0
+[0.159s] -- Check for working C compiler: /usr/bin/cc
+[0.222s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.223s] -- Detecting C compiler ABI info
+[0.290s] -- Detecting C compiler ABI info - done
+[0.307s] -- Detecting C compile features
+[0.307s] -- Detecting C compile features - done
+[0.310s] -- Check for working CXX compiler: /usr/bin/c++
+[0.393s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.395s] -- Detecting CXX compiler ABI info
+[0.474s] -- Detecting CXX compiler ABI info - done
+[0.491s] -- Detecting CXX compile features
+[0.492s] -- Detecting CXX compile features - done
+[0.497s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.531s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.531s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.746s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.803s] -- Found nav2_common: 0.4.7 (/ws/src/nav2/install/nav2_common/share/nav2_common/cmake)
+[0.807s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.881s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.896s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.026s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.071s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.183s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.268s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.270s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.272s] -- Looking for pthread.h
+[1.363s] -- Looking for pthread.h - found
+[1.363s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.467s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.467s] -- Looking for pthread_create in pthreads
+[1.544s] -- Looking for pthread_create in pthreads - not found
+[1.544s] -- Looking for pthread_create in pthread
+[1.643s] -- Looking for pthread_create in pthread - found
+[1.645s] -- Found Threads: TRUE  
+[1.846s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.888s] -- Found nav_2d_msgs: 0.4.7 (/ws/src/nav2/install/nav_2d_msgs/share/nav_2d_msgs/cmake)
+[1.968s] -- Found dwb_msgs: 0.4.7 (/ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake)
+[2.269s] -- Found nav2_costmap_2d: 0.4.7 (/ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake)
+[3.384s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[3.940s] -- Found nav_2d_utils: 0.4.7 (/ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/cmake)
+[4.151s] -- Found nav2_core: 0.4.7 (/ws/src/nav2/install/nav2_core/share/nav2_core/cmake)
+[4.693s] -- Setting build type to Release as none was specified.
+[7.507s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[7.608s] -- Found ament_cmake_gtest: 0.9.12 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+[7.625s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[7.627s] -- Check if compiler accepts -pthread
+[7.701s] -- Check if compiler accepts -pthread - yes
+[7.712s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.712s] -- Configured cppcheck include dirs: /ws/src/nav2/nav2_dwb_controller/dwb_core/include
+[7.712s] -- Configured cppcheck exclude dirs and/or files: 
+[7.713s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[7.714s] -- Configured cpplint exclude dirs and/or files: 
+[7.714s] -- Added test 'lint_cmake' to check CMake code style
+[7.716s] -- Added test 'uncrustify' to check C / C++ code style
+[7.716s] -- Configured uncrustify additional arguments: 
+[7.716s] -- Added test 'xmllint' to check XML markup files
+[7.724s] -- Configuring done
+[7.793s] -- Generating done
+[7.795s] -- Build files have been written to: /ws/src/nav2/build/dwb_core

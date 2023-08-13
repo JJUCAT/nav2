@@ -1,0 +1,69 @@
+[35m[1mScanning dependencies of target simple_goal_checker[0m
+[35m[1mScanning dependencies of target simple_progress_checker[0m
+[35m[1mScanning dependencies of target controller_server_core[0m
+[35m[1mScanning dependencies of target gtest[0m
+[35m[1mScanning dependencies of target gtest_main[0m
+[  5%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[ 11%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/simple_progress_checker.dir/plugins/simple_progress_checker.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/simple_goal_checker.dir/plugins/simple_goal_checker.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/controller_server_core.dir/src/nav2_controller.cpp.o[0m
+[ 33%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 33%] Built target gtest_main
+[ 38%] [32m[1mLinking CXX shared library libsimple_goal_checker.so[0m
+[ 44%] [32m[1mLinking CXX shared library libsimple_progress_checker.so[0m
+[ 44%] Built target simple_goal_checker
+[ 44%] Built target simple_progress_checker
+[35m[1mScanning dependencies of target stopped_goal_checker[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/stopped_goal_checker.dir/plugins/stopped_goal_checker.cpp.o[0m
+[ 55%] [32m[1mLinking CXX shared library libstopped_goal_checker.so[0m
+[ 55%] Built target stopped_goal_checker
+[ 61%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 61%] Built target gtest
+[35m[1mScanning dependencies of target gctest[0m
+[35m[1mScanning dependencies of target pctest[0m
+[ 72%] [32mBuilding CXX object plugins/test/CMakeFiles/gctest.dir/goal_checker.cpp.o[0m
+[ 72%] [32mBuilding CXX object plugins/test/CMakeFiles/pctest.dir/progress_checker.cpp.o[0m
+[ 77%] [32m[1mLinking CXX executable pctest[0m
+[ 83%] [32m[1mLinking CXX executable gctest[0m
+[ 83%] Built target pctest
+[ 83%] Built target gctest
+[ 88%] [32m[1mLinking CXX static library libcontroller_server_core.a[0m
+[ 88%] Built target controller_server_core
+[35m[1mScanning dependencies of target controller_server[0m
+[ 94%] [32mBuilding CXX object CMakeFiles/controller_server.dir/src/main.cpp.o[0m
+[100%] [32m[1mLinking CXX executable controller_server[0m
+[100%] Built target controller_server
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /ws/src/nav2/install/nav2_controller/lib/libsimple_progress_checker.so
+-- Symlinking: /ws/src/nav2/install/nav2_controller/lib/libsimple_goal_checker.so
+-- Symlinking: /ws/src/nav2/install/nav2_controller/lib/libstopped_goal_checker.so
+-- Symlinking: /ws/src/nav2/install/nav2_controller/lib/libcontroller_server_core.a
+-- Symlinking: /ws/src/nav2/install/nav2_controller/lib/nav2_controller/controller_server
+-- Symlinking: /ws/src/nav2/install/nav2_controller/include//nav2_controller/nav2_controller.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_controller/include//nav2_controller/plugins/simple_goal_checker.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_controller/include//nav2_controller/plugins/simple_progress_checker.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_controller/include//nav2_controller/plugins/stopped_goal_checker.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/library_path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/library_path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller//plugins.xml
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/ament_index/resource_index/package_run_dependencies/nav2_controller
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/ament_index/resource_index/parent_prefix_path/nav2_controller
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/ament_prefix_path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/ament_prefix_path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/local_setup.bash
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/local_setup.sh
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/local_setup.zsh
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/local_setup.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/package.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/ament_index/resource_index/packages/nav2_controller
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_controller
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/cmake/ament_cmake_export_definitions-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/cmake/nav2_controllerConfig.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/cmake/nav2_controllerConfig-version.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/package.xml

@@ -1,0 +1,79 @@
+[0.028s] Invoking command in '/ws/src/nav2/build/nav2_costmap_2d': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_map_server/lib:/ws/src/nav2/install/nav2_lifecycle_manager/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_costmap_2d -- -j16 -l16
+[0.074s] [35m[1mScanning dependencies of target gtest[0m
+[0.074s] [35m[1mScanning dependencies of target gtest_main[0m
+[0.074s] [35m[1mScanning dependencies of target nav2_costmap_2d_core[0m
+[0.093s] [  2%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[0.097s] [  4%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[0.266s] [  6%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/array_parser.cpp.o[0m
+[0.269s] [  8%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d.cpp.o[0m
+[0.277s] [ 10%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/layer.cpp.o[0m
+[0.278s] [ 12%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/layered_costmap.cpp.o[0m
+[0.284s] [ 20%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_math.cpp.o[0m
+[0.284s] [ 20%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d_publisher.cpp.o[0m
+[0.284s] [ 20%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_2d_ros.cpp.o[0m
+[0.285s] [ 20%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/footprint.cpp.o[0m
+[0.285s] [ 22%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/costmap_layer.cpp.o[0m
+[0.291s] [ 25%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/observation_buffer.cpp.o[0m
+[0.305s] [ 29%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/clear_costmap_service.cpp.o[0m
+[0.306s] [ 29%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_core.dir/src/footprint_collision_checker.cpp.o[0m
+[1.228s] [ 31%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[1.270s] [ 31%] Built target gtest_main
+[9.033s] [ 33%] [32m[1mLinking CXX static library libgtest.a[0m
+[9.076s] [ 33%] Built target gtest
+[14.890s] [ 35%] [32m[1mLinking CXX shared library libnav2_costmap_2d_core.so[0m
+[15.130s] [ 35%] Built target nav2_costmap_2d_core
+[15.145s] [35m[1mScanning dependencies of target nav2_costmap_2d_markers[0m
+[15.145s] [35m[1mScanning dependencies of target collision_footprint_test[0m
+[15.145s] [35m[1mScanning dependencies of target nav2_costmap_2d_cloud[0m
+[15.145s] [35m[1mScanning dependencies of target layers[0m
+[15.145s] [35m[1mScanning dependencies of target array_parser_test[0m
+[15.146s] [35m[1mScanning dependencies of target nav2_costmap_2d_client[0m
+[15.162s] [ 37%] [32mBuilding CXX object test/unit/CMakeFiles/array_parser_test.dir/array_parser_test.cpp.o[0m
+[15.187s] [ 41%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_cloud.dir/src/costmap_2d_cloud.cpp.o[0m
+[15.187s] [ 41%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_markers.dir/src/costmap_2d_markers.cpp.o[0m
+[15.196s] [ 43%] [32mBuilding CXX object test/unit/CMakeFiles/collision_footprint_test.dir/footprint_collision_checker_test.cpp.o[0m
+[15.204s] [ 45%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/footprint_subscriber.cpp.o[0m
+[15.207s] [ 50%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/costmap_subscriber.cpp.o[0m
+[15.207s] [ 50%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d_client.dir/src/costmap_topic_collision_checker.cpp.o[0m
+[15.270s] [ 54%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/inflation_layer.cpp.o[0m
+[15.271s] [ 54%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/static_layer.cpp.o[0m
+[15.281s] [ 60%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/voxel_layer.cpp.o[0m
+[15.281s] [ 60%] [32mBuilding CXX object CMakeFiles/layers.dir/src/observation_buffer.cpp.o[0m
+[15.281s] [ 60%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/obstacle_layer.cpp.o[0m
+[15.281s] [ 62%] [32mBuilding CXX object CMakeFiles/layers.dir/plugins/range_sensor_layer.cpp.o[0m
+[17.349s] [ 64%] [32m[1mLinking CXX executable array_parser_test[0m
+[17.718s] [ 64%] Built target array_parser_test
+[20.749s] [ 66%] [32m[1mLinking CXX executable collision_footprint_test[0m
+[21.060s] [ 66%] Built target collision_footprint_test
+[25.195s] [ 68%] [32m[1mLinking CXX shared library libnav2_costmap_2d_client.so[0m
+[25.541s] [ 68%] Built target nav2_costmap_2d_client
+[26.971s] [ 70%] [32m[1mLinking CXX executable nav2_costmap_2d_markers[0m
+[27.232s] [ 70%] Built target nav2_costmap_2d_markers
+[27.864s] [ 72%] [32m[1mLinking CXX executable nav2_costmap_2d_cloud[0m
+[28.096s] [ 72%] Built target nav2_costmap_2d_cloud
+[35.298s] [ 75%] [32m[1mLinking CXX shared library liblayers.so[0m
+[35.606s] [ 75%] Built target layers
+[35.617s] [35m[1mScanning dependencies of target footprint_tests_exec[0m
+[35.617s] [35m[1mScanning dependencies of target nav2_costmap_2d[0m
+[35.617s] [35m[1mScanning dependencies of target inflation_tests_exec[0m
+[35.617s] [35m[1mScanning dependencies of target range_tests_exec[0m
+[35.617s] [35m[1mScanning dependencies of target test_collision_checker_exec[0m
+[35.617s] [35m[1mScanning dependencies of target obstacle_tests_exec[0m
+[35.674s] [ 79%] [32mBuilding CXX object CMakeFiles/nav2_costmap_2d.dir/src/costmap_2d_node.cpp.o[0m
+[35.675s] [ 79%] [32mBuilding CXX object test/integration/CMakeFiles/footprint_tests_exec.dir/footprint_tests.cpp.o[0m
+[35.709s] [ 85%] [32mBuilding CXX object test/integration/CMakeFiles/range_tests_exec.dir/range_tests.cpp.o[0m
+[35.709s] [ 85%] [32mBuilding CXX object test/integration/CMakeFiles/inflation_tests_exec.dir/inflation_tests.cpp.o[0m
+[35.709s] [ 85%] [32mBuilding CXX object test/integration/CMakeFiles/obstacle_tests_exec.dir/obstacle_tests.cpp.o[0m
+[35.709s] [ 87%] [32mBuilding CXX object test/integration/CMakeFiles/test_collision_checker_exec.dir/test_costmap_topic_collision_checker.cpp.o[0m
+[39.512s] [ 89%] [32m[1mLinking CXX executable footprint_tests_exec[0m
+[39.578s] [ 91%] [32m[1mLinking CXX executable nav2_costmap_2d[0m
+[39.849s] [ 91%] Built target footprint_tests_exec
+[39.889s] [ 91%] Built target nav2_costmap_2d
+[42.500s] [ 93%] [32m[1mLinking CXX executable range_tests_exec[0m
+[42.566s] [ 95%] [32m[1mLinking CXX executable obstacle_tests_exec[0m
+[42.894s] [ 95%] Built target range_tests_exec
+[42.927s] [ 95%] Built target obstacle_tests_exec
+[43.094s] [ 97%] [32m[1mLinking CXX executable inflation_tests_exec[0m
+[43.408s] [ 97%] Built target inflation_tests_exec
+[43.969s] [100%] [32m[1mLinking CXX executable test_collision_checker_exec[0m
+[44.294s] [100%] Built target test_collision_checker_exec

@@ -1,0 +1,104 @@
+[0.040s] Invoking command in '/ws/src/nav2/build/nav2_bt_navigator': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_bt_navigator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_bt_navigator
+[0.116s] -- The C compiler identification is GNU 9.4.0
+[0.216s] -- The CXX compiler identification is GNU 9.4.0
+[0.225s] -- Check for working C compiler: /usr/bin/cc
+[0.339s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.340s] -- Detecting C compiler ABI info
+[0.460s] -- Detecting C compiler ABI info - done
+[0.477s] -- Detecting C compile features
+[0.477s] -- Detecting C compile features - done
+[0.480s] -- Check for working CXX compiler: /usr/bin/c++
+[0.616s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.618s] -- Detecting CXX compiler ABI info
+[0.747s] -- Detecting CXX compiler ABI info - done
+[0.768s] -- Detecting CXX compile features
+[0.768s] -- Detecting CXX compile features - done
+[0.778s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.824s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.825s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.073s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.157s] -- Found nav2_common: 0.4.7 (/ws/src/nav2/install/nav2_common/share/nav2_common/cmake)
+[1.161s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.280s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.305s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.459s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.520s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.711s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.862s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.865s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.867s] -- Looking for pthread.h
+[1.985s] -- Looking for pthread.h - found
+[1.986s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.118s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.118s] -- Looking for pthread_create in pthreads
+[2.225s] -- Looking for pthread_create in pthreads - not found
+[2.225s] -- Looking for pthread_create in pthread
+[2.350s] -- Looking for pthread_create in pthread - found
+[2.351s] -- Found Threads: TRUE  
+[2.720s] -- Found rclcpp_action: 2.4.3 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[2.881s] -- Found rclcpp_lifecycle: 2.4.3 (/opt/ros/foxy/share/rclcpp_lifecycle/cmake)
+[2.942s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[2.999s] -- Found nav2_behavior_tree: 0.4.7 (/ws/src/nav2/install/nav2_behavior_tree/share/nav2_behavior_tree/cmake)
+[4.524s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[4.531s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[5.125s] -- Setting build type to Release as none was specified.
+[7.811s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[7.972s] -- Added test 'copyright' to check source files copyright and LICENSE
+[7.984s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.985s] -- Configured cppcheck include dirs: /ws/src/nav2/nav2_bt_navigator/include
+[7.985s] -- Configured cppcheck exclude dirs and/or files: 
+[7.989s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[7.989s] -- Configured cpplint exclude dirs and/or files: 
+[7.991s] -- Added test 'lint_cmake' to check CMake code style
+[7.994s] -- Added test 'uncrustify' to check C / C++ code style
+[7.994s] -- Configured uncrustify additional arguments: 
+[7.995s] -- Added test 'xmllint' to check XML markup files
+[8.004s] -- Configuring done
+[8.131s] -- Generating done
+[8.133s] -- Build files have been written to: /ws/src/nav2/build/nav2_bt_navigator
+[8.158s] Invoked command in '/ws/src/nav2/build/nav2_bt_navigator' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_bt_navigator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_bt_navigator
+[8.162s] Invoking command in '/ws/src/nav2/build/nav2_bt_navigator': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_bt_navigator -- -j16 -l16
+[8.237s] [35m[1mScanning dependencies of target bt_navigator_core[0m
+[8.333s] [ 40%] [32mBuilding CXX object CMakeFiles/bt_navigator_core.dir/src/ros_topic_logger.cpp.o[0m
+[8.333s] [ 40%] [32mBuilding CXX object CMakeFiles/bt_navigator_core.dir/src/bt_navigator.cpp.o[0m
+[26.993s] [ 60%] [32m[1mLinking CXX shared library libbt_navigator_core.so[0m
+[27.243s] [ 60%] Built target bt_navigator_core
+[27.255s] [35m[1mScanning dependencies of target bt_navigator[0m
+[27.309s] [ 80%] [32mBuilding CXX object CMakeFiles/bt_navigator.dir/src/main.cpp.o[0m
+[30.873s] [100%] [32m[1mLinking CXX executable bt_navigator[0m
+[31.233s] [100%] Built target bt_navigator
+[31.246s] Invoked command in '/ws/src/nav2/build/nav2_bt_navigator' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_bt_navigator -- -j16 -l16
+[31.277s] Invoking command in '/ws/src/nav2/build/nav2_bt_navigator': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_bt_navigator
+[31.288s] -- Install configuration: "Release"
+[31.289s] -- Execute custom install script
+[31.289s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/lib/libbt_navigator_core.so
+[31.303s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/lib/nav2_bt_navigator/bt_navigator
+[31.314s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/include//nav2_bt_navigator/bt_navigator.hpp
+[31.325s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/include//nav2_bt_navigator/ros_topic_logger.hpp
+[31.336s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/behavior_trees/follow_point.xml
+[31.346s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml
+[31.357s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_round_robin_recovery.xml
+[31.367s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_distance.xml
+[31.377s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_speed.xml
+[31.388s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_time.xml
+[31.398s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/environment/library_path.sh
+[31.408s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/environment/library_path.dsv
+[31.419s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/ament_index/resource_index/package_run_dependencies/nav2_bt_navigator
+[31.433s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/ament_index/resource_index/parent_prefix_path/nav2_bt_navigator
+[31.445s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/environment/ament_prefix_path.sh
+[31.457s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/environment/ament_prefix_path.dsv
+[31.468s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/environment/path.sh
+[31.478s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/environment/path.dsv
+[31.489s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/local_setup.bash
+[31.500s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/local_setup.sh
+[31.511s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/local_setup.zsh
+[31.522s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/local_setup.dsv
+[31.532s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/package.dsv
+[31.543s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/ament_index/resource_index/packages/nav2_bt_navigator
+[31.555s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/cmake/ament_cmake_export_include_directories-extras.cmake
+[31.566s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/cmake/ament_cmake_export_libraries-extras.cmake
+[31.577s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/cmake/ament_cmake_export_dependencies-extras.cmake
+[31.590s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/cmake/nav2_bt_navigatorConfig.cmake
+[31.600s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/cmake/nav2_bt_navigatorConfig-version.cmake
+[31.612s] -- Symlinking: /ws/src/nav2/install/nav2_bt_navigator/share/nav2_bt_navigator/package.xml
+[31.629s] Invoked command in '/ws/src/nav2/build/nav2_bt_navigator' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_bt_navigator

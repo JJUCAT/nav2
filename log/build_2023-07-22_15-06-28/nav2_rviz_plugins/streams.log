@@ -1,0 +1,40 @@
+[0.044s] Invoking command in '/ws/src/nav2/build/nav2_rviz_plugins': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_lifecycle_manager/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_rviz_plugins -- -j16 -l16
+[0.099s] [ 20%] [34m[1mAutomatic MOC for target nav2_rviz_plugins[0m
+[0.117s] [ 20%] Built target nav2_rviz_plugins_autogen
+[0.193s] [100%] Built target nav2_rviz_plugins
+[0.212s] Invoked command in '/ws/src/nav2/build/nav2_rviz_plugins' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_lifecycle_manager/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_rviz_plugins -- -j16 -l16
+[0.244s] Invoking command in '/ws/src/nav2/build/nav2_rviz_plugins': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_lifecycle_manager/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_rviz_plugins
+[0.254s] -- Install configuration: ""
+[0.254s] -- Execute custom install script
+[0.254s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins//plugins_description.xml
+[0.266s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/include//nav2_rviz_plugins/goal_common.hpp
+[0.275s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/include//nav2_rviz_plugins/goal_pose_updater.hpp
+[0.285s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/include//nav2_rviz_plugins/goal_tool.hpp
+[0.296s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/include//nav2_rviz_plugins/nav2_panel.hpp
+[0.306s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/include//nav2_rviz_plugins/ros_action_qevent.hpp
+[0.316s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/library_path.sh
+[0.325s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/library_path.dsv
+[0.337s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/ament_index/resource_index/package_run_dependencies/nav2_rviz_plugins
+[0.351s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/ament_index/resource_index/parent_prefix_path/nav2_rviz_plugins
+[0.362s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/ament_prefix_path.sh
+[0.384s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/ament_prefix_path.dsv
+[0.401s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/path.sh
+[0.418s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/path.dsv
+[0.457s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.bash
+[0.482s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.sh
+[0.519s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.zsh
+[0.536s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.dsv
+[0.553s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/package.dsv
+[0.569s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/ament_index/resource_index/packages/nav2_rviz_plugins
+[0.587s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/ament_index/resource_index/rviz_common__pluginlib__plugin/nav2_rviz_plugins
+[0.603s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.620s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/ament_cmake_export_targets-extras.cmake
+[0.646s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.664s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsConfig.cmake
+[0.682s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsConfig-version.cmake
+[0.699s] -- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/package.xml
+[0.715s] -- Installing: /ws/src/nav2/install/nav2_rviz_plugins/lib/libnav2_rviz_plugins.so
+[0.722s] -- Set runtime path of "/ws/src/nav2/install/nav2_rviz_plugins/lib/libnav2_rviz_plugins.so" to ""
+[0.722s] -- Installing: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsExport.cmake
+[0.723s] -- Installing: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsExport-noconfig.cmake
+[0.743s] Invoked command in '/ws/src/nav2/build/nav2_rviz_plugins' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_lifecycle_manager/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_rviz_plugins

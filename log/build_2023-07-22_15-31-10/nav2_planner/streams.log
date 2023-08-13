@@ -1,0 +1,60 @@
+[0.033s] Invoking command in '/ws/src/nav2/build/nav2_planner': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_planner
+[0.084s] -- The C compiler identification is GNU 9.4.0
+[0.135s] -- The CXX compiler identification is GNU 9.4.0
+[0.140s] -- Check for working C compiler: /usr/bin/cc
+[0.199s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.199s] -- Detecting C compiler ABI info
+[0.269s] -- Detecting C compiler ABI info - done
+[0.281s] -- Detecting C compile features
+[0.281s] -- Detecting C compile features - done
+[0.283s] -- Check for working CXX compiler: /usr/bin/c++
+[0.360s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.361s] -- Detecting CXX compiler ABI info
+[0.439s] -- Detecting CXX compiler ABI info - done
+[0.451s] -- Detecting CXX compile features
+[0.452s] -- Detecting CXX compile features - done
+[0.456s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.486s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.487s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.710s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.763s] -- Found nav2_common: 0.4.7 (/ws/src/nav2/install/nav2_common/share/nav2_common/cmake)
+[0.766s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.836s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.850s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.971s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.020s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.173s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.292s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.295s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.296s] -- Looking for pthread.h
+[1.383s] -- Looking for pthread.h - found
+[1.384s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.499s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.499s] -- Looking for pthread_create in pthreads
+[1.572s] -- Looking for pthread_create in pthreads - not found
+[1.572s] -- Looking for pthread_create in pthread
+[1.665s] -- Looking for pthread_create in pthread - found
+[1.666s] -- Found Threads: TRUE  
+[1.891s] -- Found rclcpp_action: 2.4.3 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[1.991s] -- Found rclcpp_lifecycle: 2.4.3 (/opt/ros/foxy/share/rclcpp_lifecycle/cmake)
+[2.033s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[2.162s] -- Found nav2_util: 0.4.7 (/ws/src/nav2/install/nav2_util/share/nav2_util/cmake)
+[2.878s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[2.883s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[3.043s] -- Found nav2_costmap_2d: 0.4.7 (/ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake)
+[3.797s] -- Found nav2_core: 0.4.7 (/ws/src/nav2/install/nav2_core/share/nav2_core/cmake)
+[4.368s] -- Setting build type to Release as none was specified.
+[8.638s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[8.732s] -- Added test 'copyright' to check source files copyright and LICENSE
+[8.743s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[8.743s] -- Configured cppcheck include dirs: /ws/src/nav2/nav2_planner/include
+[8.743s] -- Configured cppcheck exclude dirs and/or files: 
+[8.744s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[8.744s] -- Configured cpplint exclude dirs and/or files: 
+[8.745s] -- Added test 'lint_cmake' to check CMake code style
+[8.746s] -- Added test 'uncrustify' to check C / C++ code style
+[8.746s] -- Configured uncrustify additional arguments: 
+[8.747s] -- Added test 'xmllint' to check XML markup files
+[8.755s] -- Configuring done
+[8.822s] -- Generating done
+[8.824s] -- Build files have been written to: /ws/src/nav2/build/nav2_planner

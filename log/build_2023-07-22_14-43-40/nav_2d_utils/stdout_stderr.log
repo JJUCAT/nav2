@@ -1,0 +1,12 @@
+[35m[1mScanning dependencies of target conversions[0m
+[35m[1mScanning dependencies of target path_ops[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/path_ops.dir/src/path_ops.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/conversions.dir/src/conversions.cpp.o[0m
+[ 50%] [32m[1mLinking CXX shared library libpath_ops.so[0m
+[ 50%] Built target path_ops
+[ 66%] [32m[1mLinking CXX shared library libconversions.so[0m
+[ 66%] Built target conversions
+[35m[1mScanning dependencies of target tf_help[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/tf_help.dir/src/tf_help.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libtf_help.so[0m
+[100%] Built target tf_help

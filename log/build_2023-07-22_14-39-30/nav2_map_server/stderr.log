@@ -1,0 +1,8 @@
+CMake Error at /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:146 (message):
+  GRAPHICSMAGICKCPP_LIBRARIES (missing: GRAPHICSMAGICKCPP_INCLUDE_DIRS)
+Call Stack (most recent call first):
+  /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:393 (_FPHSA_FAILURE_MESSAGE)
+  cmake_modules/FindGRAPHICSMAGICKCPP.cmake:31 (find_package_handle_standard_args)
+  CMakeLists.txt:16 (find_package)
+
+

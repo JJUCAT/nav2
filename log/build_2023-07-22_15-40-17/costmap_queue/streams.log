@@ -1,0 +1,34 @@
+[0.253s] Invoking command in '/ws/src/nav2/build/costmap_queue': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/costmap_queue -- -j16 -l16
+[0.634s] [ 27%] Built target costmap_queue
+[0.646s] [ 45%] Built target gtest
+[0.660s] [ 63%] Built target gtest_main
+[0.825s] [ 81%] Built target mbq_test
+[0.845s] [100%] Built target utest
+[0.871s] Invoked command in '/ws/src/nav2/build/costmap_queue' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/costmap_queue -- -j16 -l16
+[1.186s] Invoking command in '/ws/src/nav2/build/costmap_queue': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/costmap_queue
+[1.222s] -- Install configuration: "Release"
+[1.223s] -- Execute custom install script
+[1.223s] -- Symlinking: /ws/src/nav2/install/costmap_queue/lib/libcostmap_queue.a
+[1.271s] -- Symlinking: /ws/src/nav2/install/costmap_queue/include//costmap_queue/costmap_queue.hpp
+[1.334s] -- Symlinking: /ws/src/nav2/install/costmap_queue/include//costmap_queue/limited_costmap_queue.hpp
+[1.379s] -- Symlinking: /ws/src/nav2/install/costmap_queue/include//costmap_queue/map_based_queue.hpp
+[1.399s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/environment/library_path.sh
+[1.454s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/environment/library_path.dsv
+[1.474s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/ament_index/resource_index/package_run_dependencies/costmap_queue
+[1.524s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/ament_index/resource_index/parent_prefix_path/costmap_queue
+[1.578s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/environment/ament_prefix_path.sh
+[1.605s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/environment/ament_prefix_path.dsv
+[1.684s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/environment/path.sh
+[1.753s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/environment/path.dsv
+[1.836s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/local_setup.bash
+[1.903s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/local_setup.sh
+[1.950s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/local_setup.zsh
+[2.004s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/local_setup.dsv
+[2.059s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/package.dsv
+[2.109s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/ament_index/resource_index/packages/costmap_queue
+[2.210s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.293s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/cmake/ament_cmake_export_libraries-extras.cmake
+[2.351s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/cmake/costmap_queueConfig.cmake
+[2.394s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/cmake/costmap_queueConfig-version.cmake
+[2.454s] -- Symlinking: /ws/src/nav2/install/costmap_queue/share/costmap_queue/package.xml
+[2.541s] Invoked command in '/ws/src/nav2/build/costmap_queue' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/costmap_queue

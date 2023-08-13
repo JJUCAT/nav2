@@ -1,0 +1,59 @@
+[0.031s] Invoking command in '/ws/src/nav2/build/nav2_waypoint_follower': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_waypoint_follower -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_waypoint_follower
+[0.087s] -- The C compiler identification is GNU 9.4.0
+[0.146s] -- The CXX compiler identification is GNU 9.4.0
+[0.151s] -- Check for working C compiler: /usr/bin/cc
+[0.222s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.223s] -- Detecting C compiler ABI info
+[0.299s] -- Detecting C compiler ABI info - done
+[0.309s] -- Detecting C compile features
+[0.309s] -- Detecting C compile features - done
+[0.312s] -- Check for working CXX compiler: /usr/bin/c++
+[0.398s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.399s] -- Detecting CXX compiler ABI info
+[0.484s] -- Detecting CXX compiler ABI info - done
+[0.498s] -- Detecting CXX compile features
+[0.498s] -- Detecting CXX compile features - done
+[0.503s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.532s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.532s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.702s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.742s] -- Found nav2_common: 0.4.7 (/ws/src/nav2/install/nav2_common/share/nav2_common/cmake)
+[0.744s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.800s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.812s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.902s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.934s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.028s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.102s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.103s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.104s] -- Looking for pthread.h
+[1.181s] -- Looking for pthread.h - found
+[1.182s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.262s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.262s] -- Looking for pthread_create in pthreads
+[1.323s] -- Looking for pthread_create in pthreads - not found
+[1.323s] -- Looking for pthread_create in pthread
+[1.399s] -- Looking for pthread_create in pthread - found
+[1.401s] -- Found Threads: TRUE  
+[1.604s] -- Found rclcpp_action: 2.4.3 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[1.698s] -- Found rclcpp_lifecycle: 2.4.3 (/opt/ros/foxy/share/rclcpp_lifecycle/cmake)
+[1.740s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.868s] -- Found nav2_msgs: 0.4.7 (/ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake)
+[2.105s] -- Found nav2_util: 0.4.7 (/ws/src/nav2/install/nav2_util/share/nav2_util/cmake)
+[2.458s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[2.462s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[2.612s] -- Setting build type to Release as none was specified.
+[2.914s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[3.026s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.028s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.028s] -- Configured cppcheck include dirs: /ws/src/nav2/nav2_waypoint_follower/include
+[3.028s] -- Configured cppcheck exclude dirs and/or files: 
+[3.029s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.029s] -- Configured cpplint exclude dirs and/or files: 
+[3.030s] -- Added test 'lint_cmake' to check CMake code style
+[3.031s] -- Added test 'uncrustify' to check C / C++ code style
+[3.031s] -- Configured uncrustify additional arguments: 
+[3.031s] -- Added test 'xmllint' to check XML markup files
+[3.036s] -- Configuring done
+[3.097s] -- Generating done
+[3.099s] -- Build files have been written to: /ws/src/nav2/build/nav2_waypoint_follower

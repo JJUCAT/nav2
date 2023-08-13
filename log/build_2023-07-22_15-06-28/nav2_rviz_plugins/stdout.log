@@ -1,0 +1,36 @@
+[ 20%] [34m[1mAutomatic MOC for target nav2_rviz_plugins[0m
+[ 20%] Built target nav2_rviz_plugins_autogen
+[100%] Built target nav2_rviz_plugins
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins//plugins_description.xml
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/include//nav2_rviz_plugins/goal_common.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/include//nav2_rviz_plugins/goal_pose_updater.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/include//nav2_rviz_plugins/goal_tool.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/include//nav2_rviz_plugins/nav2_panel.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/include//nav2_rviz_plugins/ros_action_qevent.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/library_path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/library_path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/ament_index/resource_index/package_run_dependencies/nav2_rviz_plugins
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/ament_index/resource_index/parent_prefix_path/nav2_rviz_plugins
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/ament_prefix_path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/ament_prefix_path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.bash
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.sh
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.zsh
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/package.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/ament_index/resource_index/packages/nav2_rviz_plugins
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/ament_index/resource_index/rviz_common__pluginlib__plugin/nav2_rviz_plugins
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsConfig.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsConfig-version.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/package.xml
+-- Installing: /ws/src/nav2/install/nav2_rviz_plugins/lib/libnav2_rviz_plugins.so
+-- Set runtime path of "/ws/src/nav2/install/nav2_rviz_plugins/lib/libnav2_rviz_plugins.so" to ""
+-- Installing: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsExport.cmake
+-- Installing: /ws/src/nav2/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsExport-noconfig.cmake

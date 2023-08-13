@@ -1,0 +1,34 @@
+[35m[1mScanning dependencies of target nav2_navfn_planner[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/nav2_navfn_planner.dir/src/navfn_planner.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/nav2_navfn_planner.dir/src/navfn.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libnav2_navfn_planner.so[0m
+[100%] Built target nav2_navfn_planner
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner//global_planner_plugin.xml
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/lib/libnav2_navfn_planner.so
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/include//nav2_navfn_planner/navfn.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/include//nav2_navfn_planner/navfn_planner.hpp
+-- Up-to-date symlink: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/global_planner_plugin.xml
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/library_path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/library_path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/ament_index/resource_index/package_run_dependencies/nav2_navfn_planner
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/ament_index/resource_index/parent_prefix_path/nav2_navfn_planner
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/ament_prefix_path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/ament_prefix_path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/environment/path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/local_setup.bash
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/local_setup.sh
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/local_setup.zsh
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/local_setup.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/package.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/ament_index/resource_index/packages/nav2_navfn_planner
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_navfn_planner
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/ament_cmake_export_definitions-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/nav2_navfn_plannerConfig.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/cmake/nav2_navfn_plannerConfig-version.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_navfn_planner/share/nav2_navfn_planner/package.xml

@@ -1,0 +1,56 @@
+[0.041s] Invoking command in '/ws/src/nav2/build/nav2_behavior_tree': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_behavior_tree -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_behavior_tree
+[0.108s] -- The CXX compiler identification is GNU 9.4.0
+[0.112s] -- Check for working CXX compiler: /usr/bin/c++
+[0.198s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.199s] -- Detecting CXX compiler ABI info
+[0.280s] -- Detecting CXX compiler ABI info - done
+[0.293s] -- Detecting CXX compile features
+[0.293s] -- Detecting CXX compile features - done
+[0.298s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.329s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.329s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.517s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.566s] -- Found nav2_common: 0.4.7 (/ws/src/nav2/install/nav2_common/share/nav2_common/cmake)
+[0.570s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.646s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.658s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.748s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.776s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.864s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.928s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.930s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.941s] -- Looking for C++ include pthread.h
+[1.032s] -- Looking for C++ include pthread.h - found
+[1.032s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.128s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.128s] -- Looking for pthread_create in pthreads
+[1.201s] -- Looking for pthread_create in pthreads - not found
+[1.201s] -- Looking for pthread_create in pthread
+[1.286s] -- Looking for pthread_create in pthread - found
+[1.287s] -- Found Threads: TRUE  
+[1.474s] -- Found rclcpp_action: 2.4.3 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[1.565s] -- Found rclcpp_lifecycle: 2.4.3 (/opt/ros/foxy/share/rclcpp_lifecycle/cmake)
+[1.608s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.656s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.757s] -- Found nav2_msgs: 0.4.7 (/ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake)
+[2.135s] CMake Error at CMakeLists.txt:14 (find_package):
+[2.135s]   By not providing "Findbehaviortree_cpp_v3.cmake" in CMAKE_MODULE_PATH this
+[2.135s]   project has asked CMake to find a package configuration file provided by
+[2.135s]   "behaviortree_cpp_v3", but CMake did not find one.
+[2.135s] 
+[2.135s]   Could not find a package configuration file provided by
+[2.135s]   "behaviortree_cpp_v3" with any of the following names:
+[2.135s] 
+[2.135s]     behaviortree_cpp_v3Config.cmake
+[2.136s]     behaviortree_cpp_v3-config.cmake
+[2.136s] 
+[2.136s]   Add the installation prefix of "behaviortree_cpp_v3" to CMAKE_PREFIX_PATH
+[2.136s]   or set "behaviortree_cpp_v3_DIR" to a directory containing one of the above
+[2.136s]   files.  If "behaviortree_cpp_v3" provides a separate development package or
+[2.136s]   SDK, be sure it has been installed.
+[2.136s] 
+[2.136s] 
+[2.137s] -- Configuring incomplete, errors occurred!
+[2.137s] See also "/ws/src/nav2/build/nav2_behavior_tree/CMakeFiles/CMakeOutput.log".
+[2.137s] See also "/ws/src/nav2/build/nav2_behavior_tree/CMakeFiles/CMakeError.log".
+[2.145s] Invoked command in '/ws/src/nav2/build/nav2_behavior_tree' returned '1': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_behavior_tree -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_behavior_tree

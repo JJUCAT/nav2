@@ -1,0 +1,708 @@
+[0.018s] Invoking command in '/ws/src/nav2/build/nav2_msgs': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_common:/opt/ros/foxy PYTHONPATH=/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_msgs
+[0.065s] -- The C compiler identification is GNU 9.4.0
+[0.113s] -- The CXX compiler identification is GNU 9.4.0
+[0.117s] -- Check for working C compiler: /usr/bin/cc
+[0.173s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.174s] -- Detecting C compiler ABI info
+[0.234s] -- Detecting C compiler ABI info - done
+[0.244s] -- Detecting C compile features
+[0.244s] -- Detecting C compile features - done
+[0.246s] -- Check for working CXX compiler: /usr/bin/c++
+[0.318s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.318s] -- Detecting CXX compiler ABI info
+[0.385s] -- Detecting CXX compiler ABI info - done
+[0.396s] -- Detecting CXX compile features
+[0.396s] -- Detecting CXX compile features - done
+[0.399s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.423s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.423s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.565s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.599s] -- Found nav2_common: 0.4.7 (/ws/src/nav2/install/nav2_common/share/nav2_common/cmake)
+[0.611s] -- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)
+[0.638s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.646s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.718s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.745s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.822s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.848s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[0.966s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.978s] -- Found action_msgs: 1.0.0 (/opt/ros/foxy/share/action_msgs/cmake)
+[1.011s] -- Setting build type to Release as none was specified.
+[1.036s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.405s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[1.723s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.860s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.887s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[1.890s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.915s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[1.915s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.915s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.915s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.936s] -- Found PythonExtra: .so  
+[2.079s] -- Configuring done
+[2.313s] -- Generating done
+[2.319s] -- Build files have been written to: /ws/src/nav2/build/nav2_msgs
+[2.344s] Invoked command in '/ws/src/nav2/build/nav2_msgs' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_common:/opt/ros/foxy PYTHONPATH=/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_msgs
+[2.349s] Invoking command in '/ws/src/nav2/build/nav2_msgs': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_common:/opt/ros/foxy PYTHONPATH=/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_msgs -- -j16 -l16
+[2.578s] [35m[1mScanning dependencies of target nav2_msgs__cpp[0m
+[2.583s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.617s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[6.932s] [  1%] Built target nav2_msgs__cpp
+[6.944s] [  2%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[6.944s] [  3%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[6.944s] [  4%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[7.275s] [35m[1mScanning dependencies of target nav2_msgs__rosidl_generator_c[0m
+[7.313s] [  5%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/voxel_grid__functions.c.o[0m
+[7.313s] [  5%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/costmap__functions.c.o[0m
+[7.313s] [  5%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/particle__functions.c.o[0m
+[7.313s] [  6%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/behavior_tree_log__functions.c.o[0m
+[7.313s] [  6%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/costmap_meta_data__functions.c.o[0m
+[7.313s] [  7%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/behavior_tree_status_change__functions.c.o[0m
+[7.314s] [  7%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/msg/detail/particle_cloud__functions.c.o[0m
+[7.317s] [  8%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/clear_costmap_except_region__functions.c.o[0m
+[7.318s] [  8%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/get_costmap__functions.c.o[0m
+[7.318s] [  9%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/clear_costmap_around_robot__functions.c.o[0m
+[7.324s] [ 10%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/manage_lifecycle_nodes__functions.c.o[0m
+[7.324s] [ 10%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/clear_entire_costmap__functions.c.o[0m
+[7.324s] [ 10%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/load_map__functions.c.o[0m
+[7.491s] [ 11%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/srv/detail/save_map__functions.c.o[0m
+[7.506s] [ 12%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/compute_path_to_pose__functions.c.o[0m
+[7.507s] [ 12%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/back_up__functions.c.o[0m
+[7.521s] [ 12%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/follow_path__functions.c.o[0m
+[7.525s] [ 13%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/navigate_to_pose__functions.c.o[0m
+[7.538s] [ 13%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/wait__functions.c.o[0m
+[7.573s] [ 13%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/dummy_recovery__functions.c.o[0m
+[7.577s] [ 14%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/spin__functions.c.o[0m
+[7.577s] [ 15%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_generator_c.dir/rosidl_generator_c/nav2_msgs/action/detail/follow_waypoints__functions.c.o[0m
+[8.307s] [ 15%] [32m[1mLinking C shared library libnav2_msgs__rosidl_generator_c.so[0m
+[8.359s] [ 15%] Built target nav2_msgs__rosidl_generator_c
+[8.372s] [ 17%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[8.372s] [ 17%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[9.860s] [35m[1mScanning dependencies of target nav2_msgs__rosidl_typesupport_cpp[0m
+[9.893s] [ 19%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/behavior_tree_status_change__type_support.cpp.o[0m
+[9.893s] [ 19%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/particle_cloud__type_support.cpp.o[0m
+[9.894s] [ 19%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/costmap_meta_data__type_support.cpp.o[0m
+[9.894s] [ 19%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/costmap__type_support.cpp.o[0m
+[9.894s] [ 19%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/voxel_grid__type_support.cpp.o[0m
+[9.894s] [ 21%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/clear_costmap_around_robot__type_support.cpp.o[0m
+[9.895s] [ 20%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/particle__type_support.cpp.o[0m
+[9.895s] [ 21%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/msg/behavior_tree_log__type_support.cpp.o[0m
+[9.896s] [ 21%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/clear_costmap_except_region__type_support.cpp.o[0m
+[9.900s] [ 22%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/get_costmap__type_support.cpp.o[0m
+[9.908s] [ 23%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/manage_lifecycle_nodes__type_support.cpp.o[0m
+[9.909s] [ 23%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/clear_entire_costmap__type_support.cpp.o[0m
+[10.465s] [ 24%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/save_map__type_support.cpp.o[0m
+[10.467s] [ 24%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/back_up__type_support.cpp.o[0m
+[10.484s] [ 24%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/srv/load_map__type_support.cpp.o[0m
+[10.508s] [ 25%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/navigate_to_pose__type_support.cpp.o[0m
+[10.516s] [ 26%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/compute_path_to_pose__type_support.cpp.o[0m
+[10.524s] [ 26%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/follow_path__type_support.cpp.o[0m
+[10.607s] [ 26%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/wait__type_support.cpp.o[0m
+[10.611s] [ 27%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/spin__type_support.cpp.o[0m
+[10.633s] [ 27%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/dummy_recovery__type_support.cpp.o[0m
+[10.645s] [ 28%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nav2_msgs/action/follow_waypoints__type_support.cpp.o[0m
+[11.158s] [35m[1mScanning dependencies of target nav2_msgs__rosidl_typesupport_introspection_cpp[0m
+[11.207s] [ 30%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/costmap_meta_data__type_support.cpp.o[0m
+[11.207s] [ 30%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/behavior_tree_status_change__type_support.cpp.o[0m
+[11.207s] [ 30%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/behavior_tree_log__type_support.cpp.o[0m
+[11.208s] [ 30%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/costmap__type_support.cpp.o[0m
+[11.208s] [ 30%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/voxel_grid__type_support.cpp.o[0m
+[11.209s] [ 30%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/particle_cloud__type_support.cpp.o[0m
+[11.210s] [ 31%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/msg/detail/particle__type_support.cpp.o[0m
+[11.226s] [ 32%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/get_costmap__type_support.cpp.o[0m
+[11.279s] [ 32%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/clear_costmap_except_region__type_support.cpp.o[0m
+[11.308s] [ 33%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/clear_costmap_around_robot__type_support.cpp.o[0m
+[11.331s] [ 33%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/clear_entire_costmap__type_support.cpp.o[0m
+[11.446s] [ 33%] [32m[1mLinking CXX shared library libnav2_msgs__rosidl_typesupport_cpp.so[0m
+[11.598s] [ 33%] Built target nav2_msgs__rosidl_typesupport_cpp
+[11.631s] [ 33%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/load_map__type_support.cpp.o[0m
+[11.642s] [ 34%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/manage_lifecycle_nodes__type_support.cpp.o[0m
+[11.675s] [35m[1mScanning dependencies of target nav2_msgs__rosidl_typesupport_c[0m
+[11.820s] [ 34%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/costmap__type_support.cpp.o[0m
+[11.826s] [ 35%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/srv/detail/save_map__type_support.cpp.o[0m
+[11.892s] [ 35%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/back_up__type_support.cpp.o[0m
+[11.915s] [ 36%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/compute_path_to_pose__type_support.cpp.o[0m
+[11.931s] [ 37%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/costmap_meta_data__type_support.cpp.o[0m
+[11.936s] [ 37%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/follow_path__type_support.cpp.o[0m
+[11.954s] [ 37%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/wait__type_support.cpp.o[0m
+[11.958s] [ 38%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/navigate_to_pose__type_support.cpp.o[0m
+[11.965s] [ 39%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/spin__type_support.cpp.o[0m
+[11.975s] [ 39%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/dummy_recovery__type_support.cpp.o[0m
+[11.983s] [ 39%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/voxel_grid__type_support.cpp.o[0m
+[12.002s] [ 40%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nav2_msgs/action/detail/follow_waypoints__type_support.cpp.o[0m
+[12.026s] [ 41%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/behavior_tree_status_change__type_support.cpp.o[0m
+[12.051s] [ 41%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/behavior_tree_log__type_support.cpp.o[0m
+[12.141s] [ 42%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/particle__type_support.cpp.o[0m
+[12.203s] [ 42%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/msg/particle_cloud__type_support.cpp.o[0m
+[12.215s] [ 43%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/get_costmap__type_support.cpp.o[0m
+[12.311s] [ 43%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/clear_costmap_except_region__type_support.cpp.o[0m
+[12.332s] [ 44%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/clear_costmap_around_robot__type_support.cpp.o[0m
+[12.381s] [ 44%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/clear_entire_costmap__type_support.cpp.o[0m
+[12.400s] [ 45%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/manage_lifecycle_nodes__type_support.cpp.o[0m
+[12.462s] [ 45%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/load_map__type_support.cpp.o[0m
+[12.468s] [ 46%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/srv/save_map__type_support.cpp.o[0m
+[12.518s] [ 46%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/back_up__type_support.cpp.o[0m
+[12.546s] [ 47%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/compute_path_to_pose__type_support.cpp.o[0m
+[12.566s] [ 47%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/follow_path__type_support.cpp.o[0m
+[12.611s] [ 48%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/navigate_to_pose__type_support.cpp.o[0m
+[12.664s] [ 48%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/wait__type_support.cpp.o[0m
+[12.701s] [ 49%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/spin__type_support.cpp.o[0m
+[12.718s] [ 49%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/dummy_recovery__type_support.cpp.o[0m
+[12.735s] [ 50%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nav2_msgs/action/follow_waypoints__type_support.cpp.o[0m
+[12.826s] [35m[1mScanning dependencies of target nav2_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[12.854s] [ 50%] [32m[1mLinking CXX shared library libnav2_msgs__rosidl_typesupport_c.so[0m
+[12.878s] [ 53%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/behavior_tree_status_change__type_support.cpp.o[0m
+[12.878s] [ 53%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/particle__type_support.cpp.o[0m
+[12.879s] [ 53%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/voxel_grid__type_support.cpp.o[0m
+[12.879s] [ 53%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/costmap_meta_data__type_support.cpp.o[0m
+[12.879s] [ 53%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/behavior_tree_log__type_support.cpp.o[0m
+[12.879s] [ 53%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/costmap__type_support.cpp.o[0m
+[12.879s] [ 53%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/msg/detail/dds_fastrtps/particle_cloud__type_support.cpp.o[0m
+[12.880s] [ 54%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/get_costmap__type_support.cpp.o[0m
+[12.887s] [ 54%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/clear_costmap_except_region__type_support.cpp.o[0m
+[12.890s] [ 55%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/clear_costmap_around_robot__type_support.cpp.o[0m
+[12.891s] [ 55%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/clear_entire_costmap__type_support.cpp.o[0m
+[12.967s] [ 56%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/load_map__type_support.cpp.o[0m
+[12.975s] [ 56%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/manage_lifecycle_nodes__type_support.cpp.o[0m
+[12.980s] [ 56%] Built target nav2_msgs__rosidl_typesupport_c
+[13.043s] [ 57%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/srv/detail/dds_fastrtps/save_map__type_support.cpp.o[0m
+[13.168s] [ 58%] [32m[1mLinking CXX shared library libnav2_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[13.479s] [ 58%] Built target nav2_msgs__rosidl_typesupport_introspection_cpp
+[13.702s] [ 58%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/back_up__type_support.cpp.o[0m
+[13.769s] [ 59%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/compute_path_to_pose__type_support.cpp.o[0m
+[13.816s] [ 59%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/follow_path__type_support.cpp.o[0m
+[13.850s] [ 59%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/wait__type_support.cpp.o[0m
+[13.859s] [ 60%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/navigate_to_pose__type_support.cpp.o[0m
+[13.878s] [ 61%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/spin__type_support.cpp.o[0m
+[13.895s] [ 61%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/dummy_recovery__type_support.cpp.o[0m
+[13.913s] [ 62%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nav2_msgs/action/detail/dds_fastrtps/follow_waypoints__type_support.cpp.o[0m
+[13.957s] [35m[1mScanning dependencies of target nav2_msgs__rosidl_typesupport_introspection_c[0m
+[14.038s] [ 62%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/costmap__type_support.c.o[0m
+[14.079s] [ 63%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/costmap_meta_data__type_support.c.o[0m
+[14.088s] [ 63%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/voxel_grid__type_support.c.o[0m
+[14.099s] [ 64%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/behavior_tree_status_change__type_support.c.o[0m
+[14.103s] [ 65%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/particle__type_support.c.o[0m
+[14.109s] [ 65%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/behavior_tree_log__type_support.c.o[0m
+[14.210s] [ 65%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/msg/detail/particle_cloud__type_support.c.o[0m
+[14.228s] [ 66%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/get_costmap__type_support.c.o[0m
+[14.249s] [ 66%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/clear_costmap_except_region__type_support.c.o[0m
+[14.267s] [ 67%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/clear_costmap_around_robot__type_support.c.o[0m
+[14.269s] [ 67%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/clear_entire_costmap__type_support.c.o[0m
+[14.292s] [ 68%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/manage_lifecycle_nodes__type_support.c.o[0m
+[14.384s] [ 68%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/load_map__type_support.c.o[0m
+[14.392s] [ 68%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/back_up__type_support.c.o[0m
+[14.393s] [ 69%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/srv/detail/save_map__type_support.c.o[0m
+[14.402s] [ 69%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/wait__type_support.c.o[0m
+[14.406s] [ 69%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/follow_path__type_support.c.o[0m
+[14.413s] [ 70%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/compute_path_to_pose__type_support.c.o[0m
+[14.418s] [ 71%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/navigate_to_pose__type_support.c.o[0m
+[14.422s] [ 72%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/spin__type_support.c.o[0m
+[14.488s] [ 72%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/dummy_recovery__type_support.c.o[0m
+[14.533s] [ 73%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nav2_msgs/action/detail/follow_waypoints__type_support.c.o[0m
+[14.738s] [ 73%] [32m[1mLinking C shared library libnav2_msgs__rosidl_typesupport_introspection_c.so[0m
+[14.830s] [ 73%] Built target nav2_msgs__rosidl_typesupport_introspection_c
+[15.239s] [ 73%] [32m[1mLinking CXX shared library libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[15.367s] [ 73%] Built target nav2_msgs__rosidl_typesupport_fastrtps_cpp
+[15.381s] [ 74%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[19.570s] [35m[1mScanning dependencies of target nav2_msgs__rosidl_typesupport_fastrtps_c[0m
+[19.629s] [ 75%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/get_costmap__type_support_c.cpp.o[0m
+[19.630s] [ 75%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/costmap__type_support_c.cpp.o[0m
+[19.630s] [ 75%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/voxel_grid__type_support_c.cpp.o[0m
+[19.630s] [ 75%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/behavior_tree_log__type_support_c.cpp.o[0m
+[19.631s] [ 77%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/save_map__type_support_c.cpp.o[0m
+[19.631s] [ 77%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/particle__type_support_c.cpp.o[0m
+[19.631s] [ 78%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/manage_lifecycle_nodes__type_support_c.cpp.o[0m
+[19.631s] [ 80%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/clear_costmap_around_robot__type_support_c.cpp.o[0m
+[19.631s] [ 80%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/clear_entire_costmap__type_support_c.cpp.o[0m
+[19.631s] [ 80%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/costmap_meta_data__type_support_c.cpp.o[0m
+[19.632s] [ 80%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/particle_cloud__type_support_c.cpp.o[0m
+[19.632s] [ 81%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/msg/detail/behavior_tree_status_change__type_support_c.cpp.o[0m
+[19.632s] [ 81%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/load_map__type_support_c.cpp.o[0m
+[19.633s] [ 81%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/srv/detail/clear_costmap_except_region__type_support_c.cpp.o[0m
+[19.634s] [ 82%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/compute_path_to_pose__type_support_c.cpp.o[0m
+[19.639s] [ 82%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/back_up__type_support_c.cpp.o[0m
+[20.315s] [ 82%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/follow_path__type_support_c.cpp.o[0m
+[20.339s] [ 82%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/wait__type_support_c.cpp.o[0m
+[20.340s] [ 83%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/navigate_to_pose__type_support_c.cpp.o[0m
+[20.360s] [ 84%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/spin__type_support_c.cpp.o[0m
+[20.374s] [ 85%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/follow_waypoints__type_support_c.cpp.o[0m
+[20.390s] [ 85%] [32mBuilding CXX object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nav2_msgs/action/detail/dummy_recovery__type_support_c.cpp.o[0m
+[21.049s] [ 85%] [32m[1mLinking CXX shared library libnav2_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[21.140s] [ 85%] Built target nav2_msgs__rosidl_typesupport_fastrtps_c
+[21.150s] [35m[1mScanning dependencies of target nav2_msgs[0m
+[21.161s] [ 85%] Built target nav2_msgs
+[21.170s] [35m[1mScanning dependencies of target nav2_msgs__py[0m
+[21.181s] [ 86%] [34m[1mGenerating Python code for ROS interfaces[0m
+[29.015s] [ 86%] Built target nav2_msgs__py
+[29.027s] [35m[1mScanning dependencies of target nav2_msgs__python[0m
+[29.087s] [ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/msg/_costmap_meta_data_s.c.o[0m
+[29.087s] [ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/srv/_get_costmap_s.c.o[0m
+[29.087s] [ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/srv/_clear_entire_costmap_s.c.o[0m
+[29.087s] [ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/msg/_behavior_tree_log_s.c.o[0m
+[29.087s] [ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/msg/_voxel_grid_s.c.o[0m
+[29.087s] [ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/msg/_particle_cloud_s.c.o[0m
+[29.088s] [ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/msg/_behavior_tree_status_change_s.c.o[0m
+[29.088s] [ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/srv/_clear_costmap_except_region_s.c.o[0m
+[29.088s] [ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/msg/_costmap_s.c.o[0m
+[29.088s] [ 90%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/msg/_particle_s.c.o[0m
+[29.089s] [ 91%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/srv/_clear_costmap_around_robot_s.c.o[0m
+[29.089s] [ 91%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/srv/_load_map_s.c.o[0m
+[29.089s] [ 92%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/srv/_manage_lifecycle_nodes_s.c.o[0m
+[29.097s] [ 93%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/action/_compute_path_to_pose_s.c.o[0m
+[29.097s] [ 93%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/action/_back_up_s.c.o[0m
+[29.099s] [ 94%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/srv/_save_map_s.c.o[0m
+[29.298s] [ 95%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/action/_follow_path_s.c.o[0m
+[29.298s] [ 95%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/action/_navigate_to_pose_s.c.o[0m
+[29.302s] [ 96%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/action/_wait_s.c.o[0m
+[29.302s] [ 96%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/action/_follow_waypoints_s.c.o[0m
+[29.302s] [ 97%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/action/_spin_s.c.o[0m
+[29.302s] [ 97%] [32mBuilding C object CMakeFiles/nav2_msgs__python.dir/rosidl_generator_py/nav2_msgs/action/_dummy_recovery_s.c.o[0m
+[29.647s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/nav2_msgs/libnav2_msgs__python.so[0m
+[29.715s] [ 97%] Built target nav2_msgs__python
+[29.727s] [35m[1mScanning dependencies of target nav2_msgs__rosidl_typesupport_c__pyext[0m
+[29.727s] [35m[1mScanning dependencies of target nav2_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[29.727s] [35m[1mScanning dependencies of target nav2_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[29.749s] [ 99%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/nav2_msgs/_nav2_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[29.749s] [ 99%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/nav2_msgs/_nav2_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[29.749s] [100%] [32mBuilding C object CMakeFiles/nav2_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/nav2_msgs/_nav2_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[30.767s] [100%] [32m[1mLinking C shared library rosidl_generator_py/nav2_msgs/nav2_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[30.774s] [100%] [32m[1mLinking C shared library rosidl_generator_py/nav2_msgs/nav2_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[30.783s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/nav2_msgs/nav2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[30.815s] [100%] Built target nav2_msgs__rosidl_typesupport_introspection_c__pyext
+[30.823s] [100%] Built target nav2_msgs__rosidl_typesupport_c__pyext
+[30.854s] [100%] Built target nav2_msgs__rosidl_typesupport_fastrtps_c__pyext
+[30.863s] Invoked command in '/ws/src/nav2/build/nav2_msgs' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_common:/opt/ros/foxy PYTHONPATH=/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_msgs -- -j16 -l16
+[31.486s] Invoking command in '/ws/src/nav2/build/nav2_msgs': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_common:/opt/ros/foxy PYTHONPATH=/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_msgs
+[31.495s] -- Install configuration: "Release"
+[31.496s] -- Execute custom install script
+[31.496s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/ament_index/resource_index/rosidl_interfaces/nav2_msgs
+[31.509s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/back_up.h
+[31.518s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/compute_path_to_pose.h
+[31.535s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/back_up__functions.h
+[31.541s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/back_up__struct.h
+[31.547s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/back_up__type_support.h
+[31.554s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/compute_path_to_pose__functions.h
+[31.560s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/compute_path_to_pose__struct.h
+[31.573s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/compute_path_to_pose__type_support.h
+[31.585s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/dummy_recovery__functions.h
+[31.599s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/dummy_recovery__struct.h
+[31.611s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/dummy_recovery__type_support.h
+[31.622s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_path__functions.h
+[31.636s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_path__struct.h
+[31.652s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_path__type_support.h
+[31.665s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_waypoints__functions.h
+[31.677s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_waypoints__struct.h
+[31.692s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_waypoints__type_support.h
+[31.705s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/navigate_to_pose__functions.h
+[31.721s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/navigate_to_pose__struct.h
+[31.727s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/navigate_to_pose__type_support.h
+[31.737s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/spin__functions.h
+[31.751s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/spin__struct.h
+[31.757s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/spin__type_support.h
+[31.770s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/wait__functions.h
+[31.787s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/wait__struct.h
+[31.794s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/wait__type_support.h
+[31.811s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/dummy_recovery.h
+[31.825s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/follow_path.h
+[31.840s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/follow_waypoints.h
+[31.857s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/navigate_to_pose.h
+[31.870s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/spin.h
+[31.876s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/wait.h
+[31.883s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/behavior_tree_log.h
+[31.889s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/behavior_tree_status_change.h
+[31.895s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/costmap.h
+[31.901s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/costmap_meta_data.h
+[31.907s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_log__functions.h
+[31.912s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_log__struct.h
+[31.925s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_log__type_support.h
+[31.941s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_status_change__functions.h
+[31.953s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_status_change__struct.h
+[31.963s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_status_change__type_support.h
+[31.979s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap__functions.h
+[31.985s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap__struct.h
+[32.001s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap__type_support.h
+[32.016s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap_meta_data__functions.h
+[32.027s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap_meta_data__struct.h
+[32.037s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap_meta_data__type_support.h
+[32.050s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle__functions.h
+[32.065s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle__struct.h
+[32.072s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle__type_support.h
+[32.085s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle_cloud__functions.h
+[32.099s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle_cloud__struct.h
+[32.116s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle_cloud__type_support.h
+[32.127s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/voxel_grid__functions.h
+[32.138s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/voxel_grid__struct.h
+[32.150s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/voxel_grid__type_support.h
+[32.161s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/particle.h
+[32.178s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/particle_cloud.h
+[32.184s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/rosidl_generator_c__visibility_control.h
+[32.200s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/voxel_grid.h
+[32.210s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/clear_costmap_around_robot.h
+[32.219s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/clear_costmap_except_region.h
+[32.233s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/clear_entire_costmap.h
+[32.246s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_around_robot__functions.h
+[32.260s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_around_robot__struct.h
+[32.278s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_around_robot__type_support.h
+[32.289s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_except_region__functions.h
+[32.295s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_except_region__struct.h
+[32.301s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_except_region__type_support.h
+[32.307s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_entire_costmap__functions.h
+[32.313s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_entire_costmap__struct.h
+[32.329s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_entire_costmap__type_support.h
+[32.337s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/get_costmap__functions.h
+[32.345s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/get_costmap__struct.h
+[32.358s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/get_costmap__type_support.h
+[32.370s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/load_map__functions.h
+[32.382s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/load_map__struct.h
+[32.398s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/load_map__type_support.h
+[32.405s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/manage_lifecycle_nodes__functions.h
+[32.417s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/manage_lifecycle_nodes__struct.h
+[32.429s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/manage_lifecycle_nodes__type_support.h
+[32.447s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/save_map__functions.h
+[32.454s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/save_map__struct.h
+[32.465s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/save_map__type_support.h
+[32.472s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/get_costmap.h
+[32.479s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/load_map.h
+[32.487s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/manage_lifecycle_nodes.h
+[32.494s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/save_map.h
+[32.502s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/environment/library_path.sh
+[32.510s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/environment/library_path.dsv
+[32.517s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/back_up__rosidl_typesupport_fastrtps_c.h
+[32.525s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/compute_path_to_pose__rosidl_typesupport_fastrtps_c.h
+[32.531s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/dummy_recovery__rosidl_typesupport_fastrtps_c.h
+[32.538s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_path__rosidl_typesupport_fastrtps_c.h
+[32.545s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_waypoints__rosidl_typesupport_fastrtps_c.h
+[32.556s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/navigate_to_pose__rosidl_typesupport_fastrtps_c.h
+[32.569s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/spin__rosidl_typesupport_fastrtps_c.h
+[32.578s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/wait__rosidl_typesupport_fastrtps_c.h
+[32.592s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_log__rosidl_typesupport_fastrtps_c.h
+[32.598s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_status_change__rosidl_typesupport_fastrtps_c.h
+[32.605s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap__rosidl_typesupport_fastrtps_c.h
+[32.611s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap_meta_data__rosidl_typesupport_fastrtps_c.h
+[32.628s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle__rosidl_typesupport_fastrtps_c.h
+[32.642s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle_cloud__rosidl_typesupport_fastrtps_c.h
+[32.656s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/voxel_grid__rosidl_typesupport_fastrtps_c.h
+[32.663s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[32.670s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_around_robot__rosidl_typesupport_fastrtps_c.h
+[32.683s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_except_region__rosidl_typesupport_fastrtps_c.h
+[32.696s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_entire_costmap__rosidl_typesupport_fastrtps_c.h
+[32.704s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/get_costmap__rosidl_typesupport_fastrtps_c.h
+[32.720s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/load_map__rosidl_typesupport_fastrtps_c.h
+[32.733s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/manage_lifecycle_nodes__rosidl_typesupport_fastrtps_c.h
+[32.746s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/save_map__rosidl_typesupport_fastrtps_c.h
+[32.762s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_fastrtps_c.so
+[32.771s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/back_up__rosidl_typesupport_fastrtps_cpp.hpp
+[32.778s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/compute_path_to_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[32.785s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/dummy_recovery__rosidl_typesupport_fastrtps_cpp.hpp
+[32.798s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_path__rosidl_typesupport_fastrtps_cpp.hpp
+[32.809s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_waypoints__rosidl_typesupport_fastrtps_cpp.hpp
+[32.825s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/navigate_to_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[32.839s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/spin__rosidl_typesupport_fastrtps_cpp.hpp
+[32.853s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/wait__rosidl_typesupport_fastrtps_cpp.hpp
+[32.869s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_log__rosidl_typesupport_fastrtps_cpp.hpp
+[32.882s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_status_change__rosidl_typesupport_fastrtps_cpp.hpp
+[32.888s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap__rosidl_typesupport_fastrtps_cpp.hpp
+[32.897s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap_meta_data__rosidl_typesupport_fastrtps_cpp.hpp
+[32.903s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle__rosidl_typesupport_fastrtps_cpp.hpp
+[32.909s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle_cloud__rosidl_typesupport_fastrtps_cpp.hpp
+[32.921s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/voxel_grid__rosidl_typesupport_fastrtps_cpp.hpp
+[32.932s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[32.946s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_around_robot__rosidl_typesupport_fastrtps_cpp.hpp
+[32.952s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_except_region__rosidl_typesupport_fastrtps_cpp.hpp
+[32.959s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_entire_costmap__rosidl_typesupport_fastrtps_cpp.hpp
+[32.965s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/get_costmap__rosidl_typesupport_fastrtps_cpp.hpp
+[32.976s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/load_map__rosidl_typesupport_fastrtps_cpp.hpp
+[32.991s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/manage_lifecycle_nodes__rosidl_typesupport_fastrtps_cpp.hpp
+[33.008s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/save_map__rosidl_typesupport_fastrtps_cpp.hpp
+[33.024s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_fastrtps_cpp.so
+[33.035s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/back_up__rosidl_typesupport_introspection_c.h
+[33.045s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/compute_path_to_pose__rosidl_typesupport_introspection_c.h
+[33.052s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/dummy_recovery__rosidl_typesupport_introspection_c.h
+[33.059s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_path__rosidl_typesupport_introspection_c.h
+[33.066s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_waypoints__rosidl_typesupport_introspection_c.h
+[33.073s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/navigate_to_pose__rosidl_typesupport_introspection_c.h
+[33.089s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/spin__rosidl_typesupport_introspection_c.h
+[33.104s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/wait__rosidl_typesupport_introspection_c.h
+[33.111s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_log__rosidl_typesupport_introspection_c.h
+[33.118s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_status_change__rosidl_typesupport_introspection_c.h
+[33.132s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap__rosidl_typesupport_introspection_c.h
+[33.145s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap_meta_data__rosidl_typesupport_introspection_c.h
+[33.161s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle__rosidl_typesupport_introspection_c.h
+[33.175s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle_cloud__rosidl_typesupport_introspection_c.h
+[33.192s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/voxel_grid__rosidl_typesupport_introspection_c.h
+[33.199s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[33.206s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_around_robot__rosidl_typesupport_introspection_c.h
+[33.223s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_except_region__rosidl_typesupport_introspection_c.h
+[33.233s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_entire_costmap__rosidl_typesupport_introspection_c.h
+[33.246s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/get_costmap__rosidl_typesupport_introspection_c.h
+[33.264s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/load_map__rosidl_typesupport_introspection_c.h
+[33.275s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/manage_lifecycle_nodes__rosidl_typesupport_introspection_c.h
+[33.287s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/save_map__rosidl_typesupport_introspection_c.h
+[33.295s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/back_up.hpp
+[33.303s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/compute_path_to_pose.hpp
+[33.310s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/back_up__builder.hpp
+[33.318s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/back_up__struct.hpp
+[33.324s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/back_up__traits.hpp
+[33.332s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/back_up__type_support.hpp
+[33.339s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/compute_path_to_pose__builder.hpp
+[33.354s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/compute_path_to_pose__struct.hpp
+[33.361s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/compute_path_to_pose__traits.hpp
+[33.375s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/compute_path_to_pose__type_support.hpp
+[33.389s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/dummy_recovery__builder.hpp
+[33.403s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/dummy_recovery__struct.hpp
+[33.414s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/dummy_recovery__traits.hpp
+[33.421s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/dummy_recovery__type_support.hpp
+[33.432s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_path__builder.hpp
+[33.441s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_path__struct.hpp
+[33.454s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_path__traits.hpp
+[33.463s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_path__type_support.hpp
+[33.475s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_waypoints__builder.hpp
+[33.492s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_waypoints__struct.hpp
+[33.503s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_waypoints__traits.hpp
+[33.517s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_waypoints__type_support.hpp
+[33.524s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/navigate_to_pose__builder.hpp
+[33.531s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/navigate_to_pose__struct.hpp
+[33.538s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/navigate_to_pose__traits.hpp
+[33.544s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/navigate_to_pose__type_support.hpp
+[33.551s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/spin__builder.hpp
+[33.557s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/spin__struct.hpp
+[33.565s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/spin__traits.hpp
+[33.572s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/spin__type_support.hpp
+[33.578s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/wait__builder.hpp
+[33.585s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/wait__struct.hpp
+[33.591s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/wait__traits.hpp
+[33.598s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/wait__type_support.hpp
+[33.605s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/dummy_recovery.hpp
+[33.616s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/follow_path.hpp
+[33.627s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/follow_waypoints.hpp
+[33.638s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/navigate_to_pose.hpp
+[33.644s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/spin.hpp
+[33.661s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/wait.hpp
+[33.674s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/behavior_tree_log.hpp
+[33.680s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/behavior_tree_status_change.hpp
+[33.696s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/costmap.hpp
+[33.711s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/costmap_meta_data.hpp
+[33.718s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_log__builder.hpp
+[33.725s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_log__struct.hpp
+[33.738s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_log__traits.hpp
+[33.751s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_log__type_support.hpp
+[33.767s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_status_change__builder.hpp
+[33.775s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_status_change__struct.hpp
+[33.788s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_status_change__traits.hpp
+[33.805s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_status_change__type_support.hpp
+[33.816s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap__builder.hpp
+[33.832s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap__struct.hpp
+[33.845s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap__traits.hpp
+[33.860s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap__type_support.hpp
+[33.873s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap_meta_data__builder.hpp
+[33.880s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap_meta_data__struct.hpp
+[33.887s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap_meta_data__traits.hpp
+[33.895s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap_meta_data__type_support.hpp
+[33.906s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle__builder.hpp
+[33.913s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle__struct.hpp
+[33.926s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle__traits.hpp
+[33.934s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle__type_support.hpp
+[33.942s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle_cloud__builder.hpp
+[33.949s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle_cloud__struct.hpp
+[33.960s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle_cloud__traits.hpp
+[33.971s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle_cloud__type_support.hpp
+[33.982s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/voxel_grid__builder.hpp
+[33.989s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/voxel_grid__struct.hpp
+[33.997s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/voxel_grid__traits.hpp
+[34.007s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/voxel_grid__type_support.hpp
+[34.017s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/particle.hpp
+[34.025s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/particle_cloud.hpp
+[34.035s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[34.042s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/voxel_grid.hpp
+[34.050s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/clear_costmap_around_robot.hpp
+[34.067s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/clear_costmap_except_region.hpp
+[34.082s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/clear_entire_costmap.hpp
+[34.093s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_around_robot__builder.hpp
+[34.105s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_around_robot__struct.hpp
+[34.117s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_around_robot__traits.hpp
+[34.134s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_around_robot__type_support.hpp
+[34.146s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_except_region__builder.hpp
+[34.153s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_except_region__struct.hpp
+[34.166s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_except_region__traits.hpp
+[34.182s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_except_region__type_support.hpp
+[34.189s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_entire_costmap__builder.hpp
+[34.197s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_entire_costmap__struct.hpp
+[34.212s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_entire_costmap__traits.hpp
+[34.226s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_entire_costmap__type_support.hpp
+[34.233s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/get_costmap__builder.hpp
+[34.247s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/get_costmap__struct.hpp
+[34.264s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/get_costmap__traits.hpp
+[34.286s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/get_costmap__type_support.hpp
+[34.299s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/load_map__builder.hpp
+[34.310s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/load_map__struct.hpp
+[34.326s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/load_map__traits.hpp
+[34.340s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/load_map__type_support.hpp
+[34.349s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/manage_lifecycle_nodes__builder.hpp
+[34.358s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/manage_lifecycle_nodes__struct.hpp
+[34.365s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/manage_lifecycle_nodes__traits.hpp
+[34.372s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/manage_lifecycle_nodes__type_support.hpp
+[34.378s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/save_map__builder.hpp
+[34.385s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/save_map__struct.hpp
+[34.392s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/save_map__traits.hpp
+[34.399s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/save_map__type_support.hpp
+[34.406s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/get_costmap.hpp
+[34.415s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/load_map.hpp
+[34.425s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/manage_lifecycle_nodes.hpp
+[34.439s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/save_map.hpp
+[34.450s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/back_up__rosidl_typesupport_introspection_cpp.hpp
+[34.458s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/compute_path_to_pose__rosidl_typesupport_introspection_cpp.hpp
+[34.467s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/dummy_recovery__rosidl_typesupport_introspection_cpp.hpp
+[34.475s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_path__rosidl_typesupport_introspection_cpp.hpp
+[34.484s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/follow_waypoints__rosidl_typesupport_introspection_cpp.hpp
+[34.493s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/navigate_to_pose__rosidl_typesupport_introspection_cpp.hpp
+[34.500s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/spin__rosidl_typesupport_introspection_cpp.hpp
+[34.512s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/action/detail/wait__rosidl_typesupport_introspection_cpp.hpp
+[34.521s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_log__rosidl_typesupport_introspection_cpp.hpp
+[34.530s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/behavior_tree_status_change__rosidl_typesupport_introspection_cpp.hpp
+[34.540s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap__rosidl_typesupport_introspection_cpp.hpp
+[34.550s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/costmap_meta_data__rosidl_typesupport_introspection_cpp.hpp
+[34.558s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle__rosidl_typesupport_introspection_cpp.hpp
+[34.569s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/particle_cloud__rosidl_typesupport_introspection_cpp.hpp
+[34.576s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/msg/detail/voxel_grid__rosidl_typesupport_introspection_cpp.hpp
+[34.586s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_around_robot__rosidl_typesupport_introspection_cpp.hpp
+[34.596s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_costmap_except_region__rosidl_typesupport_introspection_cpp.hpp
+[34.604s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/clear_entire_costmap__rosidl_typesupport_introspection_cpp.hpp
+[34.611s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/get_costmap__rosidl_typesupport_introspection_cpp.hpp
+[34.619s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/load_map__rosidl_typesupport_introspection_cpp.hpp
+[34.632s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/manage_lifecycle_nodes__rosidl_typesupport_introspection_cpp.hpp
+[34.645s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/include/nav2_msgs/srv/detail/save_map__rosidl_typesupport_introspection_cpp.hpp
+[34.661s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/environment/pythonpath.sh
+[34.675s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/environment/pythonpath.dsv
+[34.686s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/__init__.py
+[34.703s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/msg/__init__.py
+[34.715s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/msg/_behavior_tree_log.py
+[34.729s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/msg/_behavior_tree_status_change.py
+[34.742s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/msg/_costmap.py
+[34.750s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/msg/_costmap_meta_data.py
+[34.757s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/msg/_particle.py
+[34.770s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/msg/_particle_cloud.py
+[34.783s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/msg/_voxel_grid.py
+[34.789s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/srv/__init__.py
+[34.796s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/srv/_clear_costmap_around_robot.py
+[34.810s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/srv/_clear_costmap_except_region.py
+[34.826s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/srv/_clear_entire_costmap.py
+[34.839s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/srv/_get_costmap.py
+[34.851s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/srv/_load_map.py
+[34.865s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/srv/_manage_lifecycle_nodes.py
+[34.874s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/srv/_save_map.py
+[34.884s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/action/__init__.py
+[34.895s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/action/_back_up.py
+[34.903s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/action/_compute_path_to_pose.py
+[34.909s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/action/_dummy_recovery.py
+[34.918s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/action/_follow_path.py
+[34.929s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/action/_follow_waypoints.py
+[34.936s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/action/_navigate_to_pose.py
+[34.943s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/action/_spin.py
+[34.950s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/action/_wait.py
+[34.956s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/nav2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[34.964s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/nav2_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[34.970s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/nav2_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[34.987s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__python.so
+[34.996s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/Costmap.idl
+[35.012s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/CostmapMetaData.idl
+[35.026s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/VoxelGrid.idl
+[35.033s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/BehaviorTreeStatusChange.idl
+[35.043s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/BehaviorTreeLog.idl
+[35.054s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/Particle.idl
+[35.063s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/ParticleCloud.idl
+[35.069s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/GetCostmap.idl
+[35.083s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapExceptRegion.idl
+[35.096s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapAroundRobot.idl
+[35.107s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearEntireCostmap.idl
+[35.116s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ManageLifecycleNodes.idl
+[35.123s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/LoadMap.idl
+[35.130s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/SaveMap.idl
+[35.141s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/BackUp.idl
+[35.155s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/ComputePathToPose.idl
+[35.163s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/FollowPath.idl
+[35.176s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/NavigateToPose.idl
+[35.188s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/Wait.idl
+[35.197s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/Spin.idl
+[35.207s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/DummyRecovery.idl
+[35.215s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/FollowWaypoints.idl
+[35.222s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/Costmap.msg
+[35.233s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/CostmapMetaData.msg
+[35.243s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/VoxelGrid.msg
+[35.255s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/BehaviorTreeStatusChange.msg
+[35.269s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/BehaviorTreeLog.msg
+[35.280s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/Particle.msg
+[35.293s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/msg/ParticleCloud.msg
+[35.311s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/GetCostmap.srv
+[35.319s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/GetCostmap_Request.msg
+[35.336s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/GetCostmap_Response.msg
+[35.350s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapExceptRegion.srv
+[35.356s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapExceptRegion_Request.msg
+[35.368s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapExceptRegion_Response.msg
+[35.387s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapAroundRobot.srv
+[35.399s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapAroundRobot_Request.msg
+[35.410s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearCostmapAroundRobot_Response.msg
+[35.422s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearEntireCostmap.srv
+[35.429s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearEntireCostmap_Request.msg
+[35.439s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ClearEntireCostmap_Response.msg
+[35.451s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ManageLifecycleNodes.srv
+[35.464s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ManageLifecycleNodes_Request.msg
+[35.480s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/ManageLifecycleNodes_Response.msg
+[35.495s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/LoadMap.srv
+[35.512s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/LoadMap_Request.msg
+[35.523s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/LoadMap_Response.msg
+[35.530s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/SaveMap.srv
+[35.546s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/SaveMap_Request.msg
+[35.554s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/srv/SaveMap_Response.msg
+[35.570s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/BackUp.action
+[35.588s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/ComputePathToPose.action
+[35.602s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/FollowPath.action
+[35.617s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/NavigateToPose.action
+[35.623s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/Wait.action
+[35.630s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/Spin.action
+[35.637s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/DummyRecovery.action
+[35.650s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/action/FollowWaypoints.action
+[35.661s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/ament_index/resource_index/package_run_dependencies/nav2_msgs
+[35.672s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/ament_index/resource_index/parent_prefix_path/nav2_msgs
+[35.685s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/environment/ament_prefix_path.sh
+[35.697s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/environment/ament_prefix_path.dsv
+[35.715s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/environment/path.sh
+[35.727s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/environment/path.dsv
+[35.734s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/local_setup.bash
+[35.741s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/local_setup.sh
+[35.753s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/local_setup.zsh
+[35.766s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/local_setup.dsv
+[35.783s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/package.dsv
+[35.791s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/ament_index/resource_index/packages/nav2_msgs
+[35.806s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/rosidl_cmake-extras.cmake
+[35.824s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[35.838s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[35.845s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[35.852s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[35.865s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[35.878s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[35.888s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgsConfig.cmake
+[35.903s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgsConfig-version.cmake
+[35.917s] -- Symlinking: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/package.xml
+[35.923s] -- Installing: /ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_generator_c.so
+[35.924s] -- Set runtime path of "/ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_generator_c.so" to ""
+[35.924s] -- Installing: /ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_introspection_c.so
+[35.925s] -- Set runtime path of "/ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_introspection_c.so" to ""
+[35.926s] -- Installing: /ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_c.so
+[35.928s] -- Set runtime path of "/ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_c.so" to ""
+[35.928s] -- Installing: /ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_introspection_cpp.so
+[35.929s] -- Set runtime path of "/ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[35.929s] -- Installing: /ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_cpp.so
+[35.929s] -- Set runtime path of "/ws/src/nav2/install/nav2_msgs/lib/libnav2_msgs__rosidl_typesupport_cpp.so" to ""
+[35.965s] Compiling '/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages/nav2_msgs/__init__.py'...
+[35.968s] -- Installing: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_generator_cExport.cmake
+[35.968s] -- Installing: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_generator_cExport-release.cmake
+[35.968s] -- Installing: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cExport.cmake
+[35.968s] -- Installing: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cExport-release.cmake
+[35.968s] -- Installing: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cExport.cmake
+[35.969s] -- Installing: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cExport-release.cmake
+[35.969s] -- Installing: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_generator_cppExport.cmake
+[35.969s] -- Installing: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[35.969s] -- Installing: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_introspection_cppExport-release.cmake
+[35.970s] -- Installing: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cppExport.cmake
+[35.970s] -- Installing: /ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake/nav2_msgs__rosidl_typesupport_cppExport-release.cmake
+[35.978s] Invoked command in '/ws/src/nav2/build/nav2_msgs' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_common:/opt/ros/foxy PYTHONPATH=/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_msgs

@@ -1,0 +1,70 @@
+[  8%] Built target gtest_main
+[  8%] Built target gtest
+[ 35%] Built target nav2_costmap_2d_core
+[ 39%] Built target array_parser_test
+[ 47%] Built target nav2_costmap_2d_cloud
+[ 50%] Built target nav2_costmap_2d_markers
+[ 52%] Built target collision_footprint_test
+[ 60%] Built target nav2_costmap_2d_client
+[ 75%] Built target layers
+[ 79%] Built target footprint_tests_exec
+[ 95%] Built target inflation_tests_exec
+[ 95%] Built target test_collision_checker_exec
+[ 95%] Built target range_tests_exec
+[ 95%] Built target obstacle_tests_exec
+[100%] Built target nav2_costmap_2d
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/libnav2_costmap_2d_core.so
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/liblayers.so
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/libnav2_costmap_2d_client.so
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d_markers
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d_cloud
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/costmap_plugins.xml
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/array_parser.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/clear_costmap_service.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/cost_values.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_2d.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_2d_publisher.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_2d_ros.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_layer.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_math.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_subscriber.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_topic_collision_checker.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/exceptions.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/footprint.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/footprint_collision_checker.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/footprint_subscriber.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/inflation_layer.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/layer.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/layered_costmap.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/observation.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/observation_buffer.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/obstacle_layer.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/range_sensor_layer.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/static_layer.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/voxel_layer.hpp
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/library_path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/library_path.dsv
+-- Up-to-date symlink: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d//costmap_plugins.xml
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/ament_index/resource_index/package_run_dependencies/nav2_costmap_2d
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/ament_index/resource_index/parent_prefix_path/nav2_costmap_2d
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/ament_prefix_path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/ament_prefix_path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/path.sh
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/path.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.bash
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.sh
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.zsh
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/package.dsv
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/ament_index/resource_index/packages/nav2_costmap_2d
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/ament_index/resource_index/nav2_costmap_2d__pluginlib__plugin/nav2_costmap_2d
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_definitions-extras.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/nav2_costmap_2dConfig.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/nav2_costmap_2dConfig-version.cmake
+-- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/package.xml

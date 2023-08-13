@@ -1,0 +1,37 @@
+[0.054s] Invoking command in '/ws/src/nav2/build/nav_2d_utils': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav_2d_utils -- -j16 -l16
+[0.123s] [ 33%] Built target path_ops
+[0.134s] [ 66%] Built target conversions
+[0.179s] [100%] Built target tf_help
+[0.196s] Invoked command in '/ws/src/nav2/build/nav_2d_utils' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav_2d_utils -- -j16 -l16
+[0.233s] Invoking command in '/ws/src/nav2/build/nav_2d_utils': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav_2d_utils
+[0.245s] -- Install configuration: "Release"
+[0.246s] -- Execute custom install script
+[0.246s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/lib/libconversions.so
+[0.247s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/lib/libpath_ops.so
+[0.247s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/lib/libtf_help.so
+[0.247s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/include//nav_2d_utils/conversions.hpp
+[0.247s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/include//nav_2d_utils/odom_subscriber.hpp
+[0.248s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/include//nav_2d_utils/parameters.hpp
+[0.248s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/include//nav_2d_utils/path_ops.hpp
+[0.248s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/include//nav_2d_utils/tf_help.hpp
+[0.248s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/environment/library_path.sh
+[0.249s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/environment/library_path.dsv
+[0.249s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/ament_index/resource_index/package_run_dependencies/nav_2d_utils
+[0.249s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/ament_index/resource_index/parent_prefix_path/nav_2d_utils
+[0.250s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/environment/ament_prefix_path.sh
+[0.250s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/environment/ament_prefix_path.dsv
+[0.250s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/environment/path.sh
+[0.254s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/environment/path.dsv
+[0.255s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/local_setup.bash
+[0.255s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/local_setup.sh
+[0.255s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/local_setup.zsh
+[0.256s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/local_setup.dsv
+[0.257s] -- Symlinking: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/package.dsv
+[0.262s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/ament_index/resource_index/packages/nav_2d_utils
+[0.263s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.263s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/cmake/ament_cmake_export_libraries-extras.cmake
+[0.263s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.264s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/cmake/nav_2d_utilsConfig.cmake
+[0.264s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/cmake/nav_2d_utilsConfig-version.cmake
+[0.264s] -- Up-to-date symlink: /ws/src/nav2/install/nav_2d_utils/share/nav_2d_utils/package.xml
+[0.275s] Invoked command in '/ws/src/nav2/build/nav_2d_utils' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav_2d_utils

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/ws/src/nav2/build/nav2_costmap_2d/nav2_costmap_2d" "/ws/src/nav2/build/nav2_costmap_2d/nav2_costmap_2d_markers" "/ws/src/nav2/build/nav2_costmap_2d/nav2_costmap_2d_cloud" "TARGETS" "nav2_costmap_2d" "nav2_costmap_2d_markers" "nav2_costmap_2d_cloud" "RUNTIME_DESTINATION" "lib/nav2_costmap_2d")

@@ -1,0 +1,4 @@
+Invoking command in '/ws/src/nav2/build/nav_2d_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /ws/src/nav2/build/nav_2d_msgs -- -j16 -l16
+Invoked command in '/ws/src/nav2/build/nav_2d_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /ws/src/nav2/build/nav_2d_msgs -- -j16 -l16
+Invoking command in '/ws/src/nav2/build/nav_2d_msgs': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /ws/src/nav2/build/nav_2d_msgs
+Invoked command in '/ws/src/nav2/build/nav_2d_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /ws/src/nav2/build/nav_2d_msgs

@@ -1,0 +1,17 @@
+[0.594s] Invoking command in '/ws/src/nav2/build/nav2_gazebo_spawner': PYTHONPATH=/ws/src/nav2/build/nav2_gazebo_spawner/prefix_override:/ws/src/nav2/install/nav2_gazebo_spawner/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /ws/src/nav2/build/nav2_gazebo_spawner/build --no-deps install_data
+[0.807s] running develop
+[0.895s] running egg_info
+[0.895s] writing nav2_gazebo_spawner.egg-info/PKG-INFO
+[0.896s] writing dependency_links to nav2_gazebo_spawner.egg-info/dependency_links.txt
+[0.896s] writing entry points to nav2_gazebo_spawner.egg-info/entry_points.txt
+[0.896s] writing requirements to nav2_gazebo_spawner.egg-info/requires.txt
+[0.896s] writing top-level names to nav2_gazebo_spawner.egg-info/top_level.txt
+[0.934s] reading manifest file 'nav2_gazebo_spawner.egg-info/SOURCES.txt'
+[0.934s] writing manifest file 'nav2_gazebo_spawner.egg-info/SOURCES.txt'
+[0.968s] running build_ext
+[0.968s] Creating /ws/src/nav2/install/nav2_gazebo_spawner/lib/python3.8/site-packages/nav2-gazebo-spawner.egg-link (link to .)
+[0.969s] Installing nav2_gazebo_spawner script to /ws/src/nav2/install/nav2_gazebo_spawner/lib/nav2_gazebo_spawner
+[0.969s] 
+[0.969s] Installed /ws/src/nav2/build/nav2_gazebo_spawner
+[0.969s] running install_data
+[1.017s] Invoked command in '/ws/src/nav2/build/nav2_gazebo_spawner' returned '0': PYTHONPATH=/ws/src/nav2/build/nav2_gazebo_spawner/prefix_override:/ws/src/nav2/install/nav2_gazebo_spawner/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /ws/src/nav2/build/nav2_gazebo_spawner/build --no-deps install_data

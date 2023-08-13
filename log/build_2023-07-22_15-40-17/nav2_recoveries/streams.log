@@ -1,0 +1,131 @@
+[0.042s] Invoking command in '/ws/src/nav2/build/nav2_recoveries': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_recoveries -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_recoveries
+[0.136s] -- The C compiler identification is GNU 9.4.0
+[0.222s] -- The CXX compiler identification is GNU 9.4.0
+[0.231s] -- Check for working C compiler: /usr/bin/cc
+[0.357s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.358s] -- Detecting C compiler ABI info
+[0.483s] -- Detecting C compiler ABI info - done
+[0.504s] -- Detecting C compile features
+[0.505s] -- Detecting C compile features - done
+[0.509s] -- Check for working CXX compiler: /usr/bin/c++
+[0.635s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.636s] -- Detecting CXX compiler ABI info
+[0.772s] -- Detecting CXX compiler ABI info - done
+[0.793s] -- Detecting CXX compile features
+[0.794s] -- Detecting CXX compile features - done
+[0.803s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.854s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.854s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.103s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.176s] -- Found nav2_common: 0.4.7 (/ws/src/nav2/install/nav2_common/share/nav2_common/cmake)
+[1.180s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.271s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.291s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.442s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.507s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.678s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.777s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.779s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.780s] -- Looking for pthread.h
+[1.879s] -- Looking for pthread.h - found
+[1.880s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.004s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.005s] -- Looking for pthread_create in pthreads
+[2.089s] -- Looking for pthread_create in pthreads - not found
+[2.089s] -- Looking for pthread_create in pthread
+[2.189s] -- Looking for pthread_create in pthread - found
+[2.189s] -- Found Threads: TRUE  
+[2.427s] -- Found rclcpp_action: 2.4.3 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[2.543s] -- Found rclcpp_lifecycle: 2.4.3 (/opt/ros/foxy/share/rclcpp_lifecycle/cmake)
+[2.591s] -- Found nav2_behavior_tree: 0.4.7 (/ws/src/nav2/install/nav2_behavior_tree/share/nav2_behavior_tree/cmake)
+[3.674s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[3.680s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[4.133s] -- Found nav2_costmap_2d: 0.4.7 (/ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake)
+[5.005s] -- Found nav2_core: 0.4.7 (/ws/src/nav2/install/nav2_core/share/nav2_core/cmake)
+[5.785s] -- Setting build type to Release as none was specified.
+[24.716s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[24.849s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[24.851s] -- Check if compiler accepts -pthread
+[24.926s] -- Check if compiler accepts -pthread - yes
+[27.712s] -- Added test 'copyright' to check source files copyright and LICENSE
+[27.714s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[27.714s] -- Configured cppcheck include dirs: /ws/src/nav2/nav2_recoveries/include
+[27.714s] -- Configured cppcheck exclude dirs and/or files: 
+[27.715s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[27.715s] -- Configured cpplint exclude dirs and/or files: 
+[27.716s] -- Added test 'lint_cmake' to check CMake code style
+[27.717s] -- Added test 'uncrustify' to check C / C++ code style
+[27.717s] -- Configured uncrustify additional arguments: 
+[27.718s] -- Added test 'xmllint' to check XML markup files
+[27.724s] -- Configuring done
+[27.943s] -- Generating done
+[27.945s] -- Build files have been written to: /ws/src/nav2/build/nav2_recoveries
+[27.964s] Invoked command in '/ws/src/nav2/build/nav2_recoveries' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_recoveries -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_recoveries
+[27.966s] Invoking command in '/ws/src/nav2/build/nav2_recoveries': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_recoveries -- -j16 -l16
+[28.012s] [35m[1mScanning dependencies of target gtest_main[0m
+[28.012s] [35m[1mScanning dependencies of target gtest[0m
+[28.012s] [35m[1mScanning dependencies of target recoveries_server_core[0m
+[28.012s] [35m[1mScanning dependencies of target nav2_wait_recovery[0m
+[28.012s] [35m[1mScanning dependencies of target nav2_spin_recovery[0m
+[28.012s] [35m[1mScanning dependencies of target nav2_backup_recovery[0m
+[28.027s] [  6%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[28.027s] [ 12%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[28.072s] [ 18%] [32mBuilding CXX object CMakeFiles/recoveries_server_core.dir/src/recovery_server.cpp.o[0m
+[28.077s] [ 31%] [32mBuilding CXX object CMakeFiles/nav2_wait_recovery.dir/plugins/wait.cpp.o[0m
+[28.077s] [ 31%] [32mBuilding CXX object CMakeFiles/nav2_spin_recovery.dir/plugins/spin.cpp.o[0m
+[28.082s] [ 37%] [32mBuilding CXX object CMakeFiles/nav2_backup_recovery.dir/plugins/back_up.cpp.o[0m
+[28.803s] [ 43%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[28.840s] [ 43%] Built target gtest_main
+[35.903s] [ 50%] [32m[1mLinking CXX shared library libnav2_wait_recovery.so[0m
+[36.085s] [ 56%] [32m[1mLinking CXX shared library libnav2_backup_recovery.so[0m
+[36.147s] [ 56%] Built target nav2_wait_recovery
+[36.170s] [ 62%] [32m[1mLinking CXX shared library libnav2_spin_recovery.so[0m
+[36.195s] [ 68%] [32m[1mLinking CXX static library libgtest.a[0m
+[36.241s] [ 68%] Built target gtest
+[36.255s] [35m[1mScanning dependencies of target test_recoveries[0m
+[36.327s] [ 75%] [32mBuilding CXX object test/CMakeFiles/test_recoveries.dir/test_recoveries.cpp.o[0m
+[36.338s] [ 75%] Built target nav2_backup_recovery
+[36.410s] [ 75%] Built target nav2_spin_recovery
+[37.857s] [ 81%] [32m[1mLinking CXX static library librecoveries_server_core.a[0m
+[37.897s] [ 81%] Built target recoveries_server_core
+[37.907s] [35m[1mScanning dependencies of target recoveries_server[0m
+[37.960s] [ 87%] [32mBuilding CXX object CMakeFiles/recoveries_server.dir/src/main.cpp.o[0m
+[40.814s] [ 93%] [32m[1mLinking CXX executable recoveries_server[0m
+[41.116s] [ 93%] Built target recoveries_server
+[44.882s] [100%] [32m[1mLinking CXX executable test_recoveries[0m
+[45.136s] [100%] Built target test_recoveries
+[45.152s] Invoked command in '/ws/src/nav2/build/nav2_recoveries' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_recoveries -- -j16 -l16
+[45.201s] Invoking command in '/ws/src/nav2/build/nav2_recoveries': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_recoveries
+[45.210s] -- Install configuration: "Release"
+[45.211s] -- Execute custom install script
+[45.211s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries//recovery_plugin.xml
+[45.224s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/lib/librecoveries_server_core.a
+[45.233s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/lib/libnav2_backup_recovery.so
+[45.243s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/lib/libnav2_spin_recovery.so
+[45.259s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/lib/libnav2_wait_recovery.so
+[45.269s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/lib/nav2_recoveries/recoveries_server
+[45.277s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/include//nav2_recoveries/recovery.hpp
+[45.289s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/include//nav2_recoveries/recovery_server.hpp
+[45.303s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/recovery_plugin.xml
+[45.303s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/environment/library_path.sh
+[45.315s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/environment/library_path.dsv
+[45.325s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/ament_index/resource_index/package_run_dependencies/nav2_recoveries
+[45.336s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/ament_index/resource_index/parent_prefix_path/nav2_recoveries
+[45.353s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/environment/ament_prefix_path.sh
+[45.367s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/environment/ament_prefix_path.dsv
+[45.380s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/environment/path.sh
+[45.391s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/environment/path.dsv
+[45.408s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/local_setup.bash
+[45.421s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/local_setup.sh
+[45.428s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/local_setup.zsh
+[45.438s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/local_setup.dsv
+[45.451s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/package.dsv
+[45.466s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/ament_index/resource_index/packages/nav2_recoveries
+[45.478s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_recoveries
+[45.486s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/cmake/ament_cmake_export_include_directories-extras.cmake
+[45.496s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/cmake/ament_cmake_export_libraries-extras.cmake
+[45.510s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/cmake/ament_cmake_export_definitions-extras.cmake
+[45.519s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/cmake/nav2_recoveriesConfig.cmake
+[45.529s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/cmake/nav2_recoveriesConfig-version.cmake
+[45.538s] -- Symlinking: /ws/src/nav2/install/nav2_recoveries/share/nav2_recoveries/package.xml
+[45.558s] Invoked command in '/ws/src/nav2/build/nav2_recoveries' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav2_behavior_tree:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav2_behavior_tree/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_recoveries

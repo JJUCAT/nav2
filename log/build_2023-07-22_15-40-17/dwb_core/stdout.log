@@ -1,0 +1,52 @@
+[35m[1mScanning dependencies of target gtest_main[0m
+[35m[1mScanning dependencies of target dwb_core[0m
+[35m[1mScanning dependencies of target gtest[0m
+[  9%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[ 18%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/dwb_core.dir/src/dwb_local_planner.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/dwb_core.dir/src/publisher.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/dwb_core.dir/src/illegal_trajectory_tracker.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/dwb_core.dir/src/trajectory_utils.cpp.o[0m
+[ 63%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[ 63%] Built target gtest_main
+[ 72%] [32m[1mLinking CXX static library libgtest.a[0m
+[ 72%] Built target gtest
+[ 81%] [32m[1mLinking CXX shared library libdwb_core.so[0m
+[ 81%] Built target dwb_core
+[35m[1mScanning dependencies of target utils_test[0m
+[ 90%] [32mBuilding CXX object test/CMakeFiles/utils_test.dir/utils_test.cpp.o[0m
+[100%] [32m[1mLinking CXX executable utils_test[0m
+[100%] Built target utils_test
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /ws/src/nav2/install/dwb_core/lib/libdwb_core.so
+-- Symlinking: /ws/src/nav2/install/dwb_core/include//dwb_core/dwb_local_planner.hpp
+-- Symlinking: /ws/src/nav2/install/dwb_core/include//dwb_core/exceptions.hpp
+-- Symlinking: /ws/src/nav2/install/dwb_core/include//dwb_core/illegal_trajectory_tracker.hpp
+-- Symlinking: /ws/src/nav2/install/dwb_core/include//dwb_core/publisher.hpp
+-- Symlinking: /ws/src/nav2/install/dwb_core/include//dwb_core/trajectory_critic.hpp
+-- Symlinking: /ws/src/nav2/install/dwb_core/include//dwb_core/trajectory_generator.hpp
+-- Symlinking: /ws/src/nav2/install/dwb_core/include//dwb_core/trajectory_utils.hpp
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/environment/library_path.sh
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/environment/library_path.dsv
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core//local_planner_plugin.xml
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/ament_index/resource_index/package_run_dependencies/dwb_core
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/ament_index/resource_index/parent_prefix_path/dwb_core
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/environment/ament_prefix_path.sh
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/environment/ament_prefix_path.dsv
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/environment/path.sh
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/environment/path.dsv
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/local_setup.bash
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/local_setup.sh
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/local_setup.zsh
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/local_setup.dsv
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/package.dsv
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/ament_index/resource_index/packages/dwb_core
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/ament_index/resource_index/nav2_core__pluginlib__plugin/dwb_core
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/cmake/ament_cmake_export_definitions-extras.cmake
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/cmake/dwb_coreConfig.cmake
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/cmake/dwb_coreConfig-version.cmake
+-- Symlinking: /ws/src/nav2/install/dwb_core/share/dwb_core/package.xml

@@ -1,0 +1,27 @@
+[0.038s] Invoking command in '/ws/src/nav2/build/nav2_waypoint_follower': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_waypoint_follower -- -j16 -l16
+[0.122s] [ 50%] Built target waypoint_follower_core
+[0.162s] [100%] Built target waypoint_follower
+[0.183s] Invoked command in '/ws/src/nav2/build/nav2_waypoint_follower' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_waypoint_follower -- -j16 -l16
+[0.220s] Invoking command in '/ws/src/nav2/build/nav2_waypoint_follower': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_waypoint_follower
+[0.234s] -- Install configuration: "Release"
+[0.235s] -- Execute custom install script
+[0.235s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/lib/libwaypoint_follower_core.so
+[0.235s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/lib/nav2_waypoint_follower/waypoint_follower
+[0.236s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/include//nav2_waypoint_follower/waypoint_follower.hpp
+[0.236s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/ament_index/resource_index/package_run_dependencies/nav2_waypoint_follower
+[0.236s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/ament_index/resource_index/parent_prefix_path/nav2_waypoint_follower
+[0.236s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/environment/ament_prefix_path.sh
+[0.236s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/environment/ament_prefix_path.dsv
+[0.237s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/environment/path.sh
+[0.237s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/environment/path.dsv
+[0.237s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/local_setup.bash
+[0.237s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/local_setup.sh
+[0.238s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/local_setup.zsh
+[0.238s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/local_setup.dsv
+[0.241s] -- Symlinking: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/package.dsv
+[0.249s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/ament_index/resource_index/packages/nav2_waypoint_follower
+[0.249s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.249s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/cmake/nav2_waypoint_followerConfig.cmake
+[0.249s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/cmake/nav2_waypoint_followerConfig-version.cmake
+[0.250s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_waypoint_follower/share/nav2_waypoint_follower/package.xml
+[0.282s] Invoked command in '/ws/src/nav2/build/nav2_waypoint_follower' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_waypoint_follower

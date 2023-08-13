@@ -1,0 +1,73 @@
+[0.351s] Invoking command in '/ws/src/nav2/build/nav2_controller': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav_2d_utils:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav_2d_utils:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav_2d_utils/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_controller -- -j16 -l16
+[0.615s] [35m[1mScanning dependencies of target simple_goal_checker[0m
+[0.615s] [35m[1mScanning dependencies of target simple_progress_checker[0m
+[0.623s] [35m[1mScanning dependencies of target controller_server_core[0m
+[0.647s] [35m[1mScanning dependencies of target gtest[0m
+[0.683s] [35m[1mScanning dependencies of target gtest_main[0m
+[0.753s] [  5%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[0.811s] [ 11%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[0.945s] [ 16%] [32mBuilding CXX object CMakeFiles/simple_progress_checker.dir/plugins/simple_progress_checker.cpp.o[0m
+[1.056s] [ 22%] [32mBuilding CXX object CMakeFiles/simple_goal_checker.dir/plugins/simple_goal_checker.cpp.o[0m
+[1.068s] [ 27%] [32mBuilding CXX object CMakeFiles/controller_server_core.dir/src/nav2_controller.cpp.o[0m
+[4.199s] [ 33%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[4.463s] [ 33%] Built target gtest_main
+[9.997s] [ 38%] [32m[1mLinking CXX shared library libsimple_goal_checker.so[0m
+[10.290s] [ 44%] [32m[1mLinking CXX shared library libsimple_progress_checker.so[0m
+[10.857s] [ 44%] Built target simple_goal_checker
+[10.910s] [ 44%] Built target simple_progress_checker
+[10.923s] [35m[1mScanning dependencies of target stopped_goal_checker[0m
+[11.089s] [ 50%] [32mBuilding CXX object CMakeFiles/stopped_goal_checker.dir/plugins/stopped_goal_checker.cpp.o[0m
+[17.434s] [ 55%] [32m[1mLinking CXX shared library libstopped_goal_checker.so[0m
+[17.912s] [ 55%] Built target stopped_goal_checker
+[22.759s] [ 61%] [32m[1mLinking CXX static library libgtest.a[0m
+[22.818s] [ 61%] Built target gtest
+[22.838s] [35m[1mScanning dependencies of target gctest[0m
+[22.838s] [35m[1mScanning dependencies of target pctest[0m
+[22.941s] [ 72%] [32mBuilding CXX object plugins/test/CMakeFiles/gctest.dir/goal_checker.cpp.o[0m
+[22.941s] [ 72%] [32mBuilding CXX object plugins/test/CMakeFiles/pctest.dir/progress_checker.cpp.o[0m
+[30.395s] [ 77%] [32m[1mLinking CXX executable pctest[0m
+[31.052s] [ 83%] [32m[1mLinking CXX executable gctest[0m
+[31.625s] [ 83%] Built target pctest
+[32.102s] [ 83%] Built target gctest
+[49.653s] [ 88%] [32m[1mLinking CXX static library libcontroller_server_core.a[0m
+[49.722s] [ 88%] Built target controller_server_core
+[49.737s] [35m[1mScanning dependencies of target controller_server[0m
+[49.817s] [ 94%] [32mBuilding CXX object CMakeFiles/controller_server.dir/src/main.cpp.o[0m
+[55.714s] [100%] [32m[1mLinking CXX executable controller_server[0m
+[56.252s] [100%] Built target controller_server
+[56.270s] Invoked command in '/ws/src/nav2/build/nav2_controller' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav_2d_utils:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav_2d_utils:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav_2d_utils/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_controller -- -j16 -l16
+[56.328s] Invoking command in '/ws/src/nav2/build/nav2_controller': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav_2d_utils:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav_2d_utils:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav_2d_utils/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_controller
+[56.340s] -- Install configuration: "Release"
+[56.341s] -- Execute custom install script
+[56.342s] -- Symlinking: /ws/src/nav2/install/nav2_controller/lib/libsimple_progress_checker.so
+[56.357s] -- Symlinking: /ws/src/nav2/install/nav2_controller/lib/libsimple_goal_checker.so
+[56.375s] -- Symlinking: /ws/src/nav2/install/nav2_controller/lib/libstopped_goal_checker.so
+[56.392s] -- Symlinking: /ws/src/nav2/install/nav2_controller/lib/libcontroller_server_core.a
+[56.410s] -- Symlinking: /ws/src/nav2/install/nav2_controller/lib/nav2_controller/controller_server
+[56.424s] -- Symlinking: /ws/src/nav2/install/nav2_controller/include//nav2_controller/nav2_controller.hpp
+[56.440s] -- Symlinking: /ws/src/nav2/install/nav2_controller/include//nav2_controller/plugins/simple_goal_checker.hpp
+[56.453s] -- Symlinking: /ws/src/nav2/install/nav2_controller/include//nav2_controller/plugins/simple_progress_checker.hpp
+[56.472s] -- Symlinking: /ws/src/nav2/install/nav2_controller/include//nav2_controller/plugins/stopped_goal_checker.hpp
+[56.486s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/library_path.sh
+[56.500s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/library_path.dsv
+[56.514s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller//plugins.xml
+[56.537s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/ament_index/resource_index/package_run_dependencies/nav2_controller
+[56.551s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/ament_index/resource_index/parent_prefix_path/nav2_controller
+[56.571s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/ament_prefix_path.sh
+[56.586s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/ament_prefix_path.dsv
+[56.599s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/path.sh
+[56.618s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/environment/path.dsv
+[56.636s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/local_setup.bash
+[56.650s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/local_setup.sh
+[56.668s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/local_setup.zsh
+[56.682s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/local_setup.dsv
+[56.696s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/package.dsv
+[56.715s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/ament_index/resource_index/packages/nav2_controller
+[56.728s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_controller
+[56.745s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/cmake/ament_cmake_export_include_directories-extras.cmake
+[56.758s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/cmake/ament_cmake_export_libraries-extras.cmake
+[56.772s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/cmake/ament_cmake_export_definitions-extras.cmake
+[56.785s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/cmake/nav2_controllerConfig.cmake
+[56.799s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/cmake/nav2_controllerConfig-version.cmake
+[56.818s] -- Symlinking: /ws/src/nav2/install/nav2_controller/share/nav2_controller/package.xml
+[56.860s] Invoked command in '/ws/src/nav2/build/nav2_controller' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav_2d_utils:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_core:/ws/src/nav2/install/nav2_costmap_2d:/ws/src/nav2/install/nav_2d_utils:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav_2d_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_costmap_2d/lib:/ws/src/nav2/install/nav_2d_utils/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_controller

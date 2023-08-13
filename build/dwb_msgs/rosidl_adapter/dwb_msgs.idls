@@ -1,0 +1,9 @@
+/ws/src/nav2/build/dwb_msgs/rosidl_adapter/dwb_msgs:msg/CriticScore.idl
+/ws/src/nav2/build/dwb_msgs/rosidl_adapter/dwb_msgs:msg/LocalPlanEvaluation.idl
+/ws/src/nav2/build/dwb_msgs/rosidl_adapter/dwb_msgs:msg/Trajectory2D.idl
+/ws/src/nav2/build/dwb_msgs/rosidl_adapter/dwb_msgs:msg/TrajectoryScore.idl
+/ws/src/nav2/build/dwb_msgs/rosidl_adapter/dwb_msgs:srv/DebugLocalPlan.idl
+/ws/src/nav2/build/dwb_msgs/rosidl_adapter/dwb_msgs:srv/GenerateTrajectory.idl
+/ws/src/nav2/build/dwb_msgs/rosidl_adapter/dwb_msgs:srv/GenerateTwists.idl
+/ws/src/nav2/build/dwb_msgs/rosidl_adapter/dwb_msgs:srv/GetCriticScore.idl
+/ws/src/nav2/build/dwb_msgs/rosidl_adapter/dwb_msgs:srv/ScoreTrajectory.idl

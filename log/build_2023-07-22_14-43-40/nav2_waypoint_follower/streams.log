@@ -1,0 +1,9 @@
+[0.040s] Invoking command in '/ws/src/nav2/build/nav2_waypoint_follower': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_waypoint_follower -- -j16 -l16
+[0.085s] [35m[1mScanning dependencies of target waypoint_follower_core[0m
+[0.180s] [ 25%] [32mBuilding CXX object CMakeFiles/waypoint_follower_core.dir/src/waypoint_follower.cpp.o[0m
+[8.812s] [ 50%] [32m[1mLinking CXX shared library libwaypoint_follower_core.so[0m
+[8.983s] [ 50%] Built target waypoint_follower_core
+[8.994s] [35m[1mScanning dependencies of target waypoint_follower[0m
+[9.039s] [ 75%] [32mBuilding CXX object CMakeFiles/waypoint_follower.dir/src/main.cpp.o[0m
+[10.920s] [100%] [32m[1mLinking CXX executable waypoint_follower[0m
+[11.105s] [100%] Built target waypoint_follower

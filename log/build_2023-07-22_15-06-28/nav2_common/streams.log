@@ -1,0 +1,32 @@
+[0.029s] Invoking command in '/ws/src/nav2/build/nav2_common': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /ws/src/nav2/build/nav2_common -- -j16 -l16
+[0.223s] Invoked command in '/ws/src/nav2/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /ws/src/nav2/build/nav2_common -- -j16 -l16
+[0.252s] Invoking command in '/ws/src/nav2/build/nav2_common': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /ws/src/nav2/build/nav2_common
+[0.261s] -- Install configuration: ""
+[0.261s] -- Execute custom install script
+[0.261s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/environment/pythonpath.sh
+[0.262s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/environment/pythonpath.dsv
+[0.262s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/lib/python3.8/site-packages/nav2_common/__init__.py
+[0.263s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/__init__.py
+[0.263s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/has_node_params.py
+[0.263s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/replace_string.py
+[0.263s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/rewritten_yaml.py
+[0.263s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/ament_index/resource_index/package_run_dependencies/nav2_common
+[0.263s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/ament_index/resource_index/parent_prefix_path/nav2_common
+[0.264s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/environment/ament_prefix_path.sh
+[0.264s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/environment/ament_prefix_path.dsv
+[0.264s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/environment/path.sh
+[0.264s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/environment/path.dsv
+[0.264s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/local_setup.bash
+[0.264s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/local_setup.sh
+[0.265s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/local_setup.zsh
+[0.265s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/local_setup.dsv
+[0.265s] -- Symlinking: /ws/src/nav2/install/nav2_common/share/nav2_common/package.dsv
+[0.274s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/ament_index/resource_index/packages/nav2_common
+[0.275s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/cmake/nav2_common-extras.cmake
+[0.275s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/cmake/nav2_commonConfig.cmake
+[0.275s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/cmake/nav2_commonConfig-version.cmake
+[0.275s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/package.xml
+[0.276s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_common/share/nav2_common/cmake/nav2_package.cmake
+[0.304s] Listing '/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages/nav2_common'...
+[0.304s] Listing '/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch'...
+[0.311s] Invoked command in '/ws/src/nav2/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /ws/src/nav2/build/nav2_common

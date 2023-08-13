@@ -1,0 +1,41 @@
+[0.042s] Invoking command in '/ws/src/nav2/build/nav2_map_server': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_map_server -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_map_server
+[0.059s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.081s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.393s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.405s] -- Found nav2_common: 0.4.7 (/ws/src/nav2/install/nav2_common/share/nav2_common/cmake)
+[0.405s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.466s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.472s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.749s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.862s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.865s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.188s] -- Found rclcpp_lifecycle: 2.4.3 (/opt/ros/foxy/share/rclcpp_lifecycle/cmake)
+[1.251s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.494s] -- Found nav2_msgs: 0.4.7 (/ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake)
+[2.042s] -- Found yaml_cpp_vendor: 7.0.3 (/opt/ros/foxy/share/yaml_cpp_vendor/cmake)
+[2.042s] -- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'
+[2.043s] -- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)
+[2.061s] -- Found nav2_util: 0.4.7 (/ws/src/nav2/install/nav2_util/share/nav2_util/cmake)
+[2.544s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[2.712s] -- Found GRAPHICSMAGICKCPP: /usr/include/GraphicsMagick  
+[2.712s] -- Setting build type to Release as none was specified.
+[3.574s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[3.749s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[3.752s] -- Check if compiler accepts -pthread
+[3.839s] -- Check if compiler accepts -pthread - yes
+[3.845s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[3.854s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[3.868s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.868s] -- Configured cppcheck include dirs: /ws/src/nav2/nav2_map_server/include
+[3.868s] -- Configured cppcheck exclude dirs and/or files: 
+[3.870s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.870s] -- Configured cpplint exclude dirs and/or files: 
+[3.871s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.872s] -- Added test 'lint_cmake' to check CMake code style
+[3.873s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[3.875s] -- Added test 'uncrustify' to check C / C++ code style
+[3.875s] -- Configured uncrustify additional arguments: 
+[3.876s] -- Added test 'xmllint' to check XML markup files
+[3.884s] -- Configuring done
+[4.160s] -- Generating done
+[4.163s] -- Build files have been written to: /ws/src/nav2/build/nav2_map_server

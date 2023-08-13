@@ -1,0 +1,39 @@
+[0.040s] Invoking command in '/ws/src/nav2/build/nav2_amcl': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_amcl -- -j16 -l16
+[0.091s] [35m[1mScanning dependencies of target pf_lib[0m
+[0.091s] [35m[1mScanning dependencies of target map_lib[0m
+[0.108s] [ 11%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map_draw.c.o[0m
+[0.108s] [ 11%] [32mBuilding CXX object src/map/CMakeFiles/map_lib.dir/map_cspace.cpp.o[0m
+[0.108s] [ 15%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map.c.o[0m
+[0.108s] [ 19%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf.c.o[0m
+[0.109s] [ 23%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_kdtree.c.o[0m
+[0.109s] [ 11%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map_range.c.o[0m
+[0.114s] [ 26%] [32mBuilding C object src/map/CMakeFiles/map_lib.dir/map_store.c.o[0m
+[0.122s] [ 30%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_pdf.c.o[0m
+[0.122s] [ 34%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_vector.c.o[0m
+[0.124s] [ 38%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/eig3.c.o[0m
+[0.136s] [ 42%] [32mBuilding C object src/pf/CMakeFiles/pf_lib.dir/pf_draw.c.o[0m
+[0.385s] [ 46%] [32m[1mLinking C shared library libpf_lib.so[0m
+[0.430s] [ 46%] Built target pf_lib
+[0.443s] [35m[1mScanning dependencies of target motions_lib[0m
+[0.463s] [ 53%] [32mBuilding CXX object src/motion_model/CMakeFiles/motions_lib.dir/omni_motion_model.cpp.o[0m
+[0.463s] [ 53%] [32mBuilding CXX object src/motion_model/CMakeFiles/motions_lib.dir/differential_motion_model.cpp.o[0m
+[0.471s] [ 57%] [32mBuilding CXX object src/motion_model/CMakeFiles/motions_lib.dir/motion_model.cpp.o[0m
+[0.660s] [ 61%] [32m[1mLinking CXX shared library libmap_lib.so[0m
+[0.869s] [ 61%] Built target map_lib
+[0.885s] [35m[1mScanning dependencies of target sensors_lib[0m
+[0.910s] [ 65%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/beam_model.cpp.o[0m
+[0.910s] [ 69%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/likelihood_field_model.cpp.o[0m
+[0.910s] [ 76%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/likelihood_field_model_prob.cpp.o[0m
+[0.910s] [ 76%] [32mBuilding CXX object src/sensors/CMakeFiles/sensors_lib.dir/laser/laser.cpp.o[0m
+[0.951s] [ 80%] [32m[1mLinking CXX shared library libmotions_lib.so[0m
+[1.340s] [ 80%] Built target motions_lib
+[1.453s] [ 84%] [32m[1mLinking CXX shared library libsensors_lib.so[0m
+[1.573s] [ 84%] Built target sensors_lib
+[1.587s] [35m[1mScanning dependencies of target amcl_core[0m
+[1.652s] [ 88%] [32mBuilding CXX object CMakeFiles/amcl_core.dir/src/amcl_node.cpp.o[0m
+[20.230s] [ 92%] [32m[1mLinking CXX shared library libamcl_core.so[0m
+[20.504s] [ 92%] Built target amcl_core
+[20.517s] [35m[1mScanning dependencies of target amcl[0m
+[20.567s] [ 96%] [32mBuilding CXX object CMakeFiles/amcl.dir/src/main.cpp.o[0m
+[22.739s] [100%] [32m[1mLinking CXX executable amcl[0m
+[22.940s] [100%] Built target amcl

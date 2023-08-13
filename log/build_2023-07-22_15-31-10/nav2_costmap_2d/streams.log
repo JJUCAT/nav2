@@ -1,0 +1,74 @@
+[0.022s] Invoking command in '/ws/src/nav2/build/nav2_costmap_2d': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_map_server/lib:/ws/src/nav2/install/nav2_lifecycle_manager/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_costmap_2d -- -j16 -l16
+[0.068s] [  8%] Built target gtest_main
+[0.068s] [  8%] Built target gtest
+[0.106s] [ 35%] Built target nav2_costmap_2d_core
+[0.134s] [ 39%] Built target array_parser_test
+[0.138s] [ 47%] Built target nav2_costmap_2d_cloud
+[0.139s] [ 50%] Built target nav2_costmap_2d_markers
+[0.139s] [ 52%] Built target collision_footprint_test
+[0.147s] [ 60%] Built target nav2_costmap_2d_client
+[0.164s] [ 75%] Built target layers
+[0.202s] [ 79%] Built target footprint_tests_exec
+[0.207s] [ 95%] Built target inflation_tests_exec
+[0.207s] [ 95%] Built target test_collision_checker_exec
+[0.207s] [ 95%] Built target range_tests_exec
+[0.208s] [ 95%] Built target obstacle_tests_exec
+[0.208s] [100%] Built target nav2_costmap_2d
+[0.217s] Invoked command in '/ws/src/nav2/build/nav2_costmap_2d' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_map_server/lib:/ws/src/nav2/install/nav2_lifecycle_manager/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/nav2_costmap_2d -- -j16 -l16
+[0.268s] Invoking command in '/ws/src/nav2/build/nav2_costmap_2d': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_map_server/lib:/ws/src/nav2/install/nav2_lifecycle_manager/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_costmap_2d
+[0.276s] -- Install configuration: "Release"
+[0.276s] -- Execute custom install script
+[0.277s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/libnav2_costmap_2d_core.so
+[0.286s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/liblayers.so
+[0.293s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/libnav2_costmap_2d_client.so
+[0.301s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d
+[0.309s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d_markers
+[0.317s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/lib/nav2_costmap_2d/nav2_costmap_2d_cloud
+[0.325s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/costmap_plugins.xml
+[0.333s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/array_parser.hpp
+[0.341s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/clear_costmap_service.hpp
+[0.350s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/cost_values.hpp
+[0.358s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_2d.hpp
+[0.366s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_2d_publisher.hpp
+[0.375s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_2d_ros.hpp
+[0.384s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_layer.hpp
+[0.391s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_math.hpp
+[0.398s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_subscriber.hpp
+[0.406s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/costmap_topic_collision_checker.hpp
+[0.413s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/exceptions.hpp
+[0.420s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/footprint.hpp
+[0.427s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/footprint_collision_checker.hpp
+[0.434s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/footprint_subscriber.hpp
+[0.442s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/inflation_layer.hpp
+[0.450s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/layer.hpp
+[0.457s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/layered_costmap.hpp
+[0.465s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/observation.hpp
+[0.473s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/observation_buffer.hpp
+[0.481s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/obstacle_layer.hpp
+[0.488s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/range_sensor_layer.hpp
+[0.495s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/static_layer.hpp
+[0.503s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/include//nav2_costmap_2d/voxel_layer.hpp
+[0.510s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/library_path.sh
+[0.518s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/library_path.dsv
+[0.526s] -- Up-to-date symlink: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d//costmap_plugins.xml
+[0.526s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/ament_index/resource_index/package_run_dependencies/nav2_costmap_2d
+[0.534s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/ament_index/resource_index/parent_prefix_path/nav2_costmap_2d
+[0.542s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/ament_prefix_path.sh
+[0.550s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/ament_prefix_path.dsv
+[0.558s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/path.sh
+[0.566s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/environment/path.dsv
+[0.574s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.bash
+[0.583s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.sh
+[0.591s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.zsh
+[0.598s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/local_setup.dsv
+[0.605s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/package.dsv
+[0.611s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/ament_index/resource_index/packages/nav2_costmap_2d
+[0.619s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/ament_index/resource_index/nav2_costmap_2d__pluginlib__plugin/nav2_costmap_2d
+[0.626s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.634s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_libraries-extras.cmake
+[0.641s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.649s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/ament_cmake_export_definitions-extras.cmake
+[0.656s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/nav2_costmap_2dConfig.cmake
+[0.663s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake/nav2_costmap_2dConfig-version.cmake
+[0.670s] -- Symlinking: /ws/src/nav2/install/nav2_costmap_2d/share/nav2_costmap_2d/package.xml
+[0.682s] Invoked command in '/ws/src/nav2/build/nav2_costmap_2d' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_map_server/lib:/ws/src/nav2/install/nav2_lifecycle_manager/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/nav2_costmap_2d

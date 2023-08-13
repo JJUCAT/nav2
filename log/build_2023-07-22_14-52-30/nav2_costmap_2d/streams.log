@@ -1,0 +1,66 @@
+[0.019s] Invoking command in '/ws/src/nav2/build/nav2_costmap_2d': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav2_map_server:/ws/src/nav2/install/nav2_lifecycle_manager:/ws/src/nav2/install/nav2_util:/ws/src/nav2/install/nav2_voxel_grid:/ws/src/nav2/install/nav2_msgs:/ws/src/nav2/install/nav2_common:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav2_map_server/lib:/ws/src/nav2/install/nav2_lifecycle_manager/lib:/ws/src/nav2/install/nav2_util/lib:/ws/src/nav2/install/nav2_voxel_grid/lib:/ws/src/nav2/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav2_msgs/lib/python3.8/site-packages:/ws/src/nav2/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /ws/src/nav2/nav2_costmap_2d -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ws/src/nav2/install/nav2_costmap_2d
+[0.071s] -- The C compiler identification is GNU 9.4.0
+[0.120s] -- The CXX compiler identification is GNU 9.4.0
+[0.124s] -- Check for working C compiler: /usr/bin/cc
+[0.213s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.214s] -- Detecting C compiler ABI info
+[0.288s] -- Detecting C compiler ABI info - done
+[0.298s] -- Detecting C compile features
+[0.298s] -- Detecting C compile features - done
+[0.300s] -- Check for working CXX compiler: /usr/bin/c++
+[0.373s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.375s] -- Detecting CXX compiler ABI info
+[0.454s] -- Detecting CXX compiler ABI info - done
+[0.465s] -- Detecting CXX compile features
+[0.466s] -- Detecting CXX compile features - done
+[0.470s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.499s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.499s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.657s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.702s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.743s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.757s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.854s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.885s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.981s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.090s] -- Found laser_geometry: 2.2.0 (/opt/ros/foxy/share/laser_geometry/cmake)
+[1.110s] -- Found map_msgs: 2.0.2 (/opt/ros/foxy/share/map_msgs/cmake)
+[1.428s] -- Found message_filters: 3.2.7 (/opt/ros/foxy/share/message_filters/cmake)
+[1.431s] -- Found nav2_common: 0.4.7 (/ws/src/nav2/install/nav2_common/share/nav2_common/cmake)
+[1.431s] -- Found nav2_msgs: 0.4.7 (/ws/src/nav2/install/nav2_msgs/share/nav2_msgs/cmake)
+[1.682s] -- Found nav2_util: 0.4.7 (/ws/src/nav2/install/nav2_util/share/nav2_util/cmake)
+[1.801s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.803s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.804s] -- Looking for pthread.h
+[1.884s] -- Looking for pthread.h - found
+[1.884s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.961s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.961s] -- Looking for pthread_create in pthreads
+[2.023s] -- Looking for pthread_create in pthreads - not found
+[2.023s] -- Looking for pthread_create in pthread
+[2.096s] -- Looking for pthread_create in pthread - found
+[2.097s] -- Found Threads: TRUE  
+[2.569s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[2.728s] -- Found nav2_voxel_grid: 0.4.7 (/ws/src/nav2/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake)
+[2.735s] -- Found pluginlib: 2.5.4 (/opt/ros/foxy/share/pluginlib/cmake)
+[2.765s] -- Found tf2_sensor_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_sensor_msgs/cmake)
+[2.784s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[2.859s] -- Found angles: 1.12.6 (/opt/ros/foxy/share/angles/cmake)
+[2.861s] -- Setting build type to Release as none was specified.
+[3.624s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[3.977s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[3.980s] -- Check if compiler accepts -pthread
+[4.051s] -- Check if compiler accepts -pthread - yes
+[4.058s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[4.826s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.827s] -- Configured cppcheck include dirs: /ws/src/nav2/nav2_costmap_2d/include
+[4.827s] -- Configured cppcheck exclude dirs and/or files: 
+[4.828s] -- Added test 'flake8' to check Python code syntax and style conventions
+[4.829s] -- Added test 'lint_cmake' to check CMake code style
+[4.831s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[4.833s] -- Added test 'uncrustify' to check C / C++ code style
+[4.833s] -- Configured uncrustify additional arguments: 
+[4.834s] -- Added test 'xmllint' to check XML markup files
+[4.843s] -- Configuring done
+[5.265s] -- Generating done
+[5.268s] -- Build files have been written to: /ws/src/nav2/build/nav2_costmap_2d

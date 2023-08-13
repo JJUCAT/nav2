@@ -1,0 +1,231 @@
+[0.027s] Invoking command in '/ws/src/nav2/build/dwb_msgs': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav_2d_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav_2d_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/dwb_msgs -- -j16 -l16
+[0.080s] [  1%] Built target dwb_msgs__cpp
+[0.084s] [ 12%] Built target dwb_msgs__rosidl_generator_c
+[0.111s] [ 24%] Built target dwb_msgs__rosidl_typesupport_introspection_cpp
+[0.111s] [ 35%] Built target dwb_msgs__rosidl_typesupport_introspection_c
+[0.111s] [ 47%] Built target dwb_msgs__rosidl_typesupport_cpp
+[0.113s] [ 58%] Built target dwb_msgs__rosidl_typesupport_c
+[0.119s] [ 70%] Built target dwb_msgs__rosidl_typesupport_fastrtps_cpp
+[0.151s] [ 82%] Built target dwb_msgs__rosidl_typesupport_fastrtps_c
+[0.172s] [ 82%] Built target dwb_msgs
+[0.192s] [ 83%] Built target dwb_msgs__py
+[0.226s] [ 93%] Built target dwb_msgs__python
+[0.253s] [100%] Built target dwb_msgs__rosidl_typesupport_introspection_c__pyext
+[0.253s] [100%] Built target dwb_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.253s] [100%] Built target dwb_msgs__rosidl_typesupport_c__pyext
+[0.263s] Invoked command in '/ws/src/nav2/build/dwb_msgs' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav_2d_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav_2d_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /ws/src/nav2/build/dwb_msgs -- -j16 -l16
+[0.377s] Invoking command in '/ws/src/nav2/build/dwb_msgs': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav_2d_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav_2d_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/dwb_msgs
+[0.384s] -- Install configuration: ""
+[0.385s] -- Execute custom install script
+[0.385s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/ament_index/resource_index/rosidl_interfaces/dwb_msgs
+[0.386s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/critic_score.h
+[0.386s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/critic_score__functions.h
+[0.387s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/critic_score__struct.h
+[0.387s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/critic_score__type_support.h
+[0.387s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/local_plan_evaluation__functions.h
+[0.387s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/local_plan_evaluation__struct.h
+[0.388s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/local_plan_evaluation__type_support.h
+[0.388s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory2_d__functions.h
+[0.388s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory2_d__struct.h
+[0.388s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory2_d__type_support.h
+[0.389s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory_score__functions.h
+[0.389s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory_score__struct.h
+[0.389s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory_score__type_support.h
+[0.389s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/local_plan_evaluation.h
+[0.389s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/rosidl_generator_c__visibility_control.h
+[0.389s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/trajectory2_d.h
+[0.389s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/trajectory_score.h
+[0.389s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/debug_local_plan.h
+[0.389s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/debug_local_plan__functions.h
+[0.390s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/debug_local_plan__struct.h
+[0.390s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/debug_local_plan__type_support.h
+[0.390s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_trajectory__functions.h
+[0.390s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_trajectory__struct.h
+[0.390s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_trajectory__type_support.h
+[0.390s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_twists__functions.h
+[0.391s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_twists__struct.h
+[0.391s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_twists__type_support.h
+[0.391s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/get_critic_score__functions.h
+[0.391s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/get_critic_score__struct.h
+[0.391s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/get_critic_score__type_support.h
+[0.391s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/score_trajectory__functions.h
+[0.391s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/score_trajectory__struct.h
+[0.392s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/score_trajectory__type_support.h
+[0.392s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/generate_trajectory.h
+[0.392s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/generate_twists.h
+[0.392s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/get_critic_score.h
+[0.393s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/score_trajectory.h
+[0.393s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/environment/library_path.sh
+[0.393s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/environment/library_path.dsv
+[0.394s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/critic_score__rosidl_typesupport_fastrtps_c.h
+[0.394s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/local_plan_evaluation__rosidl_typesupport_fastrtps_c.h
+[0.394s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory2_d__rosidl_typesupport_fastrtps_c.h
+[0.395s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory_score__rosidl_typesupport_fastrtps_c.h
+[0.395s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.395s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/debug_local_plan__rosidl_typesupport_fastrtps_c.h
+[0.395s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_trajectory__rosidl_typesupport_fastrtps_c.h
+[0.395s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_twists__rosidl_typesupport_fastrtps_c.h
+[0.396s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/get_critic_score__rosidl_typesupport_fastrtps_c.h
+[0.396s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/score_trajectory__rosidl_typesupport_fastrtps_c.h
+[0.396s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_fastrtps_c.so
+[0.397s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/critic_score__rosidl_typesupport_fastrtps_cpp.hpp
+[0.397s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/local_plan_evaluation__rosidl_typesupport_fastrtps_cpp.hpp
+[0.398s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory2_d__rosidl_typesupport_fastrtps_cpp.hpp
+[0.398s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory_score__rosidl_typesupport_fastrtps_cpp.hpp
+[0.398s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.398s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/debug_local_plan__rosidl_typesupport_fastrtps_cpp.hpp
+[0.398s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[0.398s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_twists__rosidl_typesupport_fastrtps_cpp.hpp
+[0.398s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/get_critic_score__rosidl_typesupport_fastrtps_cpp.hpp
+[0.398s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/score_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[0.399s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_fastrtps_cpp.so
+[0.399s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/critic_score__rosidl_typesupport_introspection_c.h
+[0.399s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/local_plan_evaluation__rosidl_typesupport_introspection_c.h
+[0.399s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory2_d__rosidl_typesupport_introspection_c.h
+[0.399s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory_score__rosidl_typesupport_introspection_c.h
+[0.400s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.400s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/debug_local_plan__rosidl_typesupport_introspection_c.h
+[0.400s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_trajectory__rosidl_typesupport_introspection_c.h
+[0.400s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_twists__rosidl_typesupport_introspection_c.h
+[0.400s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/get_critic_score__rosidl_typesupport_introspection_c.h
+[0.400s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/score_trajectory__rosidl_typesupport_introspection_c.h
+[0.401s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/critic_score.hpp
+[0.401s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/critic_score__builder.hpp
+[0.401s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/critic_score__struct.hpp
+[0.401s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/critic_score__traits.hpp
+[0.401s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/critic_score__type_support.hpp
+[0.401s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/local_plan_evaluation__builder.hpp
+[0.401s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/local_plan_evaluation__struct.hpp
+[0.401s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/local_plan_evaluation__traits.hpp
+[0.401s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/local_plan_evaluation__type_support.hpp
+[0.402s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory2_d__builder.hpp
+[0.402s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory2_d__struct.hpp
+[0.402s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory2_d__traits.hpp
+[0.402s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory2_d__type_support.hpp
+[0.402s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory_score__builder.hpp
+[0.403s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory_score__struct.hpp
+[0.403s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory_score__traits.hpp
+[0.403s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory_score__type_support.hpp
+[0.403s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/local_plan_evaluation.hpp
+[0.403s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.403s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/trajectory2_d.hpp
+[0.404s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/trajectory_score.hpp
+[0.404s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/debug_local_plan.hpp
+[0.404s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/debug_local_plan__builder.hpp
+[0.404s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/debug_local_plan__struct.hpp
+[0.404s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/debug_local_plan__traits.hpp
+[0.404s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/debug_local_plan__type_support.hpp
+[0.404s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_trajectory__builder.hpp
+[0.404s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_trajectory__struct.hpp
+[0.405s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_trajectory__traits.hpp
+[0.405s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_trajectory__type_support.hpp
+[0.405s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_twists__builder.hpp
+[0.406s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_twists__struct.hpp
+[0.406s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_twists__traits.hpp
+[0.406s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_twists__type_support.hpp
+[0.406s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/get_critic_score__builder.hpp
+[0.406s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/get_critic_score__struct.hpp
+[0.406s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/get_critic_score__traits.hpp
+[0.407s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/get_critic_score__type_support.hpp
+[0.407s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/score_trajectory__builder.hpp
+[0.407s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/score_trajectory__struct.hpp
+[0.407s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/score_trajectory__traits.hpp
+[0.407s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/score_trajectory__type_support.hpp
+[0.407s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/generate_trajectory.hpp
+[0.407s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/generate_twists.hpp
+[0.407s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/get_critic_score.hpp
+[0.408s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/score_trajectory.hpp
+[0.408s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/critic_score__rosidl_typesupport_introspection_cpp.hpp
+[0.408s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/local_plan_evaluation__rosidl_typesupport_introspection_cpp.hpp
+[0.408s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory2_d__rosidl_typesupport_introspection_cpp.hpp
+[0.408s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/msg/detail/trajectory_score__rosidl_typesupport_introspection_cpp.hpp
+[0.409s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/debug_local_plan__rosidl_typesupport_introspection_cpp.hpp
+[0.409s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[0.409s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/generate_twists__rosidl_typesupport_introspection_cpp.hpp
+[0.409s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/get_critic_score__rosidl_typesupport_introspection_cpp.hpp
+[0.409s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/include/dwb_msgs/srv/detail/score_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[0.410s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/environment/pythonpath.sh
+[0.410s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/environment/pythonpath.dsv
+[0.410s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/__init__.py
+[0.410s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/msg/__init__.py
+[0.410s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/msg/_critic_score.py
+[0.410s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/msg/_local_plan_evaluation.py
+[0.410s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/msg/_trajectory2_d.py
+[0.411s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/msg/_trajectory_score.py
+[0.411s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/srv/__init__.py
+[0.411s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/srv/_debug_local_plan.py
+[0.411s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/srv/_generate_trajectory.py
+[0.411s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/srv/_generate_twists.py
+[0.412s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/srv/_get_critic_score.py
+[0.412s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/srv/_score_trajectory.py
+[0.412s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/dwb_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[0.412s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/dwb_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[0.412s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/python3.8/site-packages/dwb_msgs/dwb_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[0.413s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/lib/libdwb_msgs__python.so
+[0.413s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/msg/CriticScore.idl
+[0.413s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/msg/LocalPlanEvaluation.idl
+[0.413s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/msg/Trajectory2D.idl
+[0.413s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/msg/TrajectoryScore.idl
+[0.414s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/DebugLocalPlan.idl
+[0.414s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GenerateTrajectory.idl
+[0.414s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GenerateTwists.idl
+[0.414s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GetCriticScore.idl
+[0.414s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/ScoreTrajectory.idl
+[0.415s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/msg/CriticScore.msg
+[0.415s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/msg/LocalPlanEvaluation.msg
+[0.415s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/msg/Trajectory2D.msg
+[0.415s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/msg/TrajectoryScore.msg
+[0.415s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/DebugLocalPlan.srv
+[0.415s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/DebugLocalPlan_Request.msg
+[0.416s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/DebugLocalPlan_Response.msg
+[0.416s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GenerateTrajectory.srv
+[0.416s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GenerateTrajectory_Request.msg
+[0.416s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GenerateTrajectory_Response.msg
+[0.416s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GenerateTwists.srv
+[0.416s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GenerateTwists_Request.msg
+[0.417s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GenerateTwists_Response.msg
+[0.417s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GetCriticScore.srv
+[0.417s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GetCriticScore_Request.msg
+[0.417s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/GetCriticScore_Response.msg
+[0.417s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/ScoreTrajectory.srv
+[0.418s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/ScoreTrajectory_Request.msg
+[0.418s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/srv/ScoreTrajectory_Response.msg
+[0.418s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/ament_index/resource_index/package_run_dependencies/dwb_msgs
+[0.418s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/ament_index/resource_index/parent_prefix_path/dwb_msgs
+[0.418s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/environment/ament_prefix_path.sh
+[0.418s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/environment/ament_prefix_path.dsv
+[0.419s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/environment/path.sh
+[0.419s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/environment/path.dsv
+[0.419s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/local_setup.bash
+[0.419s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/local_setup.sh
+[0.419s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/local_setup.zsh
+[0.419s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/local_setup.dsv
+[0.419s] -- Symlinking: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/package.dsv
+[0.427s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/ament_index/resource_index/packages/dwb_msgs
+[0.427s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/rosidl_cmake-extras.cmake
+[0.427s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.427s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[0.428s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[0.428s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.428s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.428s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.428s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgsConfig.cmake
+[0.428s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgsConfig-version.cmake
+[0.429s] -- Up-to-date symlink: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/package.xml
+[0.429s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/lib/libdwb_msgs__rosidl_generator_c.so
+[0.429s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_introspection_c.so
+[0.429s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_c.so
+[0.430s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_introspection_cpp.so
+[0.430s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/lib/libdwb_msgs__rosidl_typesupport_cpp.so
+[0.463s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_generator_cExport.cmake
+[0.463s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_generator_cExport-noconfig.cmake
+[0.463s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_introspection_cExport.cmake
+[0.463s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.464s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_cExport.cmake
+[0.464s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[0.464s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_generator_cppExport.cmake
+[0.464s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[0.465s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.465s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_cppExport.cmake
+[0.465s] -- Up-to-date: /ws/src/nav2/install/dwb_msgs/share/dwb_msgs/cmake/dwb_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[0.479s] Invoked command in '/ws/src/nav2/build/dwb_msgs' returned '0': AMENT_PREFIX_PATH=/ws/src/nav2/install/nav_2d_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ws/src/nav2/install/nav_2d_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/ws/src/nav2/install/nav_2d_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ws/src/nav2/install/nav_2d_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /ws/src/nav2/build/dwb_msgs

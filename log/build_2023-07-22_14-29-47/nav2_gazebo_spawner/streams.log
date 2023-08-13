@@ -1,0 +1,25 @@
+[0.536s] Invoking command in '/ws/src/nav2/build/nav2_gazebo_spawner': PYTHONPATH=/ws/src/nav2/build/nav2_gazebo_spawner/prefix_override:/ws/src/nav2/install/nav2_gazebo_spawner/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /ws/src/nav2/build/nav2_gazebo_spawner/build --no-deps install_data
+[0.725s] running develop
+[0.815s] running egg_info
+[0.815s] creating nav2_gazebo_spawner.egg-info
+[0.815s] writing nav2_gazebo_spawner.egg-info/PKG-INFO
+[0.815s] writing dependency_links to nav2_gazebo_spawner.egg-info/dependency_links.txt
+[0.815s] writing entry points to nav2_gazebo_spawner.egg-info/entry_points.txt
+[0.816s] writing requirements to nav2_gazebo_spawner.egg-info/requires.txt
+[0.816s] writing top-level names to nav2_gazebo_spawner.egg-info/top_level.txt
+[0.817s] writing manifest file 'nav2_gazebo_spawner.egg-info/SOURCES.txt'
+[0.850s] reading manifest file 'nav2_gazebo_spawner.egg-info/SOURCES.txt'
+[0.851s] writing manifest file 'nav2_gazebo_spawner.egg-info/SOURCES.txt'
+[0.886s] running build_ext
+[0.887s] Creating /ws/src/nav2/install/nav2_gazebo_spawner/lib/python3.8/site-packages/site.py
+[0.888s] Creating /ws/src/nav2/install/nav2_gazebo_spawner/lib/python3.8/site-packages/nav2-gazebo-spawner.egg-link (link to .)
+[0.889s] Installing nav2_gazebo_spawner script to /ws/src/nav2/install/nav2_gazebo_spawner/lib/nav2_gazebo_spawner
+[0.890s] 
+[0.890s] Installed /ws/src/nav2/build/nav2_gazebo_spawner
+[0.890s] running install_data
+[0.890s] creating /ws/src/nav2/install/nav2_gazebo_spawner/share/ament_index
+[0.890s] creating /ws/src/nav2/install/nav2_gazebo_spawner/share/ament_index/resource_index
+[0.890s] creating /ws/src/nav2/install/nav2_gazebo_spawner/share/ament_index/resource_index/packages
+[0.890s] copying resource/nav2_gazebo_spawner -> /ws/src/nav2/install/nav2_gazebo_spawner/share/ament_index/resource_index/packages
+[0.891s] copying package.xml -> /ws/src/nav2/install/nav2_gazebo_spawner/share/nav2_gazebo_spawner
+[0.928s] Invoked command in '/ws/src/nav2/build/nav2_gazebo_spawner' returned '0': PYTHONPATH=/ws/src/nav2/build/nav2_gazebo_spawner/prefix_override:/ws/src/nav2/install/nav2_gazebo_spawner/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /ws/src/nav2/build/nav2_gazebo_spawner/build --no-deps install_data
