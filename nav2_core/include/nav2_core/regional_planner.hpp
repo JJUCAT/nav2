@@ -68,13 +68,12 @@ public:
   virtual void deactivate() = 0;
 
   /**
-   * @brief Method create the plan from a starting and ending goal.
-   * @param start The starting pose of the robot
-   * @param goal  The goal pose of the robot
-   * @return      The sequence of poses to get from start to goal, if any
+   * @brief Method create the plan in region.
+   * @param boundary boundary of the region
+   * @return      paths in region
    */
   virtual std::vector<nav_msgs::msg::Path> createPlan(
-    const std::vector<geometry_msgs::msg::PoseStamped> & boundary) = 0;
+    const nav_msgs::msg::Path & boundary) = 0;
 };
 
 }  // namespace nav2_core
