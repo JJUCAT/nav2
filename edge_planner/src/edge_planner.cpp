@@ -23,7 +23,7 @@
 
 #define BENCHMARK_TESTING
 
-namespace smac_planner
+namespace edge_planner
 {
 
 using namespace std::chrono;  // NOLINT
@@ -89,7 +89,7 @@ std::vector<nav_msgs::msg::Path> EdgePlanner::createPlan(
   return plans;
 }
 
-}  // namespace smac_planner
+}  // namespace edge_planner
 
 #include "pluginlib/class_list_macros.hpp"
 PLUGINLIB_EXPORT_CLASS(edge_planner::EdgePlanner, nav2_core::RegionalPlanner)

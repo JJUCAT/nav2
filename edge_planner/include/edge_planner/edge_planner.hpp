@@ -86,7 +86,6 @@ protected:
   rclcpp::Logger _logger{rclcpp::get_logger("EdgePlanner")};
   std::string _global_frame, _name;
   rclcpp_lifecycle::LifecyclePublisher<nav_msgs::msg::Path>::SharedPtr _raw_plan_publisher;
-  OptimizerParams _optimizer_params;
 };
 
 }  // namespace edge_planner
