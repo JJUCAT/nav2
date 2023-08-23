@@ -53,9 +53,26 @@ void EdgePlanner::configure(
   _raw_plan_publisher =
     node->create_publisher<nav_msgs::msg::Path>("edge_plan", 1);
 
+  nav2_util::declare_parameter_if_not_declared(
+    node, name + ".close_inflation", rclcpp::ParameterValue(0.9f));
+  node->get_parameter(name + ".close_inflation", close_inflation_);
+  nav2_util::declare_parameter_if_not_declared(
+    node, name + ".path_inflation", rclcpp::ParameterValue(1.2f));
+  node->get_parameter(name + ".path_inflation", path_inflation_);
+  nav2_util::declare_parameter_if_not_declared(
+    node, name + ".smooth_inflation", rclcpp::ParameterValue(1.2f));
+  node->get_parameter(name + ".smooth_inflation", smooth_inflation_);
+  nav2_util::declare_parameter_if_not_declared(
+    node, name + ".debug", rclcpp::ParameterValue(false));
+  node->get_parameter(name + ".debug", debug_);
+
   RCLCPP_INFO(
     _logger, "Configured plugin %s of type EdgePlanner.",
     _name.c_str());
+  RCLCPP_INFO(_logger, "close inflation: %f.", close_inflation_);
+  RCLCPP_INFO(_logger, "path inflation: %f.", path_inflation_);
+  RCLCPP_INFO(_logger, "smooth inflation: %f.", smooth_inflation_);
+  RCLCPP_INFO(_logger, "debug: %f.", debug_);
 }
 
 void EdgePlanner::activate()

@@ -29,6 +29,8 @@
 #include "nav2_util/node_utils.hpp"
 #include "tf2/utils.h"
 
+#include "map_editor.h"
+
 namespace edge_planner
 {
 
@@ -86,6 +88,25 @@ protected:
   rclcpp::Logger _logger{rclcpp::get_logger("EdgePlanner")};
   std::string _global_frame, _name;
   rclcpp_lifecycle::LifecyclePublisher<nav_msgs::msg::Path>::SharedPtr _raw_plan_publisher;
+
+private:
+  bool ScreenShot(const nav_msgs::Path& edge,
+                  const costmap_2d::Costmap2D& map_src,
+                  costmap_2d::Costmap2D& map_window);
+
+  bool FillSuburb(const nav_msgs::Path& edge,
+                  costmap_2d::Costmap2D& map_src,
+                  std::shared_ptr<costmap_2d::Costmap2D>& map);
+
+  void GetFullMapEdge(const costmap_2d::Costmap2D& map, nav_msgs::Path& edge);
+
+  void Counter2Path(const std::vector<std::vector<cv::Point>>& counters,
+    const costmap_2d::Costmap2D& map, std::vector<nav_msgs::Path>& wall_path_list);
+
+  float close_inflation_;
+  float path_inflation_;
+  float smooth_inflation_;
+  bool debug_;
 };
 
 }  // namespace edge_planner

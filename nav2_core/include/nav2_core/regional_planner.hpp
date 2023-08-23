@@ -17,6 +17,7 @@
 
 #include <memory>
 #include <string>
+
 #include "rclcpp/rclcpp.hpp"
 #include "nav2_costmap_2d/costmap_2d_ros.hpp"
 #include "tf2_ros/buffer.h"
@@ -28,7 +29,7 @@ namespace nav2_core
 {
 
 /**
- * @class GlobalPlanner
+ * @class RegionalPlanner
  * @brief Abstract interface for global planners to adhere to with pluginlib
  */
 class RegionalPlanner
@@ -78,4 +79,4 @@ public:
 
 }  // namespace nav2_core
 
-#endif  // NAV2_CORE__GLOBAL_PLANNER_HPP_
+#endif  // NAV2_CORE__REGIONAL_PLANNER_HPP_
