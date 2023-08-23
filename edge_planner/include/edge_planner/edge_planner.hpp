@@ -31,7 +31,7 @@
 
 #include "map_editor.h"
 
-namespace edge_planner
+namespace edge_planner_ns
 {
 
 class EdgePlanner : public nav2_core::RegionalPlanner
@@ -90,18 +90,18 @@ protected:
   rclcpp_lifecycle::LifecyclePublisher<nav_msgs::msg::Path>::SharedPtr _raw_plan_publisher;
 
 private:
-  bool ScreenShot(const nav_msgs::Path& edge,
-                  const costmap_2d::Costmap2D& map_src,
-                  costmap_2d::Costmap2D& map_window);
+  bool ScreenShot(const nav_msgs::msg::Path& edge,
+                  const nav2_costmap_2d::Costmap2D& map_src,
+                  nav2_costmap_2d::Costmap2D& map_window);
 
-  bool FillSuburb(const nav_msgs::Path& edge,
-                  costmap_2d::Costmap2D& map_src,
-                  std::shared_ptr<costmap_2d::Costmap2D>& map);
+  bool FillSuburb(const nav_msgs::msg::Path& edge,
+                  nav2_costmap_2d::Costmap2D& map_src,
+                  std::shared_ptr<nav2_costmap_2d::Costmap2D>& map);
 
-  void GetFullMapEdge(const costmap_2d::Costmap2D& map, nav_msgs::Path& edge);
+  void GetFullMapEdge(const nav2_costmap_2d::Costmap2D& map, nav_msgs::msg::Path& edge);
 
   void Counter2Path(const std::vector<std::vector<cv::Point>>& counters,
-    const costmap_2d::Costmap2D& map, std::vector<nav_msgs::Path>& wall_path_list);
+    const nav2_costmap_2d::Costmap2D& map, std::vector<nav_msgs::msg::Path>& wall_path_list);
 
   float close_inflation_;
   float path_inflation_;
@@ -109,6 +109,6 @@ private:
   bool debug_;
 };
 
-}  // namespace edge_planner
+}  // namespace edge_planner_ns
 
 #endif  // EDGE_PLANNER__EDGE_PLANNER_HPP_

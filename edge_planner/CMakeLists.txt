@@ -24,6 +24,7 @@ find_package(eigen3_cmake_module REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(ompl REQUIRED)
 find_package(OpenMP REQUIRED)
+find_package(OpenCV REQUIRED)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
@@ -40,6 +41,7 @@ include_directories(
   ${CERES_INCLUDES}
   ${OMPL_INCLUDE_DIRS}
   ${OpenMP_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
 )
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
@@ -65,13 +67,20 @@ set(dependencies
   nav2_core
   pluginlib
   eigen3_cmake_module
+  nav_msgs
 )
 
 add_library(${library_name} SHARED
   src/edge_planner.cpp
+  src/map_editor.cpp
 )
 
-target_link_libraries(${library_name} ${CERES_LIBRARIES} ${OMPL_LIBRARIES} ${OpenMP_LIBRARIES}  OpenMP::OpenMP_CXX)
+target_link_libraries(${library_name}
+  ${CERES_LIBRARIES}
+  ${OMPL_LIBRARIES}
+  ${OpenMP_LIBRARIES}
+  OpenMP::OpenMP_CXX
+  ${OpenCV_LIBRARIES})
 target_include_directories(${library_name} PUBLIC ${Eigen3_INCLUDE_DIRS})
 
 ament_target_dependencies(${library_name}
@@ -80,7 +89,7 @@ ament_target_dependencies(${library_name}
 
 target_compile_definitions(${library_name} PUBLIC "PLUGINLIB__DISABLE_BOOST_FUNCTIONS")
 
-pluginlib_export_plugin_description_file(nav2_core edge_plugin.xml)
+pluginlib_export_plugin_description_file(nav2_core edge_planner_plugin.xml)
 
 install(TARGETS ${library_name}
   ARCHIVE DESTINATION lib

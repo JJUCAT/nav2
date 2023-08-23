@@ -2,13 +2,13 @@
 #define MAP_EDITOR_H
 
 #include <memory>
-#include <ros/ros.h>
-#include <costmap_2d/costmap_2d.h>
-#include <grid_map_ros/grid_map_ros.hpp>
-#include <grid_map_cv/grid_map_cv.hpp>
-#include <cv_bridge/cv_bridge.h>
+#include "nav2_costmap_2d/costmap_2d_ros.hpp"
+#include "nav2_costmap_2d/costmap_2d.hpp"
+#include <opencv2/core/types.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
 
-namespace wall_path_planner_ns
+namespace edge_planner_ns
 {
 class MapEditor {
  public:
@@ -16,7 +16,7 @@ class MapEditor {
 
   ~MapEditor() {}
 
-  void Costmap2Image(const costmap_2d::Costmap2D& map);
+  void Costmap2Image(const nav2_costmap_2d::Costmap2D& map);
   bool GetOuterCounter(float close_inflation, float path_inflation,
     float smooth_inflation, std::vector<std::vector<cv::Point>>& outer_counter);
   bool GetInnerCounter(float close_inflation, float path_inflation,
@@ -34,5 +34,5 @@ class MapEditor {
   bool debug_;
 };
 
-} // namespace wall_path_planner_ns
+} // namespace edge_planner_ns
 #endif

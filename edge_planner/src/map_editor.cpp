@@ -1,7 +1,8 @@
-#include "map_editor.h"
-#include "costmap_2d/cost_values.h"
-#include "costmap_2d/costmap_2d.h"
-#include "geometry_msgs/PoseStamped.h"
+#include "edge_planner/map_editor.h"
+#include "nav2_costmap_2d/cost_values.hpp"
+#include "nav2_costmap_2d/costmap_2d_ros.hpp"
+#include "nav2_costmap_2d/costmap_2d.hpp"
+#include "geometry_msgs/msg/pose_stamped.hpp"
 #include "ros/duration.h"
 #include "tf2/utils.h"
 #include "tf/transform_datatypes.h"
@@ -9,30 +10,26 @@
 #include <cstdint>
 #include <cstdlib>
 #include <memory>
-#include <opencv2/core/types.hpp>
-#include <opencv2/highgui.hpp>
-#include <opencv2/imgproc.hpp>
 #include <string>
 
-namespace wall_path_planner_ns
+namespace edge_planner_ns
 {
 
-void MapEditor::Costmap2Image(const costmap_2d::Costmap2D& map) {
-  ROS_INFO("[WPP][%s,%d]", __FUNCTION__, __LINE__);
+void MapEditor::Costmap2Image(const nav2_costmap_2d::Costmap2D& map) {
+  RCLCPP_INFO(_logger, "[WPP] Costmap2Image");
 
   int mx = map.getSizeInCellsX(), my = map.getSizeInCellsY();
   resolution_ = map.getResolution();
-  ROS_INFO("[WPP][%s,%d] map x:%d, y:%d, res:%f",
-    __FUNCTION__, __LINE__, mx, my, resolution_);
+  RCLCPP_INFO(_logger, "[WPP] map x:%d, y:%d, res:%f", mx, my, resolution_);
   if (mx == 0 || my == 0) {
-    ROS_ERROR("[WPP][%s,%d] map error, x:%d, y:%d", __FUNCTION__, __LINE__, mx, my);
+    RCLCPP_ERROR(_logger, "[WPP] map error, x:%d, y:%d", mx, my);
     return;
   }
 
   *mat_ = cv::Mat::zeros(map.getSizeInCellsY(), map.getSizeInCellsX(), CV_8UC1);
   for(int x = 0; x < map.getSizeInCellsX(); x ++) {
     for(int y = 0; y < map.getSizeInCellsY(); y ++) {
-      mat_->at<uchar>(map.getSizeInCellsY() - y - 1, x) = map.getCost(x, y) >= costmap_2d::LETHAL_OBSTACLE ? 255 : 0;
+      mat_->at<uchar>(map.getSizeInCellsY() - y - 1, x) = map.getCost(x, y) >= nav2_costmap_2d::LETHAL_OBSTACLE ? 255 : 0;
     }
   }
 
@@ -43,16 +40,16 @@ void MapEditor::Costmap2Image(const costmap_2d::Costmap2D& map) {
 
 bool MapEditor::GetOuterCounter(float close_inflation, float path_inflation,
   float smooth_inflation, std::vector<std::vector<cv::Point>>& outer_counter) {
-  ROS_INFO("[WPP][%s,%d]", __FUNCTION__, __LINE__);
+  RCLCPP_INFO(_logger, "[WPP] GetOuterCounter");
   Inflat(*mat_, close_inflation, resolution_);
   Separation();
 
   if (close_inflation > path_inflation) {
-    ROS_WARN("[WPP][%s,%d] close_inflation:%f > path_inflation:%f,use close_inflation as path",
-      __FUNCTION__, __LINE__, close_inflation, path_inflation);
+    RCLCPP_WARN(_logger, "[WPP] close_inflation:%f > path_inflation:%f,use close_inflation as path",
+      close_inflation, path_inflation);
   } else {
     float inflation = path_inflation - close_inflation;
-    ROS_INFO("[WPP][%s,%d] advance inflation:%f", __FUNCTION__, __LINE__, inflation);
+    RCLCPP_INFO(_logger, "[WPP] advance inflation:%f", inflation);
     Inflat(*coast_mat_, inflation, resolution_);
   }
 
@@ -69,7 +66,7 @@ bool MapEditor::GetOuterCounter(float close_inflation, float path_inflation,
   cv::drawContours(cm, cs, -1, 254,1);
 
   if (cs.empty()) {
-    ROS_ERROR("[WPP][%s,%d] can't find counters !", __FUNCTION__, __LINE__);
+    RCLCPP_ERROR(_logger, "[WPP] can't find counters !");
     return false;
   }
 
@@ -80,11 +77,10 @@ bool MapEditor::GetOuterCounter(float close_inflation, float path_inflation,
   }
 
   int map_boundary_idx = -1;
-  ROS_INFO("[WPP][%s,%d] hierarchy count:%lu", __FUNCTION__, __LINE__, hierarchy.size());
+  RCLCPP_INFO(_logger, "[WPP] hierarchy count:%lu", hierarchy.size());
   for (int i = 0; i < hierarchy.size(); i ++) {
-    ROS_INFO("[WPP][%s,%d] hierarchy [%d], back:%d, front:%d, child:%d, parent:%d",
-      __FUNCTION__, __LINE__, i,
-      hierarchy.at(i)[0], hierarchy.at(i)[1], hierarchy.at(i)[2], hierarchy.at(i)[3]);
+    RCLCPP_INFO(_logger, "[WPP] hierarchy [%d], back:%d, front:%d, child:%d, parent:%d",
+      i, hierarchy.at(i)[0], hierarchy.at(i)[1], hierarchy.at(i)[2], hierarchy.at(i)[3]);
     if (hierarchy.at(i)[3] == -1) {
       map_boundary_idx = i;
     }
@@ -99,14 +95,14 @@ bool MapEditor::GetOuterCounter(float close_inflation, float path_inflation,
       idx = i;
     }
   }
-  ROS_ERROR("[WPP][%s,%d] outer counter idx:%d !", __FUNCTION__, __LINE__, idx);
+  RCLCPP_ERROR(_logger, "[WPP] outer counter idx:%d !", idx);
   outer_counter.push_back(cs.at(idx));
   return true;
 }
 
 bool MapEditor::GetInnerCounter(float close_inflation, float path_inflation,
   std::vector<std::vector<cv::Point>>& inner_counters) {
-  ROS_INFO("[WPP][%s,%d]", __FUNCTION__, __LINE__);
+  RCLCPP_INFO(_logger, "[WPP] GetInnerCounter");
   Separation();
   Inflat(*mediterranean_mat_, path_inflation, resolution_);
 
@@ -117,7 +113,7 @@ bool MapEditor::GetInnerCounter(float close_inflation, float path_inflation,
   cv::drawContours(cm, cs, -1, 254,1);
 
   if (cs.empty()) {
-    ROS_ERROR("[WPP][%s,%d] can't find counters !", __FUNCTION__, __LINE__);
+    RCLCPP_ERROR(_logger, "[WPP] can't find counters !");
     return false;
   }
 
@@ -133,7 +129,7 @@ bool MapEditor::GetInnerCounter(float close_inflation, float path_inflation,
 
 // ------------------------------------------------------------
 void MapEditor::Inflat(cv::Mat& mat, const float radius, const float resolution) {
-  ROS_INFO("[WPP][%s,%d]", __FUNCTION__, __LINE__);
+  RCLCPP_INFO(_logger, "[WPP] Inflat");
 
   unsigned int dr = std::ceil(radius / resolution);
   cv::Mat de;
@@ -146,7 +142,7 @@ void MapEditor::Inflat(cv::Mat& mat, const float radius, const float resolution)
 }
 
 void MapEditor::Erode(cv::Mat& mat, const float radius, const float resolution) {
-  ROS_INFO("[WPP][%s,%d]", __FUNCTION__, __LINE__);
+  RCLCPP_INFO(_logger, "[WPP] Erode");
 
   unsigned int er = std::ceil(radius / resolution);
   cv::Mat ee;
@@ -159,7 +155,7 @@ void MapEditor::Erode(cv::Mat& mat, const float radius, const float resolution) 
 }
 
 bool MapEditor::Separation() {
-  ROS_INFO("[WPP][%s,%d]", __FUNCTION__, __LINE__);
+  RCLCPP_INFO(_logger, "[WPP] Separation");
 
   cv::Mat areas;
   coast_mat_.reset();
@@ -178,7 +174,7 @@ bool MapEditor::Separation() {
 
   int number = connectedComponents(*mat_, areas, 8, CV_16U);  
   if (number <= 1) {
-    ROS_ERROR("[WPP][%s,%d] separate failed, number:%d", __FUNCTION__, __LINE__, number);
+    RCLCPP_ERROR(_logger, "[WPP] separate failed, number:%d", number);
     return false;
   }
 
@@ -224,4 +220,4 @@ bool MapEditor::Separation() {
   return true;
 }
 
-} // namespace wall_path_planner_ns
+} // namespace edge_planner_ns
