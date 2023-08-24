@@ -104,41 +104,40 @@ std::vector<nav_msgs::msg::Path> EdgePlanner::createPlan(
 {
   std::vector<nav_msgs::msg::Path> plans;
   return plans;
-  RCLCPP_INFO(_logger, "[WPP] wall path planner scene: %s.", scene.c_str());
+  // RCLCPP_INFO(_logger, "[WPP] wall path planner scene: %s.", scene.c_str());
 
-  nav2_costmap_2d::Costmap2D* static_map = costmap_ros_->getLayeredCostmap()->getStaticCostmap();
-  nav_msgs::msg::Path edge = edge_path;
-  // GetFullMapEdge(*static_map, edge); // 测试全图规划，edge 更新为全图的四个顶点
+  nav_msgs::msg::Path edge = boundary;
+  // GetFullMapEdge(*_costmap, edge); // 测试全图规划，edge 更新为全图的四个顶点
   
   // TODO@LZY：判断是否全图规划，全图的话截图和填充功能可以跳过
   nav2_costmap_2d::Costmap2D map_window;
-  if (!ScreenShot(edge, *static_map, map_window)) {
+  if (!ScreenShot(edge, *_costmap, map_window)) {
     RCLCPP_ERROR(_logger, "[WPP] copy window failed !");
-    return false;
+    return plans;
   }
   
   std::shared_ptr<nav2_costmap_2d::Costmap2D> filled_map;
   if (!FillSuburb(edge, map_window, filled_map)) {
     RCLCPP_ERROR(_logger, "[WPP] fill failed !");
-    return false;
+    return plans;
   }
 
   std::shared_ptr<MapEditor> map_editor_ = std::make_shared<MapEditor>(debug_);
   map_editor_->Costmap2Image(*filled_map);
   std::vector<std::vector<cv::Point>> counters;
-  if (scene == "outer") {
+  // if (scene == "outer") {
     map_editor_->GetOuterCounter(
       close_inflation_, path_inflation_, smooth_inflation_, counters);
     std::reverse(counters.front().begin(), counters.front().end());
-  } else if (scene == "inner") {
-    map_editor_->GetInnerCounter(close_inflation_, path_inflation_, counters);
-    for (auto& counter : counters) {
-      if (!counter.empty())
-        std::reverse(counter.begin(), counter.end());
-    }
-  }
-  Counter2Path(counters, *filled_map, wall_path_list);
-  return true;
+  // } else if (scene == "inner") {
+  //   map_editor_->GetInnerCounter(close_inflation_, path_inflation_, counters);
+  //   for (auto& counter : counters) {
+  //     if (!counter.empty())
+  //       std::reverse(counter.begin(), counter.end());
+  //   }
+  // }
+  Counter2Path(counters, *filled_map, plans);
+  return plans;
 }
 
 
@@ -209,11 +208,11 @@ bool EdgePlanner::FillSuburb(const nav_msgs::msg::Path& edge,
 void EdgePlanner::GetFullMapEdge(const nav2_costmap_2d::Costmap2D& map, nav_msgs::msg::Path& edge)
 {
   edge.header.frame_id = "map";
-  edge.header.stamp = ros::Time::now();
+  edge.header.stamp = rclcpp::Clock.now();
   edge.poses.clear();
   double ox = map.getOriginX(), oy = map.getOriginY();
   double mx = map.getSizeInMetersX(), my = map.getSizeInMetersY();
-  geometry_msgs::PoseStamped pose;
+  geometry_msgs::msg::PoseStamped pose;
   pose.pose.position.x = ox; pose.pose.position.y = oy; edge.poses.push_back(pose);
   pose.pose.position.x = ox + mx; pose.pose.position.y = oy; edge.poses.push_back(pose);
   pose.pose.position.x = ox + mx; pose.pose.position.y = oy + my; edge.poses.push_back(pose);
@@ -224,8 +223,8 @@ void EdgePlanner::Counter2Path(const std::vector<std::vector<cv::Point>>& counte
   const nav2_costmap_2d::Costmap2D& map, std::vector<nav_msgs::msg::Path>& wall_path_list) {
   nav_msgs::msg::Path path;
   path.header.frame_id = "map";
-  path.header.stamp = ros::Time::now();
-  geometry_msgs::PoseStamped pose;
+  path.header.stamp = rclcpp::Clock().now();
+  geometry_msgs::msg::PoseStamped pose;
   pose.header = path.header;
   int map_rows = map.getSizeInCellsY();
   for (int i = 0; i < counters.size(); i ++) {
@@ -239,7 +238,7 @@ void EdgePlanner::Counter2Path(const std::vector<std::vector<cv::Point>>& counte
         float yaw = atan2(
           path.poses.at(j+1).pose.position.y - path.poses.at(j).pose.position.y,
           path.poses.at(j+1).pose.position.x - path.poses.at(j).pose.position.x);
-        path.poses.at(j).pose.orientation = tf::createQuaternionMsgFromYaw(yaw);
+        path.poses.at(j).pose.orientation = tf2::createQuaternionMsgFromYaw(yaw);
       } else {
         path.poses.at(j).pose.orientation = path.poses.back().pose.orientation;
       }
