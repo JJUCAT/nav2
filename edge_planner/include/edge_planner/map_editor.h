@@ -12,7 +12,8 @@ namespace edge_planner_ns
 {
 class MapEditor {
  public:
-  MapEditor(bool debug) : debug_(debug) { mat_ = std::make_shared<cv::Mat>(); }
+  MapEditor(rclcpp::Logger* logger, bool debug) :
+    _logger(logger), debug_(debug) { mat_ = std::make_shared<cv::Mat>(); }
 
   ~MapEditor() {}
 
@@ -26,7 +27,9 @@ class MapEditor {
   void Inflat(cv::Mat& mat, const float radius, const float resolution);
   void Erode(cv::Mat& mat, const float radius, const float resolution);
   bool Separation();
-
+  
+  rclcpp::Node* node_;
+  rclcpp::Logger* _logger;
   std::shared_ptr<cv::Mat> mat_;
   std::shared_ptr<cv::Mat> coast_mat_;
   std::shared_ptr<cv::Mat> mediterranean_mat_;

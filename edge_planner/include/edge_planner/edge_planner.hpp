@@ -102,7 +102,8 @@ private:
 
   void Counter2Path(const std::vector<std::vector<cv::Point>>& counters,
     const nav2_costmap_2d::Costmap2D& map, std::vector<nav_msgs::msg::Path>& wall_path_list);
-
+  
+  std::shared_ptr<MapEditor> map_editor_;
   float close_inflation_;
   float path_inflation_;
   float smooth_inflation_;

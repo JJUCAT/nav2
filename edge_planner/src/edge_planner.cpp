@@ -73,6 +73,8 @@ void EdgePlanner::configure(
   RCLCPP_INFO(_logger, "path inflation: %f.", path_inflation_);
   RCLCPP_INFO(_logger, "smooth inflation: %f.", smooth_inflation_);
   RCLCPP_INFO(_logger, "debug: %f.", debug_);
+
+  map_editor_ = std::make_shared<MapEditor>(&_logger, debug_);
 }
 
 void EdgePlanner::activate()
@@ -122,7 +124,6 @@ std::vector<nav_msgs::msg::Path> EdgePlanner::createPlan(
     return plans;
   }
 
-  std::shared_ptr<MapEditor> map_editor_ = std::make_shared<MapEditor>(debug_);
   map_editor_->Costmap2Image(*filled_map);
   std::vector<std::vector<cv::Point>> counters;
   // if (scene == "outer") {
@@ -144,7 +145,7 @@ std::vector<nav_msgs::msg::Path> EdgePlanner::createPlan(
 // ------------------------------------------------------------
 bool EdgePlanner::ScreenShot(const nav_msgs::msg::Path& edge,
   const nav2_costmap_2d::Costmap2D& map, nav2_costmap_2d::Costmap2D& map_window) {
-  for (int i = 0; i < edge.poses.size(); i ++) {
+  for (size_t i = 0; i < edge.poses.size(); i ++) {
     RCLCPP_INFO(_logger, "[WPP] edge pose[%d]:[%f,%f].",
       i, edge.poses.at(i).pose.position.x, edge.poses.at(i).pose.position.y);
   }
@@ -208,7 +209,7 @@ bool EdgePlanner::FillSuburb(const nav_msgs::msg::Path& edge,
 void EdgePlanner::GetFullMapEdge(const nav2_costmap_2d::Costmap2D& map, nav_msgs::msg::Path& edge)
 {
   edge.header.frame_id = "map";
-  edge.header.stamp = rclcpp::Clock.now();
+  edge.header.stamp = rclcpp::Clock().now();
   edge.poses.clear();
   double ox = map.getOriginX(), oy = map.getOriginY();
   double mx = map.getSizeInMetersX(), my = map.getSizeInMetersY();
@@ -227,18 +228,20 @@ void EdgePlanner::Counter2Path(const std::vector<std::vector<cv::Point>>& counte
   geometry_msgs::msg::PoseStamped pose;
   pose.header = path.header;
   int map_rows = map.getSizeInCellsY();
-  for (int i = 0; i < counters.size(); i ++) {
-    for (int j = 0; j < counters.at(i).size(); j ++) {
+  for (size_t i = 0; i < counters.size(); i ++) {
+    for (size_t j = 0; j < counters.at(i).size(); j ++) {
       int mx = counters.at(i).at(j).x, my = map_rows - counters.at(i).at(j).y - 1;
       map.mapToWorld(mx, my, pose.pose.position.x, pose.pose.position.y);
       path.poses.push_back(pose);
     }
-    for (int j = 0; j < path.poses.size(); j ++) {
+    for (size_t j = 0; j < path.poses.size(); j ++) {
       if (j + 1 < path.poses.size()) {
         float yaw = atan2(
           path.poses.at(j+1).pose.position.y - path.poses.at(j).pose.position.y,
           path.poses.at(j+1).pose.position.x - path.poses.at(j).pose.position.x);
-        path.poses.at(j).pose.orientation = tf2::createQuaternionMsgFromYaw(yaw);
+        tf2::Quaternion quaternion;
+        quaternion.setRPY(0, 0, yaw);
+        path.poses.at(j).pose.orientation = tf2::toMsg(quaternion);
       } else {
         path.poses.at(j).pose.orientation = path.poses.back().pose.orientation;
       }

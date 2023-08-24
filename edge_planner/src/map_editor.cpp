@@ -4,7 +4,6 @@
 #include "nav2_costmap_2d/costmap_2d.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "tf2/utils.h"
-#include "tf/transform_datatypes.h"
 #include <cmath>
 #include <cstdint>
 #include <cstdlib>
@@ -15,13 +14,13 @@ namespace edge_planner_ns
 {
 
 void MapEditor::Costmap2Image(const nav2_costmap_2d::Costmap2D& map) {
-  RCLCPP_INFO(_logger, "[WPP] Costmap2Image");
+  RCLCPP_INFO(*_logger, "[WPP] Costmap2Image");
 
   int mx = map.getSizeInCellsX(), my = map.getSizeInCellsY();
   resolution_ = map.getResolution();
-  RCLCPP_INFO(_logger, "[WPP] map x:%d, y:%d, res:%f", mx, my, resolution_);
+  RCLCPP_INFO(*_logger, "[WPP] map x:%d, y:%d, res:%f", mx, my, resolution_);
   if (mx == 0 || my == 0) {
-    RCLCPP_ERROR(_logger, "[WPP] map error, x:%d, y:%d", mx, my);
+    RCLCPP_ERROR(*_logger, "[WPP] map error, x:%d, y:%d", mx, my);
     return;
   }
 
@@ -39,16 +38,16 @@ void MapEditor::Costmap2Image(const nav2_costmap_2d::Costmap2D& map) {
 
 bool MapEditor::GetOuterCounter(float close_inflation, float path_inflation,
   float smooth_inflation, std::vector<std::vector<cv::Point>>& outer_counter) {
-  RCLCPP_INFO(_logger, "[WPP] GetOuterCounter");
+  RCLCPP_INFO(*_logger, "[WPP] GetOuterCounter");
   Inflat(*mat_, close_inflation, resolution_);
   Separation();
 
   if (close_inflation > path_inflation) {
-    RCLCPP_WARN(_logger, "[WPP] close_inflation:%f > path_inflation:%f,use close_inflation as path",
+    RCLCPP_WARN(*_logger, "[WPP] close_inflation:%f > path_inflation:%f,use close_inflation as path",
       close_inflation, path_inflation);
   } else {
     float inflation = path_inflation - close_inflation;
-    RCLCPP_INFO(_logger, "[WPP] advance inflation:%f", inflation);
+    RCLCPP_INFO(*_logger, "[WPP] advance inflation:%f", inflation);
     Inflat(*coast_mat_, inflation, resolution_);
   }
 
@@ -65,7 +64,7 @@ bool MapEditor::GetOuterCounter(float close_inflation, float path_inflation,
   cv::drawContours(cm, cs, -1, 254,1);
 
   if (cs.empty()) {
-    RCLCPP_ERROR(_logger, "[WPP] can't find counters !");
+    RCLCPP_ERROR(*_logger, "[WPP] can't find counters !");
     return false;
   }
 
@@ -76,9 +75,9 @@ bool MapEditor::GetOuterCounter(float close_inflation, float path_inflation,
   }
 
   int map_boundary_idx = -1;
-  RCLCPP_INFO(_logger, "[WPP] hierarchy count:%lu", hierarchy.size());
+  RCLCPP_INFO(*_logger, "[WPP] hierarchy count:%lu", hierarchy.size());
   for (int i = 0; i < hierarchy.size(); i ++) {
-    RCLCPP_INFO(_logger, "[WPP] hierarchy [%d], back:%d, front:%d, child:%d, parent:%d",
+    RCLCPP_INFO(*_logger, "[WPP] hierarchy [%d], back:%d, front:%d, child:%d, parent:%d",
       i, hierarchy.at(i)[0], hierarchy.at(i)[1], hierarchy.at(i)[2], hierarchy.at(i)[3]);
     if (hierarchy.at(i)[3] == -1) {
       map_boundary_idx = i;
@@ -94,14 +93,14 @@ bool MapEditor::GetOuterCounter(float close_inflation, float path_inflation,
       idx = i;
     }
   }
-  RCLCPP_ERROR(_logger, "[WPP] outer counter idx:%d !", idx);
+  RCLCPP_ERROR(*_logger, "[WPP] outer counter idx:%d !", idx);
   outer_counter.push_back(cs.at(idx));
   return true;
 }
 
 bool MapEditor::GetInnerCounter(float close_inflation, float path_inflation,
   std::vector<std::vector<cv::Point>>& inner_counters) {
-  RCLCPP_INFO(_logger, "[WPP] GetInnerCounter");
+  RCLCPP_INFO(*_logger, "[WPP] GetInnerCounter");
   Separation();
   Inflat(*mediterranean_mat_, path_inflation, resolution_);
 
@@ -112,7 +111,7 @@ bool MapEditor::GetInnerCounter(float close_inflation, float path_inflation,
   cv::drawContours(cm, cs, -1, 254,1);
 
   if (cs.empty()) {
-    RCLCPP_ERROR(_logger, "[WPP] can't find counters !");
+    RCLCPP_ERROR(*_logger, "[WPP] can't find counters !");
     return false;
   }
 
@@ -128,7 +127,7 @@ bool MapEditor::GetInnerCounter(float close_inflation, float path_inflation,
 
 // ------------------------------------------------------------
 void MapEditor::Inflat(cv::Mat& mat, const float radius, const float resolution) {
-  RCLCPP_INFO(_logger, "[WPP] Inflat");
+  RCLCPP_INFO(*_logger, "[WPP] Inflat");
 
   unsigned int dr = std::ceil(radius / resolution);
   cv::Mat de;
@@ -141,7 +140,7 @@ void MapEditor::Inflat(cv::Mat& mat, const float radius, const float resolution)
 }
 
 void MapEditor::Erode(cv::Mat& mat, const float radius, const float resolution) {
-  RCLCPP_INFO(_logger, "[WPP] Erode");
+  RCLCPP_INFO(*_logger, "[WPP] Erode");
 
   unsigned int er = std::ceil(radius / resolution);
   cv::Mat ee;
@@ -154,7 +153,7 @@ void MapEditor::Erode(cv::Mat& mat, const float radius, const float resolution) 
 }
 
 bool MapEditor::Separation() {
-  RCLCPP_INFO(_logger, "[WPP] Separation");
+  RCLCPP_INFO(*_logger, "[WPP] Separation");
 
   cv::Mat areas;
   coast_mat_.reset();
@@ -173,7 +172,7 @@ bool MapEditor::Separation() {
 
   int number = connectedComponents(*mat_, areas, 8, CV_16U);  
   if (number <= 1) {
-    RCLCPP_ERROR(_logger, "[WPP] separate failed, number:%d", number);
+    RCLCPP_ERROR(*_logger, "[WPP] separate failed, number:%d", number);
     return false;
   }
 

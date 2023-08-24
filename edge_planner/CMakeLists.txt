@@ -68,6 +68,7 @@ set(dependencies
   pluginlib
   eigen3_cmake_module
   nav_msgs
+  tf2
 )
 
 add_library(${library_name} SHARED
