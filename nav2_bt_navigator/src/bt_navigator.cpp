@@ -462,6 +462,7 @@ BtNavigator::regionalPlan()
 void
 BtNavigator::onBoundaryPointReceived(const geometry_msgs::msg::PointStamped::SharedPtr point)
 {
+  RCLCPP_INFO(get_logger(), "get point:[%.2f,%.2f]", point->point.x, point->point.y);
   boundary_.push_back(*point);
   if (boundary_.size() >= 4) {
     nav2_msgs::action::RegionalPlan::Goal goal;
