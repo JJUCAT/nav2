@@ -22,6 +22,12 @@
       <input_port name="planner_id"/>
     </Action>
 
+    <Action ID="ComputeRegionalPath">
+      <input_port name="boundary">boundary of region</input_port>
+      <output_port name="path_list">Path created by RegionalComputePath node</output_port>
+      <input_port name="planner_id"/>
+    </Action>
+
     <Action ID="FollowPath">
       <input_port name="controller_id" default="FollowPath"/>
       <input_port name="path">Path to follow</input_port>
@@ -68,6 +74,11 @@
     <!-- ############################### DECORATOR NODES ############################## -->
     <Decorator ID="RateController">
       <input_port name="hz">Rate</input_port>
+    </Decorator>
+
+    <Decorator ID="SequencePathsExport">
+      <input_port name="path_list">paths plan to run</input_port>
+      <output_port name="path">path to run</output_port>
     </Decorator>
 
     <Decorator ID="DistanceController">

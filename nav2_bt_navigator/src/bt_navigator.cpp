@@ -99,6 +99,9 @@ BtNavigator::on_configure(const rclcpp_lifecycle::State & /*state*/)
   self_client_ = rclcpp_action::create_client<nav2_msgs::action::NavigateToPose>(
     client_node_, "navigate_to_pose");
 
+  self_rpclient_ = rclcpp_action::create_client<nav2_msgs::action::RegionalPlan>(
+    client_node_, "regional_plan");
+
   tf_ = std::make_shared<tf2_ros::Buffer>(get_clock());
   auto timer_interface = std::make_shared<tf2_ros::CreateTimerROS>(
     get_node_base_interface(), get_node_timers_interface());
@@ -145,6 +148,22 @@ BtNavigator::on_configure(const rclcpp_lifecycle::State & /*state*/)
     RCLCPP_ERROR(get_logger(), "Error loading XML file: %s", default_bt_xml_filename_.c_str());
     return nav2_util::CallbackReturn::FAILURE;
   }
+
+  // ---------------------------- Regional Plan ------------------------------------
+
+  point_sub_ = create_subscription<geometry_msgs::msg::PointStamped>(
+    "clicked_point",
+    rclcpp::SystemDefaultsQoS(),
+    std::bind(&BtNavigator::onBoundaryPointReceived, this, std::placeholders::_1));
+
+  rpaction_server_ = std::make_unique<RPActionServer>(
+    get_node_base_interface(),
+    get_node_clock_interface(),
+    get_node_logging_interface(),
+    get_node_waitables_interface(),
+    "regional_plan", std::bind(&BtNavigator::regionalPlan, this), false);
+
+
 
   return nav2_util::CallbackReturn::SUCCESS;
 }
@@ -223,6 +242,7 @@ BtNavigator::on_cleanup(const rclcpp_lifecycle::State & /*state*/)
   goal_sub_.reset();
   client_node_.reset();
   self_client_.reset();
+  self_rpclient_.reset();
 
   // Reset the listener before the buffer
   tf_listener_.reset();
@@ -357,5 +377,106 @@ BtNavigator::onGoalPoseReceived(const geometry_msgs::msg::PoseStamped::SharedPtr
   goal.pose = *pose;
   self_client_->async_send_goal(goal);
 }
+
+// ---------------------------- Regional Plan ------------------------------------
+void
+BtNavigator::regionalPlan()
+{
+  auto is_canceling = [this]() {
+      if (rpaction_server_ == nullptr) {
+        RCLCPP_DEBUG(get_logger(), "Action server unavailable. Canceling.");
+        return true;
+      }
+
+      if (!rpaction_server_->is_server_active()) {
+        RCLCPP_DEBUG(get_logger(), "Action server is inactive. Canceling.");
+        return true;
+      }
+
+      return rpaction_server_->is_cancel_requested();
+    };
+
+  std::string bt_xml_filename = action_server_->get_current_goal()->behavior_tree;
+  RCLCPP_INFO(get_logger(), "[BT] regionalPlan XML file: %s", bt_xml_filename.c_str());  
+
+  if (!loadBehaviorTree(bt_xml_filename)) {
+    RCLCPP_ERROR(
+      get_logger(), "BT file not found: %s. Navigation canceled.",
+      bt_xml_filename.c_str());
+    action_server_->terminate_current();
+    return;
+  }
+
+  start_time_ = now();
+  RosTopicLogger topic_logger(client_node_, tree_);
+  std::shared_ptr<RPAction::Feedback> feedback_msg = std::make_shared<RPAction::Feedback>();
+
+  auto on_loop = [&]() {
+      // if (rpaction_server_->is_preempt_requested()) {
+      //   RCLCPP_INFO(get_logger(), "Received goal preemption request");
+      //   rpaction_server_->accept_pending_goal();
+      // }
+      topic_logger.flush();
+
+      // action server feedback (pose, duration of task,
+      // number of recoveries, and distance remaining to goal)
+      nav2_util::getCurrentPose(
+        feedback_msg->current_pose, *tf_, global_frame_, robot_frame_, transform_tolerance_);
+
+      // geometry_msgs::msg::PoseStamped goal_pose;
+      // blackboard_->get("goal", goal_pose);
+
+      // feedback_msg->distance_remaining = nav2_util::geometry_utils::euclidean_distance(
+      //   feedback_msg->current_pose.pose, goal_pose.pose);
+
+      feedback_msg->distance_remaining = 0;
+      feedback_msg->number_of_recoveries = 0;
+      feedback_msg->navigation_time = now() - start_time_;
+      rpaction_server_->publish_feedback(feedback_msg);
+    };
+
+  // Execute the BT that was previously created in the configure step
+  nav2_behavior_tree::BtStatus rc = bt_->run(&tree_, on_loop, is_canceling);
+  // Make sure that the Bt is not in a running state from a previous execution
+  // note: if all the ControlNodes are implemented correctly, this is not needed.
+  bt_->haltAllActions(tree_.rootNode());
+
+  switch (rc) {
+    case nav2_behavior_tree::BtStatus::SUCCEEDED:
+      RCLCPP_INFO(get_logger(), "Navigation succeeded");
+      rpaction_server_->succeeded_current();
+      break;
+
+    case nav2_behavior_tree::BtStatus::FAILED:
+      RCLCPP_ERROR(get_logger(), "Navigation failed");
+      rpaction_server_->terminate_current();
+      break;
+
+    case nav2_behavior_tree::BtStatus::CANCELED:
+      RCLCPP_INFO(get_logger(), "Navigation canceled");
+      rpaction_server_->terminate_all();
+      break;
+  }
+}
+
+void
+BtNavigator::onBoundaryPointReceived(const geometry_msgs::msg::PointStamped::SharedPtr point)
+{
+  boundary_.push_back(*point);
+  if (boundary_.size() >= 4) {
+    nav2_msgs::action::RegionalPlan::Goal goal;
+    // goal.boundary.header = boundary_;
+    for (auto p : boundary_) {
+      geometry_msgs::msg::PoseStamped ps;
+      ps.pose.position.x = point->point.x;
+      ps.pose.position.y = point->point.y;
+      ps.pose.position.z = point->point.z;
+      goal.boundary.poses.push_back(ps);
+    }
+    boundary_.clear();
+    self_rpclient_->async_send_goal(goal);
+  }
+}
+
 
 }  // namespace nav2_bt_navigator

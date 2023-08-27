@@ -15,14 +15,17 @@
 #ifndef NAV2_BT_NAVIGATOR__BT_NAVIGATOR_HPP_
 #define NAV2_BT_NAVIGATOR__BT_NAVIGATOR_HPP_
 
+#include <geometry_msgs/msg/detail/point_stamped__struct.hpp>
 #include <memory>
 #include <string>
 #include <vector>
 
 #include "geometry_msgs/msg/pose_stamped.hpp"
+#include "geometry_msgs/msg/point_stamped.hpp"
 #include "nav2_behavior_tree/behavior_tree_engine.hpp"
 #include "nav2_util/lifecycle_node.hpp"
 #include "nav2_msgs/action/navigate_to_pose.hpp"
+#include "nav2_msgs/action/regional_plan.hpp"
 #include "nav_msgs/msg/path.hpp"
 #include "nav2_util/simple_action_server.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
@@ -145,6 +148,35 @@ protected:
   std::string robot_frame_;
   std::string global_frame_;
   double transform_tolerance_;
+
+  // ---------------------------- Regional Plan ------------------------------------
+  using RPAction = nav2_msgs::action::RegionalPlan;
+
+  using RPActionServer = nav2_util::SimpleActionServer<RPAction>;
+
+  // Our action server implements the RegionalPlan action
+  std::unique_ptr<RPActionServer> rpaction_server_;
+  
+  std::vector<geometry_msgs::msg::PointStamped> boundary_;
+  /**
+   * @brief Action server callbacks 
+   */
+  void regionalPlan();
+
+  // /**
+  //  * @brief Goal pose initialization on the blackboard
+  //  */
+  // void initializeGoalPose();
+
+  /**
+   * @brief A subscription and callback to handle the topic-based goal published
+   * from rviz
+   */
+  void onBoundaryPointReceived(const geometry_msgs::msg::PointStamped::SharedPtr point);
+  rclcpp::Subscription<geometry_msgs::msg::PointStamped>::SharedPtr point_sub_;
+
+  // A client that we'll use to send a command message to our own task server
+  rclcpp_action::Client<RPAction>::SharedPtr self_rpclient_;
 };
 
 }  // namespace nav2_bt_navigator

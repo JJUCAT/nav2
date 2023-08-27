@@ -54,6 +54,9 @@ ament_target_dependencies(${library_name}
 add_library(nav2_compute_path_to_pose_action_bt_node SHARED plugins/action/compute_path_to_pose_action.cpp)
 list(APPEND plugin_libs nav2_compute_path_to_pose_action_bt_node)
 
+add_library(nav2_compute_regional_path_action_bt_node SHARED plugins/action/compute_regional_path_action.cpp)
+list(APPEND plugin_libs nav2_compute_regional_path_action_bt_node)
+
 add_library(nav2_follow_path_action_bt_node SHARED plugins/action/follow_path_action.cpp)
 list(APPEND plugin_libs nav2_follow_path_action_bt_node)
 
@@ -98,6 +101,9 @@ list(APPEND plugin_libs nav2_reinitialize_global_localization_service_bt_node)
 
 add_library(nav2_rate_controller_bt_node SHARED plugins/decorator/rate_controller.cpp)
 list(APPEND plugin_libs nav2_rate_controller_bt_node)
+
+add_library(nav2_sequence_paths_export_bt_node SHARED plugins/decorator/sequence_paths_export.cpp)
+list(APPEND plugin_libs nav2_sequence_paths_export_bt_node)
 
 add_library(nav2_distance_controller_bt_node SHARED plugins/decorator/distance_controller.cpp)
 list(APPEND plugin_libs nav2_distance_controller_bt_node)
