@@ -218,6 +218,7 @@ BtNavigator::on_activate(const rclcpp_lifecycle::State & /*state*/)
   RCLCPP_INFO(get_logger(), "Activating");
 
   action_server_->activate();
+  rpaction_server_->activate();
 
   return nav2_util::CallbackReturn::SUCCESS;
 }
@@ -228,6 +229,7 @@ BtNavigator::on_deactivate(const rclcpp_lifecycle::State & /*state*/)
   RCLCPP_INFO(get_logger(), "Deactivating");
 
   action_server_->deactivate();
+  rpaction_server_->deactivate();
 
   return nav2_util::CallbackReturn::SUCCESS;
 }
@@ -249,6 +251,7 @@ BtNavigator::on_cleanup(const rclcpp_lifecycle::State & /*state*/)
   tf_.reset();
 
   action_server_.reset();
+  rpaction_server_.reset();
   plugin_lib_names_.clear();
   current_bt_xml_filename_.clear();
   blackboard_.reset();
@@ -396,14 +399,14 @@ BtNavigator::regionalPlan()
       return rpaction_server_->is_cancel_requested();
     };
 
-  std::string bt_xml_filename = action_server_->get_current_goal()->behavior_tree;
+  std::string bt_xml_filename = rpaction_server_->get_current_goal()->behavior_tree;
   RCLCPP_INFO(get_logger(), "[BT] regionalPlan XML file: %s", bt_xml_filename.c_str());  
 
   if (!loadBehaviorTree(bt_xml_filename)) {
     RCLCPP_ERROR(
       get_logger(), "BT file not found: %s. Navigation canceled.",
       bt_xml_filename.c_str());
-    action_server_->terminate_current();
+    rpaction_server_->terminate_current();
     return;
   }
 
@@ -462,11 +465,13 @@ BtNavigator::regionalPlan()
 void
 BtNavigator::onBoundaryPointReceived(const geometry_msgs::msg::PointStamped::SharedPtr point)
 {
-  RCLCPP_INFO(get_logger(), "get point:[%.2f,%.2f]", point->point.x, point->point.y);
   boundary_.push_back(*point);
+  RCLCPP_INFO(get_logger(),
+    "get point:[%.2f,%.2f], boundary size:%u",
+    point->point.x, point->point.y, boundary_.size());  
   if (boundary_.size() >= 4) {
+    RCLCPP_INFO(get_logger(), "received boundary size 4, ready to make regional plan.");
     nav2_msgs::action::RegionalPlan::Goal goal;
-    // goal.boundary.header = boundary_;
     for (auto p : boundary_) {
       geometry_msgs::msg::PoseStamped ps;
       ps.pose.position.x = point->point.x;
