@@ -1,0 +1,9 @@
+#goal definition
+nav_msgs/Path boundary
+string planner_id
+---
+#result definition
+nav_msgs/Path[] path_list
+builtin_interfaces/Duration planning_time
+---
+#feedback

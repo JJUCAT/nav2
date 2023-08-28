@@ -1,0 +1,5 @@
+<library path="edge_planner">
+	<class name="edge_planner_ns/EdgePlanner" type="edge_planner_ns::EdgePlanner" base_class_type="nav2_core::RegionalPlanner">
+	  <description>Edge planner</description>
+	</class>
+</library>

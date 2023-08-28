@@ -36,6 +36,7 @@ def generate_launch_description():
 
     lifecycle_nodes = ['controller_server',
                        'planner_server',
+                       'regionalplanner_server',
                        'recoveries_server',
                        'bt_navigator',
                        'waypoint_follower']
@@ -105,6 +106,14 @@ def generate_launch_description():
             package='nav2_planner',
             executable='planner_server',
             name='planner_server',
+            output='screen',
+            parameters=[configured_params],
+            remappings=remappings),
+
+        Node(
+            package='nav2_regionalplanner',
+            executable='regionalplanner_server',
+            name='regionalplanner_server',
             output='screen',
             parameters=[configured_params],
             remappings=remappings),
