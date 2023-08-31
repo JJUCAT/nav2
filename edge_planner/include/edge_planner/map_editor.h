@@ -28,6 +28,7 @@ class MapEditor {
   void Erode(cv::Mat& mat, const float radius, const float resolution);
   bool Separation();
   
+  std::string save_dir_ = "/ws/navigation2_ws/roslog/";
   rclcpp::Node* node_;
   rclcpp::Logger* _logger;
   std::shared_ptr<cv::Mat> mat_;

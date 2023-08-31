@@ -25,11 +25,13 @@ SequencePathsExport::SequencePathsExport(
   const BT::NodeConfiguration & conf)
 : BT::DecoratorNode(name, conf)
 {
-  getInput("path_list", path_list_);
+
 }
 
 BT::NodeStatus SequencePathsExport::tick()
 {
+  getInput("path_list", path_list_);
+
   if (status() == BT::NodeStatus::IDLE) {
     current_path_index_ = 0;
     if (path_list_.empty()) {

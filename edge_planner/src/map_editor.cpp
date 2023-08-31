@@ -32,7 +32,7 @@ void MapEditor::Costmap2Image(const nav2_costmap_2d::Costmap2D& map) {
   }
 
   std::string save_path = getenv("HOME");
-  save_path = save_path + "/wp_Costmap2Image.jpg";
+  save_path = save_path + save_dir_ + "/wp_Costmap2Image.jpg";
   cv::imwrite(save_path, *mat_);
 }
 
@@ -70,7 +70,7 @@ bool MapEditor::GetOuterCounter(float close_inflation, float path_inflation,
 
   if (debug_) {
     std::string save_path = getenv("HOME");
-    save_path = save_path + "/outer_counters.jpg";
+    save_path = save_path + save_dir_ + "/outer_counters.jpg";
     cv::imwrite(save_path, cm);    
   }
 
@@ -93,7 +93,7 @@ bool MapEditor::GetOuterCounter(float close_inflation, float path_inflation,
       idx = i;
     }
   }
-  RCLCPP_ERROR(*_logger, "[WPP] outer counter idx:%d !", idx);
+  RCLCPP_INFO(*_logger, "[WPP] outer counter idx:%d !", idx);
   outer_counter.push_back(cs.at(idx));
   return true;
 }
@@ -117,7 +117,7 @@ bool MapEditor::GetInnerCounter(float close_inflation, float path_inflation,
 
   if (debug_) {
     std::string save_path = getenv("HOME");
-    save_path = save_path + "/inner_counters.jpg";
+    save_path = save_path + save_dir_ + "/inner_counters.jpg";
     cv::imwrite(save_path, cm);    
   }
 
@@ -135,7 +135,7 @@ void MapEditor::Inflat(cv::Mat& mat, const float radius, const float resolution)
   cv::dilate(mat, mat, de);
   
   // std::string save_path = getenv("HOME");
-  // save_path = save_path + "/wp_Inflat.jpg";
+  // save_path = save_path + save_dir_ + "/wp_Inflat.jpg";
   // cv::imwrite(save_path, mat);
 }
 
@@ -148,7 +148,7 @@ void MapEditor::Erode(cv::Mat& mat, const float radius, const float resolution) 
   cv::dilate(mat, mat, ee);
 
   // std::string save_path = getenv("HOME");
-  // save_path = save_path + "/wp_Erode.jpg";
+  // save_path = save_path + save_dir_ + "/wp_Erode.jpg";
   // cv::imwrite(save_path, mat);
 }
 
@@ -207,9 +207,9 @@ bool MapEditor::Separation() {
 
   if (debug_) {
     std::string save_path = getenv("HOME");
-    std::string coast_path = save_path + "/wp_Coast.jpg";
-    std::string mediterranean_path = save_path + "/wp_Mediterranean.jpg";
-    std::string color_areas_path = save_path + "/wp_ColorAreas.jpg";
+    std::string coast_path = save_path + save_dir_ + "/wp_Coast.jpg";
+    std::string mediterranean_path = save_path + save_dir_ + "/wp_Mediterranean.jpg";
+    std::string color_areas_path = save_path + save_dir_ + "/wp_ColorAreas.jpg";
     cv::imwrite(coast_path, *coast_mat_);
     cv::imwrite(mediterranean_path, *mediterranean_mat_);
     cv::imwrite(color_areas_path, color_areas_mat);
