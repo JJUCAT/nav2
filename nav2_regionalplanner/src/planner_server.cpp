@@ -38,7 +38,7 @@ namespace nav2_regional_planner
 PlannerServer::PlannerServer()
 : nav2_util::LifecycleNode("nav2_regionalplanner_server", "", true),
   gp_loader_("nav2_core", "nav2_core::RegionalPlanner"),
-  default_ids_{"ef"},
+  default_ids_{"none_planner"},
   default_types_{"edge_planner_ns/EdgePlanner"},
   costmap_(nullptr)
 {
@@ -94,13 +94,13 @@ PlannerServer::on_configure(const rclcpp_lifecycle::State & /*state*/)
       nav2_core::RegionalPlanner::Ptr planner =
         gp_loader_.createUniqueInstance(planner_types_[i]);
       RCLCPP_INFO(
-        get_logger(), "Created global planner plugin %s of type %s",
+        get_logger(), "Created regional planner plugin %s of type %s",
         planner_ids_[i].c_str(), planner_types_[i].c_str());
       planner->configure(node, planner_ids_[i], tf_, costmap_ros_);
       planners_.insert({planner_ids_[i], planner});
     } catch (const pluginlib::PluginlibException & ex) {
       RCLCPP_FATAL(
-        get_logger(), "Failed to create global planner. Exception: %s",
+        get_logger(), "Failed to create regional planner. Exception: %s",
         ex.what());
       return nav2_util::CallbackReturn::FAILURE;
     }
@@ -207,7 +207,9 @@ PlannerServer::computePlan()
   // Initialize the ComputeRegionalPath goal and result
   auto goal = action_server_->get_current_goal();
   auto result = std::make_shared<nav2_msgs::action::ComputeRegionalPath::Result>();
-
+  RCLCPP_INFO(
+      get_logger(), "planner [%s] perpare to plan, in boundary size:%u",
+      goal->planner_id.c_str(), goal->boundary.poses.size());
   try {
     if (action_server_ == nullptr || !action_server_->is_server_active()) {
       RCLCPP_DEBUG(get_logger(), "Action server unavailable or inactive. Stopping.");
@@ -235,7 +237,7 @@ PlannerServer::computePlan()
     if (result->path_list.size() == 0) {
       RCLCPP_WARN(
         get_logger(), "Planning algorithm %s failed to generate a valid"
-        " path");
+        " path", goal->planner_id.c_str());
       action_server_->terminate_current();
       return;
     }

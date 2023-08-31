@@ -39,6 +39,7 @@ BtNavigator::BtNavigator()
 
   const std::vector<std::string> plugin_libs = {
     "nav2_compute_path_to_pose_action_bt_node",
+    "nav2_compute_regional_path_action_bt_node",
     "nav2_follow_path_action_bt_node",
     "nav2_back_up_action_bt_node",
     "nav2_spin_action_bt_node",
@@ -50,6 +51,7 @@ BtNavigator::BtNavigator()
     "nav2_goal_updated_condition_bt_node",
     "nav2_reinitialize_global_localization_service_bt_node",
     "nav2_rate_controller_bt_node",
+    "nav2_sequence_paths_export_bt_node",
     "nav2_distance_controller_bt_node",
     "nav2_speed_controller_bt_node",
     "nav2_truncate_path_action_bt_node",
@@ -385,6 +387,8 @@ BtNavigator::onGoalPoseReceived(const geometry_msgs::msg::PoseStamped::SharedPtr
 void
 BtNavigator::regionalPlan()
 {
+  initializeBoundary();
+
   auto is_canceling = [this]() {
       if (rpaction_server_ == nullptr) {
         RCLCPP_DEBUG(get_logger(), "Action server unavailable. Canceling.");
@@ -401,7 +405,8 @@ BtNavigator::regionalPlan()
 
   std::string bt_xml_filename = rpaction_server_->get_current_goal()->behavior_tree;
   RCLCPP_INFO(get_logger(), "[BT] regionalPlan XML file: %s", bt_xml_filename.c_str());  
-
+  bt_xml_filename = bt_xml_filename == "" ? default_bt_xml_filename_ : bt_xml_filename;
+  RCLCPP_INFO(get_logger(), "[BT] regional plan use XML file: %s", bt_xml_filename.c_str()); 
   if (!loadBehaviorTree(bt_xml_filename)) {
     RCLCPP_ERROR(
       get_logger(), "BT file not found: %s. Navigation canceled.",
@@ -415,10 +420,10 @@ BtNavigator::regionalPlan()
   std::shared_ptr<RPAction::Feedback> feedback_msg = std::make_shared<RPAction::Feedback>();
 
   auto on_loop = [&]() {
-      // if (rpaction_server_->is_preempt_requested()) {
-      //   RCLCPP_INFO(get_logger(), "Received goal preemption request");
-      //   rpaction_server_->accept_pending_goal();
-      // }
+      if (rpaction_server_->is_preempt_requested()) {
+        RCLCPP_INFO(get_logger(), "Received goal preemption request");
+        rpaction_server_->accept_pending_goal();
+      }
       topic_logger.flush();
 
       // action server feedback (pose, duration of task,
@@ -463,6 +468,24 @@ BtNavigator::regionalPlan()
 }
 
 void
+BtNavigator::initializeBoundary()
+{
+  auto goal = rpaction_server_->get_current_goal();
+
+  RCLCPP_INFO(
+    get_logger(), "Begin regional plan, boundary size:%u",
+    goal->boundary.poses.size());
+
+  // Reset state for new action feedback
+  start_time_ = now();
+  nav_msgs::msg::Path boundary;
+  blackboard_->set<nav_msgs::msg::Path>("boundary", boundary);  // NOLINT
+
+  // Update the goal pose on the blackboard
+  blackboard_->set("boundary", goal->boundary);
+}
+
+void
 BtNavigator::onBoundaryPointReceived(const geometry_msgs::msg::PointStamped::SharedPtr point)
 {
   boundary_.push_back(*point);
@@ -474,9 +497,9 @@ BtNavigator::onBoundaryPointReceived(const geometry_msgs::msg::PointStamped::Sha
     nav2_msgs::action::RegionalPlan::Goal goal;
     for (auto p : boundary_) {
       geometry_msgs::msg::PoseStamped ps;
-      ps.pose.position.x = point->point.x;
-      ps.pose.position.y = point->point.y;
-      ps.pose.position.z = point->point.z;
+      ps.pose.position.x = p.point.x;
+      ps.pose.position.y = p.point.y;
+      ps.pose.position.z = p.point.z;
       goal.boundary.poses.push_back(ps);
     }
     boundary_.clear();

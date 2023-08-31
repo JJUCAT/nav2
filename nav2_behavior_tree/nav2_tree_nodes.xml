@@ -24,7 +24,7 @@
 
     <Action ID="ComputeRegionalPath">
       <input_port name="boundary">boundary of region</input_port>
-      <output_port name="path_list">Path created by RegionalComputePath node</output_port>
+      <output_port name="path_list">Path created by ComputeRegionalPath node</output_port>
       <input_port name="planner_id"/>
     </Action>
 

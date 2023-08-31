@@ -52,9 +52,9 @@ BT_REGISTER_NODES(factory)
     [](const std::string & name, const BT::NodeConfiguration & config)
     {
       return std::make_unique<nav2_behavior_tree::ComputeRegionalPathAction>(
-        name, "compute_path_to_pose", config);
+        name, "compute_regional_path", config);
     };
 
   factory.registerBuilder<nav2_behavior_tree::ComputeRegionalPathAction>(
-    "ComputePathToPose", builder);
+    "ComputeRegionalPath", builder);
 }

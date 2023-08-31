@@ -105,22 +105,20 @@ std::vector<nav_msgs::msg::Path> EdgePlanner::createPlan(
   const nav_msgs::msg::Path & boundary)
 {
   std::vector<nav_msgs::msg::Path> plans;
-  return plans;
-  // RCLCPP_INFO(_logger, "[WPP] wall path planner scene: %s.", scene.c_str());
+  RCLCPP_INFO(_logger, "[EP] boundary size:%u.", boundary.poses.size());
 
   nav_msgs::msg::Path edge = boundary;
   // GetFullMapEdge(*_costmap, edge); // 测试全图规划，edge 更新为全图的四个顶点
   
-  // TODO@LZY：判断是否全图规划，全图的话截图和填充功能可以跳过
   nav2_costmap_2d::Costmap2D map_window;
   if (!ScreenShot(edge, *_costmap, map_window)) {
-    RCLCPP_ERROR(_logger, "[WPP] copy window failed !");
+    RCLCPP_ERROR(_logger, "[EP] copy window failed !");
     return plans;
   }
   
   std::shared_ptr<nav2_costmap_2d::Costmap2D> filled_map;
   if (!FillSuburb(edge, map_window, filled_map)) {
-    RCLCPP_ERROR(_logger, "[WPP] fill failed !");
+    RCLCPP_ERROR(_logger, "[EP] fill failed !");
     return plans;
   }
 
@@ -146,10 +144,10 @@ std::vector<nav_msgs::msg::Path> EdgePlanner::createPlan(
 bool EdgePlanner::ScreenShot(const nav_msgs::msg::Path& edge,
   const nav2_costmap_2d::Costmap2D& map, nav2_costmap_2d::Costmap2D& map_window) {
   for (size_t i = 0; i < edge.poses.size(); i ++) {
-    RCLCPP_INFO(_logger, "[WPP] edge pose[%d]:[%f,%f].",
+    RCLCPP_INFO(_logger, "[EP] edge pose[%d]:[%f,%f].",
       i, edge.poses.at(i).pose.position.x, edge.poses.at(i).pose.position.y);
   }
-  RCLCPP_INFO(_logger, "[WPP] map ox:%f, oy:%f, mx:%f, my:%f.",
+  RCLCPP_INFO(_logger, "[EP] map ox:%f, oy:%f, mx:%f, my:%f.",
     map.getOriginX(), map.getOriginY(), map.getSizeInMetersX(), map.getSizeInMetersY());
 
   double x_min = std::numeric_limits<double>::max(), y_min = x_min;
@@ -162,18 +160,18 @@ bool EdgePlanner::ScreenShot(const nav_msgs::msg::Path& edge,
   }
 
   double x_win = x_max - x_min, y_win = y_max - y_min;
-  RCLCPP_INFO(_logger, "[WPP] x min:%f, x max:%f, y min:%f y max:%f x win:%f, y win:%f",
+  RCLCPP_INFO(_logger, "[EP] x min:%f, x max:%f, y min:%f y max:%f x win:%f, y win:%f",
     x_min, x_max, y_min, y_max, x_win, y_win);
 
   bool ret = map_window.copyCostmapWindowFully(map, x_min, y_min, x_win, y_win);
   if (ret) {
-    RCLCPP_INFO(_logger, "[WPP] window map, ox:%f, oy:%f, x max:%f, y max:%f, x in meter:%f, y in meter:%f",
+    RCLCPP_INFO(_logger, "[EP] window map, ox:%f, oy:%f, x max:%f, y max:%f, x in meter:%f, y in meter:%f",
       map_window.getOriginX(), map_window.getOriginY(),
       map_window.getOriginX() + map_window.getSizeInMetersX(),
       map_window.getOriginY() + map_window.getSizeInMetersY(),
       map_window.getSizeInMetersX(), map_window.getSizeInMetersY());
   } else {
-    RCLCPP_ERROR(_logger, "[WPP] copy window failed !");
+    RCLCPP_ERROR(_logger, "[EP] copy window failed !");
   }
 
   return ret;
@@ -185,7 +183,7 @@ bool EdgePlanner::FillSuburb(const nav_msgs::msg::Path& edge,
   nav2_costmap_2d::MapLocation mp;
   for (auto pose : edge.poses) {
     if (!map_src.worldToMap(pose.pose.position.x, pose.pose.position.y, mp.x, mp.y)) {
-      RCLCPP_ERROR(_logger, "[WPP] Polygon point [%f,%f] lies outside map bounds !",
+      RCLCPP_ERROR(_logger, "[EP] Polygon point [%f,%f] lies outside map bounds !",
         pose.pose.position.x, pose.pose.position.y);
       return false;
     }

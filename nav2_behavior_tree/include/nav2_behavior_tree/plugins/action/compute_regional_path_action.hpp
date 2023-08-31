@@ -42,12 +42,12 @@ public:
       {
         BT::OutputPort<std::vector<nav_msgs::msg::Path>>("path_list", "Paths created by ComputeRegionalPath node"),
         BT::InputPort<nav_msgs::msg::Path>("boundary", "boundary of task"),
-        BT::InputPort<std::string>("planner_id", ""),
+        BT::InputPort<std::string>("planner_id", "")
       });
   }
 
 private:
-  bool first_time_{true};
+
 };
 
 }  // namespace nav2_behavior_tree

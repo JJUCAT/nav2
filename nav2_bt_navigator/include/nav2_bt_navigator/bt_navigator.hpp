@@ -163,16 +163,17 @@ protected:
    */
   void regionalPlan();
 
-  // /**
-  //  * @brief Goal pose initialization on the blackboard
-  //  */
-  // void initializeGoalPose();
+  /**
+   * @brief Boundary initialization on the blackboard
+   */
+  void initializeBoundary();
 
   /**
    * @brief A subscription and callback to handle the topic-based goal published
    * from rviz
    */
   void onBoundaryPointReceived(const geometry_msgs::msg::PointStamped::SharedPtr point);
+
   rclcpp::Subscription<geometry_msgs::msg::PointStamped>::SharedPtr point_sub_;
 
   // A client that we'll use to send a command message to our own task server
