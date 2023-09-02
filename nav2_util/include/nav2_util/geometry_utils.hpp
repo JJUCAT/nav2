@@ -22,7 +22,9 @@
 #include "geometry_msgs/msg/point.hpp"
 #include "geometry_msgs/msg/quaternion.hpp"
 #include "geometry_msgs/msg/polygon.hpp"
+#include "geometry_msgs/msg/polygon_stamped.hpp"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.h"
+#include "tf2/utils.h"
 
 namespace nav2_util
 {
@@ -100,21 +102,17 @@ inline double get_diff_angle(const double angle_start, const double angle_end)
   return diff_angle;
 }
 
-inline void transform_polygon(const ef_point_t& check_pose,
-    const geometry_msgs::PolygonStamped& base_polygon,
-    geometry_msgs::PolygonStamped& check_polygon)
+inline void transform_polygon(const geometry_msgs::msg::PoseStamped& check_pose,
+  const geometry_msgs::msg::PolygonStamped& base_polygon,
+  geometry_msgs::msg::PolygonStamped& check_polygon)
 {
-  auto Transform = [&](const ef_point_t& check_pose, const geometry_msgs::Point32 point) {
-      geometry_msgs::Point32 new_point;
-      new_point.x = check_pose.x + check_pose.cos_theta * point.x - check_pose.sin_theta * point.y;
-      new_point.y = check_pose.y + check_pose.sin_theta * point.x + check_pose.cos_theta * point.y;
-      return new_point;
-  };
-
-  int i = 0;
-  check_polygon.polygon.points.resize(base_polygon.polygon.points.size());
-  for (auto points : base_polygon.polygon.points) {
-      check_polygon.polygon.points[i++] = Transform(check_pose, points);
+  double yaw = tf2::getYaw(check_pose.pose.orientation);
+  double cos_theta = cos(yaw), sin_theta = sin(yaw);
+  for (auto point : base_polygon.polygon.points) {
+    geometry_msgs::msg::Point32 new_point;
+    new_point.x = check_pose.pose.position.x + cos_theta * point.x - sin_theta * point.y;
+    new_point.y = check_pose.pose.position.y + sin_theta * point.x + cos_theta * point.y;
+    check_polygon.polygon.points.push_back(new_point);
   }
 }
 

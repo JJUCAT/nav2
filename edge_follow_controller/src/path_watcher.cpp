@@ -1,6 +1,7 @@
 #include "edge_follow_controller/nanoflann_port.h"
 #include "edge_follow_controller/path_watcher.h"
-#include "nav2_util/geometyr_utils.hpp"
+#include "nav2_util/geometry_utils.hpp"
+#include "nav2_util/robot_utils.hpp"
 #include <memory>
 
 namespace edge_follow_controller_ns
@@ -62,7 +63,7 @@ void PathWatcher::watching(const nav2_costmap_2d::Costmap2D& map)
   std::vector<nav_msgs::msg::Path> paths;
   Counters2Path(local_map, counters, paths);
 
-  nav_msgs::Path path_ahead;
+  nav_msgs::msg::Path path_ahead;
   if (FindPathAhead(paths, path_ahead)) {
       // straight_ = IsPathAheadStraight(path_ahead, 8, 0.1);
       // if (straight_)path_ahead_ = path_ahead;
@@ -75,12 +76,26 @@ void PathWatcher::watching(const nav2_costmap_2d::Costmap2D& map)
   } else {
     RCLCPP_WARN(logger_, "[%s,%d] lose edge !", __FUNCTION__, __LINE__);
     dir_ = kDirN;    
-    straight_ = false;
+    // straight_ = false;
   }
 }
 
 
 // -------------------- private methods --------------------
+bool PathWatcher::UpdateRobotPose()
+{
+  if (nav2_util::getCurrentPose(robot_pose_, *tf_)) {
+    rbt_.x = robot_pose_.pose.position.x;
+    rbt_.y = robot_pose_.pose.position.y;
+    rbt_.theta = tf2::getYaw(robot_pose_.pose.orientation);
+    rbt_.sin_theta = sin(rbt_.theta);
+    rbt_.cos_theta = cos(rbt_.theta);
+    return true;
+  } else {
+    return false;
+  }
+}
+
 bool PathWatcher::addCostmap(
   nav2_costmap_2d::Costmap2D& src_map, const nav2_costmap_2d::Costmap2D& map,
   const unsigned char low_cost, const unsigned char high_cost)
@@ -156,8 +171,7 @@ bool PathWatcher::FindPathAhead(const std::vector<nav_msgs::msg::Path>& contours
   nav_msgs::msg::Path& path_ahead)
 {
   nav_msgs::msg::Path tmp_path;
-  int closest_idx = 0;
-  if (FindEdgePath(contours, tmp_path, closest_idx)) {
+  if (FindEdgePath(contours, tmp_path)) {
     kdt_.Reset();
     kdt_.Init(tmp_path);
     nanoflann_port_ns::KDTIndex kdi = kdt_.FindClosestPoint(rbt_.x, rbt_.y, 0.f);
@@ -168,6 +182,52 @@ bool PathWatcher::FindPathAhead(const std::vector<nav_msgs::msg::Path>& contours
   }
 
   RCLCPP_WARN(logger_, "[%s,%d] lose edge path !", __FUNCTION__, __LINE__);
+  return false;
+}
+
+bool PathWatcher::FindEdgePath(const std::vector<nav_msgs::msg::Path>& contours,
+  nav_msgs::msg::Path& edge_path)
+{
+  ef_point_t rbt_head = rbt_;
+  rbt_head.x += rbt_head.cos_theta * params_.head;
+  rbt_head.y += rbt_head.sin_theta * params_.head;   
+
+  std::vector<std::pair<int, nanoflann_port_ns::KDTIndex>> kdis;
+  for (unsigned int i = 0; i < contours.size(); i++) {
+    kdt_.Reset();
+    kdt_.Init(contours.at(i));
+    nanoflann_port_ns::KDTIndex kdi0 = kdt_.FindClosestPoint(rbt_.x, rbt_.y, 0.f);
+    nanoflann_port_ns::KDTIndex kdi1 = kdt_.FindClosestPoint(rbt_head.x, rbt_head.y, 0.f);
+    std::pair<int, nanoflann_port_ns::KDTIndex> key;
+    if (kdi0.dist < kdi1.dist) key = std::make_pair(i, kdi0);
+    else key = std::make_pair(i, kdi1);
+    if (kdis.empty()) kdis.push_back(key);
+    else {
+      bool insert = false;
+      for (unsigned int j = 0; j < kdis.size(); j++) {
+        if (key.second.dist < kdis.at(j).second.dist) {
+          kdis.insert(kdis.begin() + j, key);
+          insert = true;
+          break;
+        }
+      }
+      if (!insert) kdis.push_back(key);
+    }
+  }
+
+  for (unsigned int i = 0; i < kdis.size(); i++) {
+    if (kdis.at(i).second.dist < 3.f) {
+      edge_path = contours.at(kdis.at(i).first);
+      auto p = contours.at(kdis.at(i).first).poses.at(kdis.at(i).second.idx);
+      ef_point_t tp; tp.x = p.pose.position.x; tp.y = p.pose.position.y;
+      std::vector<ef_point_t> vcp;
+      vcp.push_back(tp);
+      // sp_vizer_->VizCheckPoses(clocest_pose_pub_, vcp);   
+      return true;
+    }
+  }
+
+  RCLCPP_WARN(logger_, "[%s,%d] can't find edge path", __FUNCTION__, __LINE__);
   return false;
 }
 
@@ -186,8 +246,8 @@ bool PathWatcher::SortContour(nav_msgs::msg::Path& contour, int& idx)
   geometry_msgs::msg::Point back_pose = contour.poses.at(back_idx).pose.position;
   float front_yaw = atan2(front_pose.y - closest_pose.y, front_pose.x - closest_pose.x);
   float back_yaw = atan2(back_pose.y - closest_pose.y, back_pose.x - closest_pose.x);
-  float front_diff = GetDiffAngle(front_yaw, rbt_.theta);
-  float back_diff = GetDiffAngle(back_yaw, rbt_.theta);
+  float front_diff = nav2_util::geometry_utils::get_diff_angle(front_yaw, rbt_.theta);
+  float back_diff = nav2_util::geometry_utils::get_diff_angle(back_yaw, rbt_.theta);
 
   if (fabs(front_diff) > fabs(back_diff)) {
     reverse(contour.poses.begin(), contour.poses.end());
@@ -210,7 +270,7 @@ size_t PathWatcher::CutPath(const nav_msgs::msg::Path& path_ahead,
 
   float dist_sum = 0;
   cut_path.header = tmp_path.header;
-  for (int i = 0; i < tmp_path.poses.size()-1; i++) {
+  for (unsigned int i = 0; i < tmp_path.poses.size()-1; i++) {
     dist_sum += std::hypot(
       tmp_path.poses.at(i).pose.position.x - tmp_path.poses.at(i+1).pose.position.x,
       tmp_path.poses.at(i).pose.position.y - tmp_path.poses.at(i+1).pose.position.y);
@@ -221,8 +281,14 @@ size_t PathWatcher::CutPath(const nav_msgs::msg::Path& path_ahead,
   return cut_path.poses.size();
 }
 
-ef_dir_t EdgeFollowerROS::GetDir(const nav_msgs::msg::Path& path_ahead)
+ef_dir_t PathWatcher::GetDir(const nav_msgs::msg::Path& path_ahead)
 {
+  geometry_msgs::msg::PoseStamped robot_pose;
+  if (!nav2_util::getCurrentPose(robot_pose, *tf_)) {
+    RCLCPP_ERROR(logger_, "[%s,%d] can't get robot pose.", __FUNCTION__, __LINE__);
+    return kDirN;
+  }
+
   geometry_msgs::msg::PolygonStamped horizon_polygon, base_polygon;
   if (((params_.mode == kLeft) && (dir_ == kDirR)) || ((params_.mode == kRight) && (dir_ == kDirL))) {
     base_polygon.polygon = params_.polygon_horizon_plus;
@@ -230,13 +296,12 @@ ef_dir_t EdgeFollowerROS::GetDir(const nav_msgs::msg::Path& path_ahead)
     base_polygon.polygon = params_.polygon_horizon;
   }
 
-  TransformPolygon(rbt_, base_polygon, horizon_polygon);
+  nav2_util::geometry_utils::transform_polygon(robot_pose, base_polygon, horizon_polygon);
   horizon_polygon.header.frame_id = "map";
   horizon_polygon.header.stamp = rclcpp::Time();
   // sp_vizer_->VizPolygon(horizon_polygon_pub_, horizon_polygon);
 
   geometry_msgs::msg::Point p;
-  bool find = false;
   nav_msgs::msg::Path path_in_horizon;
   path_in_horizon.header = path_ahead.header;
   for (auto pose = path_ahead.poses.rbegin();
@@ -244,8 +309,8 @@ ef_dir_t EdgeFollowerROS::GetDir(const nav_msgs::msg::Path& path_ahead)
     p.x = pose->pose.position.x;
     p.y = pose->pose.position.y;
     if (nav2_util::geometry_utils::in_polygon(horizon_polygon.polygon, p)) {
-        path_in_horizon.poses.push_back(*pose);
-        // break;
+      path_in_horizon.poses.push_back(*pose);
+      // break;
     }
   }
 

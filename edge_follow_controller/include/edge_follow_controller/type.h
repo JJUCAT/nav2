@@ -1,7 +1,7 @@
 #ifndef TYPE_H
 #define TYPE_H
 
-#include <geometry_msgs/msg/Polygon.h>
+#include "geometry_msgs/msg/polygon.hpp"
 
 namespace edge_follow_controller_ns {
 

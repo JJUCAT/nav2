@@ -20,7 +20,8 @@ class PathWatcher
 {
  public:
   PathWatcher(rclcpp_lifecycle::LifecycleNode::SharedPtr& node,
-    ef_params_t params) : node_(node), params_(params) {
+    std::shared_ptr<tf2_ros::Buffer>& tf, ef_params_t params)
+      : node_(node), tf_(tf), params_(params) {
     logger_ = node_->get_logger();
   }
   ~PathWatcher() {}
@@ -32,6 +33,8 @@ class PathWatcher
 
 
  private:
+  bool UpdateRobotPose();
+
   bool addCostmap(
     nav2_costmap_2d::Costmap2D& src_map, const nav2_costmap_2d::Costmap2D& map,
     const unsigned char low_cost = nav2_costmap_2d::LETHAL_OBSTACLE,
@@ -50,6 +53,9 @@ class PathWatcher
   bool FindPathAhead(const std::vector<nav_msgs::msg::Path>& contours,
     nav_msgs::msg::Path& path_ahead);
 
+  bool FindEdgePath(const std::vector<nav_msgs::msg::Path>& contours,
+    nav_msgs::msg::Path& edge_path);
+
   bool SortContour(nav_msgs::msg::Path& contour, int& idx);
 
   size_t CutPath(const nav_msgs::msg::Path& path_ahead,
@@ -59,7 +65,9 @@ class PathWatcher
 
   rclcpp_lifecycle::LifecycleNode::SharedPtr node_;
   rclcpp::Logger logger_{rclcpp::get_logger("EdgePlanner")};
-
+  std::shared_ptr<tf2_ros::Buffer> tf_;
+  geometry_msgs::msg::PoseStamped robot_pose_;
+  ef_point_t rbt_;  
   std::shared_ptr<nav2_costmap_2d::Costmap2D> boundary_map_;
   nanoflann_port_ns::NanoflannPort kdt_;
   ef_params_t params_;
