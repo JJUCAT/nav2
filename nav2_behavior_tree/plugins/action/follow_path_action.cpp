@@ -33,6 +33,8 @@ void FollowPathAction::on_tick()
 {
   getInput("path", goal_.path);
   getInput("controller_id", goal_.controller_id);
+  std::cout << "[FP] on tick" << std::endl;
+  std::cout << "path :" << goal_.path.poses.size() << std::endl;
 }
 
 void FollowPathAction::on_wait_for_result()

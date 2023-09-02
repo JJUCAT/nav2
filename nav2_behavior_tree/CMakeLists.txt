@@ -111,6 +111,9 @@ list(APPEND plugin_libs nav2_distance_controller_bt_node)
 add_library(nav2_speed_controller_bt_node SHARED plugins/decorator/speed_controller.cpp)
 list(APPEND plugin_libs nav2_speed_controller_bt_node)
 
+add_library(nav2_move_path_start_action_bt_node SHARED plugins/action/move_path_start_action.cpp)
+list(APPEND plugin_libs nav2_move_path_start_action_bt_node)
+
 add_library(nav2_truncate_path_action_bt_node SHARED plugins/action/truncate_path_action.cpp)
 list(APPEND plugin_libs nav2_truncate_path_action_bt_node)
 
@@ -128,6 +131,9 @@ list(APPEND plugin_libs nav2_pipeline_sequence_bt_node)
 
 add_library(nav2_round_robin_node_bt_node SHARED plugins/control/round_robin_node.cpp)
 list(APPEND plugin_libs nav2_round_robin_node_bt_node)
+
+add_library(nav2_do_until_success_bt_node SHARED plugins/control/do_until_success.cpp)
+list(APPEND plugin_libs nav2_do_until_success_bt_node)
 
 foreach(bt_plugin ${plugin_libs})
   ament_target_dependencies(${bt_plugin} ${dependencies})

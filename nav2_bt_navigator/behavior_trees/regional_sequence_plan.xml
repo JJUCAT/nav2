@@ -7,9 +7,22 @@
     <BehaviorTree ID="MainTree">
         <Sequence>
             <ComputeRegionalPath boundary="{boundary}" path_list="{path_list}" planner_id="ep"/>
-            <SequencePathsExport path="{path}" path_list="{path_list}">
-                <FollowPath controller_id="FollowPath" path="{path}"/>
-            </SequencePathsExport>
+            <Control ID="DoUntilSuccess">
+                <SequencePathsExport path="{path}" path_list="{path_list}">
+                    <MovePathStart jump_dist="0.3" path_in="{path}" path_out="{path2go}" pose="{global_robot_pose}"/>
+                </SequencePathsExport>
+                <FollowPath controller_id="FollowPath" path="{path2go}"/>
+            </Control>
         </Sequence>
     </BehaviorTree>
+    <TreeNodesModel>
+        <Action ID="MovePathStart">
+            <input_port name="jump_dist"/>
+            <input_port name="path_in"/>
+            <output_port name="path_out"/>
+            <input_port name="pose"/>
+        </Action>
+
+        <Control ID="DoUntilSuccess"/>
+    </TreeNodesModel>
 </root>

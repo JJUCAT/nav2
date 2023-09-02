@@ -31,43 +31,37 @@ SequencePathsExport::SequencePathsExport(
 BT::NodeStatus SequencePathsExport::tick()
 {
   getInput("path_list", path_list_);
+  std::cout << "[SPE] init" << std::endl;
 
-  if (status() == BT::NodeStatus::IDLE) {
-    current_path_index_ = 0;
-    if (path_list_.empty()) {
-      // RCLCPP_ERROR(node_->get_logger(), "empty path list !");
-      std::cout << "empty path list !" << std::endl;
-      std::stringstream error_msg;
-      error_msg << "empty path list";
-      throw std::runtime_error(error_msg.str());
-    }
-
-    setOutput("path", path_list_.at(current_path_index_));
-    return BT::NodeStatus::RUNNING;
+  if (path_list_.empty()) {
+    // RCLCPP_ERROR(node_->get_logger(), "empty path list !");
+    std::cout << "empty path list !" << std::endl;
+    std::stringstream error_msg;
+    error_msg << "empty path list";
+    throw std::runtime_error(error_msg.str());
   }
 
+  std::cout << "output path [" << current_path_index_ << "] size: " << 
+    path_list_.at(current_path_index_).poses.size() << std::endl;
+  setOutput("path", path_list_.at(current_path_index_));
+
+  std::cout << "[SPE] work" << std::endl;
   setStatus(BT::NodeStatus::RUNNING);
   const BT::NodeStatus child_state = child_node_->executeTick();
+  std::cout << "[SPE] child state: " << int(child_state) << std::endl;
   switch (child_state) {
     case BT::NodeStatus::RUNNING:
       return BT::NodeStatus::RUNNING;
 
     case BT::NodeStatus::SUCCESS:
-      if (current_path_index_++ >= path_list_.size()) {
+      current_path_index_ ++;
+      if (current_path_index_ >= path_list_.size()) {
         // RCLCPP_INFO(node_->get_logger(), "path list finish !");
         std::cout << "path list finish !" << std::endl;
         current_path_index_ = 0;
         return BT::NodeStatus::SUCCESS;
-      } else {
-        // RCLCPP_INFO(
-        //   node_->get_logger(),
-        //   "export path [%d], size:%u",
-        //   current_path_index_, path_list_.at(current_path_index_).poses.size());
-        std::cout << "export path [" << current_path_index_ << "], size:" <<
-          path_list_.at(current_path_index_).poses.size() << std::endl;
-        setOutput("path", path_list_.at(current_path_index_));
-        return BT::NodeStatus::RUNNING;
       }
+      return BT::NodeStatus::RUNNING;
 
     case BT::NodeStatus::FAILURE:
         // RCLCPP_INFO(node_->get_logger(),

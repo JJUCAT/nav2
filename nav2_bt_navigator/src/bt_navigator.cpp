@@ -15,6 +15,7 @@
 #include "nav2_bt_navigator/bt_navigator.hpp"
 
 #include <fstream>
+#include <geometry_msgs/msg/detail/pose_stamped__struct.hpp>
 #include <memory>
 #include <streambuf>
 #include <string>
@@ -55,9 +56,11 @@ BtNavigator::BtNavigator()
     "nav2_distance_controller_bt_node",
     "nav2_speed_controller_bt_node",
     "nav2_truncate_path_action_bt_node",
+    "nav2_move_path_start_action_bt_node",
     "nav2_recovery_node_bt_node",
     "nav2_pipeline_sequence_bt_node",
     "nav2_round_robin_node_bt_node",
+    "nav2_do_until_success_bt_node",
     "nav2_transform_available_condition_bt_node",
     "nav2_time_expired_condition_bt_node",
     "nav2_distance_traveled_condition_bt_node",
@@ -142,6 +145,8 @@ BtNavigator::on_configure(const rclcpp_lifecycle::State & /*state*/)
   blackboard_->set<bool>("path_updated", false);  // NOLINT
   blackboard_->set<bool>("initial_pose_received", false);  // NOLINT
   blackboard_->set<int>("number_recoveries", 0);  // NOLINT
+  geometry_msgs::msg::PoseStamped robot;
+  blackboard_->set<geometry_msgs::msg::PoseStamped>("global_robot_pose", robot);  // NOLINT
 
   // Get the BT filename to use from the node parameter
   get_parameter("default_bt_xml_filename", default_bt_xml_filename_);
@@ -428,11 +433,10 @@ BtNavigator::regionalPlan()
 
       // action server feedback (pose, duration of task,
       // number of recoveries, and distance remaining to goal)
+      geometry_msgs::msg::PoseStamped robot;
       nav2_util::getCurrentPose(
-        feedback_msg->current_pose, *tf_, global_frame_, robot_frame_, transform_tolerance_);
-
-      // geometry_msgs::msg::PoseStamped goal_pose;
-      // blackboard_->get("goal", goal_pose);
+        robot, *tf_, global_frame_, robot_frame_, transform_tolerance_);
+      blackboard_->set("global_robot_pose", robot);  // NOLINT
 
       // feedback_msg->distance_remaining = nav2_util::geometry_utils::euclidean_distance(
       //   feedback_msg->current_pose.pose, goal_pose.pose);

@@ -76,10 +76,12 @@ bt_navigator:
     - nav2_distance_controller_bt_node
     - nav2_speed_controller_bt_node
     - nav2_truncate_path_action_bt_node
+    - nav2_move_path_start_action_bt_node
     - nav2_goal_updater_node_bt_node
     - nav2_recovery_node_bt_node
     - nav2_pipeline_sequence_bt_node
     - nav2_round_robin_node_bt_node
+    - nav2_do_until_success_bt_node
     - nav2_transform_available_condition_bt_node
     - nav2_time_expired_condition_bt_node
     - nav2_distance_traveled_condition_bt_node
@@ -267,9 +269,9 @@ regionalplanner_server:
     planner_plugins: ["ep"]
     ep:
       plugin: "edge_planner_ns/EdgePlanner"
-      close_inflation: 0.2               # 闭合狭窄区域的膨胀，uint:m
-      path_inflation: 0.3                # 获取路径的膨胀，至少大于等于 close_inflation，uint:m
-      smooth_inflation: -1.0               # 平滑外轮廓凹陷的膨胀，uint:m
+      close_inflation: 0.3               # 闭合狭窄区域的膨胀，uint:m
+      path_inflation: 0.4                # 获取路径的膨胀，至少大于等于 close_inflation，uint:m
+      smooth_inflation: -1.0             # 平滑外轮廓凹陷的膨胀，uint:m
       debug: true                        # 保存调试的图片
 
 planner_server_rclcpp_node:
