@@ -7,11 +7,16 @@
 #include <algorithm>
 
 #include "nav2_core/controller.hpp"
+#include "path_watcher.h"
 #include "rclcpp/rclcpp.hpp"
 #include "pluginlib/class_loader.hpp"
 #include "pluginlib/class_list_macros.hpp"
 #include "nav2_util/odometry_utils.hpp"
 #include "geometry_msgs/msg/pose2_d.hpp"
+
+#include "edge_follow_controller/type.h"
+#include "edge_follow_controller/config.hpp"
+#include "edge_follow_controller/path_watcher.h"
 
 namespace edge_follow_controller_ns
 {
@@ -90,8 +95,13 @@ protected:
   nav2_costmap_2d::Costmap2D * costmap_;
   rclcpp::Logger logger_ {rclcpp::get_logger("EdgeFollowControllerROS")};
 
+  ef_params_t params_;
+  
   nav_msgs::msg::Path global_plan_;
   std::shared_ptr<rclcpp_lifecycle::LifecyclePublisher<nav_msgs::msg::Path>> global_path_pub_;
+  
+  std::shared_ptr<PathWatcher> path_watcher_;
+
 
 };
 

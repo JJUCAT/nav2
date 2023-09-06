@@ -40,7 +40,9 @@ set(library_name edge_follow_controller)
 add_library(${library_name} SHARED
         src/edge_follow_controller_ros.cpp
         src/nanoflann_port.cpp
-        src/path_watcher.cpp)
+        src/path_watcher.cpp
+        src/edge_follower.cpp
+        src/config.cpp)
 
 target_link_libraries(${library_name}
   ${OpenCV_LIBRARIES}

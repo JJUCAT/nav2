@@ -24,6 +24,8 @@ void EdgeFollowControllerROS::configure(
   tf_ = tf;
   plugin_name_ = name;
   logger_ = node->get_logger();
+  
+  path_watcher_ = std::make_shared<PathWatcher>(node, tf, params_);
 
   declare_parameter_if_not_declared(
     node, plugin_name_ + ".desired_linear_vel", rclcpp::ParameterValue(0.5));
@@ -41,7 +43,7 @@ void EdgeFollowControllerROS::cleanup()
     " regulated_pure_pursuit_controller::EdgeFollowControllerROS",
     plugin_name_.c_str());
   global_path_pub_.reset();
-
+  path_watcher_.reset();
 }
 
 void EdgeFollowControllerROS::activate()

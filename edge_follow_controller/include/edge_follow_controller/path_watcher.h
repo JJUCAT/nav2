@@ -1,6 +1,7 @@
 #ifndef PATH_WATCHER_H_
 #define PATH_WATCHER_H_
 
+#include "nav2_util/lifecycle_node.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "geometry_msgs/msg/point32.hpp"
 #include "nav_msgs/msg/path.hpp"
@@ -19,8 +20,8 @@ namespace edge_follow_controller_ns {
 class PathWatcher
 {
  public:
-  PathWatcher(rclcpp_lifecycle::LifecycleNode::SharedPtr& node,
-    std::shared_ptr<tf2_ros::Buffer>& tf, ef_params_t params)
+  PathWatcher(const rclcpp_lifecycle::LifecycleNode::SharedPtr& node,
+    const std::shared_ptr<tf2_ros::Buffer>& tf, ef_params_t params)
       : node_(node), tf_(tf), params_(params) {
     logger_ = node_->get_logger();
   }
@@ -64,7 +65,7 @@ class PathWatcher
   ef_dir_t GetDir(const nav_msgs::msg::Path& path_ahead);
 
   rclcpp_lifecycle::LifecycleNode::SharedPtr node_;
-  rclcpp::Logger logger_{rclcpp::get_logger("EdgePlanner")};
+  rclcpp::Logger logger_{rclcpp::get_logger("EdgeFollowController")};
   std::shared_ptr<tf2_ros::Buffer> tf_;
   geometry_msgs::msg::PoseStamped robot_pose_;
   ef_point_t rbt_;  
