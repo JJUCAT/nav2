@@ -90,6 +90,7 @@ public:
    * @param max Maximum velocity allowable
    * @param acc_limit Acceleration Limit
    * @param decel_limit Deceleration Limit
+   * @param acc_time Simulation time
    * @param num_samples The number of samples to return
    */
   OneDVelocityIterator(
@@ -106,12 +107,13 @@ public:
     reset();
 
     if (fabs(min_vel_ - max_vel_) < EPSILON) {
-      increment_ = 1.0;
+      increment_ = 1.0; // 最大最小速度非常接近，没有采样的空间了
       return;
     }
     num_samples = std::max(2, num_samples);
 
     // e.g. for 4 samples, split distance in 3 even parts
+    // 4 个采样点需要把采样空间切成三段，increment_ 是采样步进
     increment_ = (max_vel_ - min_vel_) / std::max(1, (num_samples - 1));
   }
 

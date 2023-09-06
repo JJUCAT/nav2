@@ -277,6 +277,7 @@ DWBLocalPlanner::computeVelocityCommands(
   const geometry_msgs::msg::PoseStamped & pose,
   const geometry_msgs::msg::Twist & velocity)
 {
+  // dwb_msgs::msg::LocalPlanEvaluation 包含了多条采样轨迹的各项评分
   std::shared_ptr<dwb_msgs::msg::LocalPlanEvaluation> results = nullptr;
   if (pub_->shouldRecordEvaluation()) {
     results = std::make_shared<dwb_msgs::msg::LocalPlanEvaluation>();
@@ -326,9 +327,9 @@ DWBLocalPlanner::computeVelocityCommands(
 
   nav_2d_msgs::msg::Path2D transformed_plan;
   nav_2d_msgs::msg::Pose2DStamped goal_pose;
-
+  // 把路径转弯到 pose 所在坐标系下
   prepareGlobalPlan(pose, transformed_plan, goal_pose);
-
+  // 地图上锁防止半途被更新修改
   nav2_costmap_2d::Costmap2D * costmap = costmap_ros_->getCostmap();
   std::unique_lock<nav2_costmap_2d::Costmap2D::mutex_t> lock(*(costmap->getMutex()));
 
@@ -387,8 +388,8 @@ DWBLocalPlanner::coreScoringAlgorithm(
   worst.total = -1;
   IllegalTrajectoryTracker tracker;
 
-  traj_generator_->startNewIteration(velocity);
-  while (traj_generator_->hasMoreTwists()) {
+  traj_generator_->startNewIteration(velocity); // 轨迹采样初始化
+  while (traj_generator_->hasMoreTwists()) { // 还有轨迹能采样生成
     twist = traj_generator_->nextTwist();
     traj = traj_generator_->generateTrajectory(pose, velocity, twist);
 
