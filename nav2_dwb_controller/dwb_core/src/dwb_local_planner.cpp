@@ -390,7 +390,7 @@ DWBLocalPlanner::coreScoringAlgorithm(
 
   traj_generator_->startNewIteration(velocity); // 轨迹采样初始化
   while (traj_generator_->hasMoreTwists()) { // 还有轨迹能采样生成
-    twist = traj_generator_->nextTwist();
+    twist = traj_generator_->nextTwist(); // 最终期望的线速度和角速度
     traj = traj_generator_->generateTrajectory(pose, velocity, twist);
 
     try {
