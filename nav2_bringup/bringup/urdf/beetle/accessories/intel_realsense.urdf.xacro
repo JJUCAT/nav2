@@ -27,7 +27,7 @@
 
       <gazebo reference="${frame}">
         <turnGravityOff>true</turnGravityOff>
-        <sensor type="depth" name="${prefix}_realsense_depth">
+        <sensor type="depth" name="realsense_depth">
           <update_rate>${update_rate}</update_rate>
           <camera>
             <!-- 75x65 degree FOV for the depth sensor -->
@@ -73,7 +73,7 @@
       </gazebo>
     </xacro:macro>
 
-    <link name="${prefix}_realsense_lens">
+    <link name="realsense_lens">
       <visual>
         <!--
           the model's origin is in the middle & it's rotated to lie in
@@ -88,17 +88,17 @@
       </visual>
     </link>
 
-    <joint type="fixed" name="${prefix}_realsense_lens_joint">
+    <joint type="fixed" name="realsense_lens_joint">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <parent link="${parent_link}" />
-      <child link="${prefix}_realsense_lens" />
+      <child link="realsense_lens" />
     </joint>
-    <joint type="fixed" name="${prefix}_realsense_joint">
+    <joint type="fixed" name="realsense_joint">
       <origin xyz="0.025 0 0" rpy="0 0 0" />
-      <parent link="${prefix}_realsense_lens" />
-      <child link="${prefix}_realsense" />
+      <parent link="realsense_lens" />
+      <child link="realsense" />
     </joint>
 
-    <xacro:intel_realsense frame="${prefix}_realsense" topic="${topic}"/>
+    <xacro:intel_realsense frame="realsense" topic="${topic}"/>
   </xacro:macro>
 </robot>

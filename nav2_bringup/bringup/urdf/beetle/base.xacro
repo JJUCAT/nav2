@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="base">
 
   <xacro:arg name="laser_enabled" default="1" />
   <xacro:arg name="laser_xyz" default="0.2206 0.0 0.00635" />
   <xacro:arg name="laser_rpy" default="0.0 0.0 0.0" />
+  <xacro:property name="laser_z_offset" value="0.1" />
 
   <xacro:arg name="realsense_enabled" default="0" />
   <xacro:arg name="realsense_xyz" default="0 0 0" />
@@ -43,7 +44,7 @@
     <xacro:property name="wheel_radius" value="0.1651" />
 
     <!-- Base link is the center of the robot's bottom plate -->
-    <link name="${prefix}base_link">
+    <link name="base_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -65,16 +66,16 @@
     </link>
 
     <!-- Base footprint is on the ground under the robot -->
-    <link name="${prefix}base_footprint"/>
+    <link name="base_footprint"/>
 
-    <joint name="${prefix}base_footprint_joint" type="fixed">
+    <joint name="base_footprint_joint" type="fixed">
       <origin xyz="0 0 ${wheel_vertical_offset - wheel_radius}" rpy="0 0 0" />
-      <parent link="${prefix}base_link" />
-      <child link="${prefix}base_footprint" />
+      <parent link="base_link" />
+      <child link="base_footprint" />
     </joint>
 
     <!-- Inertial link stores the robot's inertial information -->
-    <link name="${prefix}inertial_link">
+    <link name="inertial_link">
       <inertial>
         <mass value="46.034" />
         <origin xyz="-0.00065 -0.085 0.062" />
@@ -82,85 +83,70 @@
       </inertial>
     </link>
 
-    <joint name="${prefix}inertial_joint" type="fixed">
+    <joint name="inertial_joint" type="fixed">
       <origin xyz="0 0 0" rpy="0 0 0" />
-      <parent link="${prefix}base_link" />
-      <child link="${prefix}inertial_link" />
+      <parent link="base_link" />
+      <child link="inertial_link" />
     </joint>
 
     <!-- IMU Link-->
     <!-- Can be modified with environment variables in /etc/ros/setup.bash -->
-    <link name="${prefix}imu_link"/>
-    <joint name="${prefix}imu_joint" type="fixed">
+    <link name="imu_link"/>
+    <joint name="imu_joint" type="fixed">
       <origin xyz="0 0 0" rpy="0 0 0" />
-      <parent link="${prefix}base_link" />
-      <child link="${prefix}imu_link" />
+      <parent link="base_link" />
+      <child link="imu_link" />
     </joint>
 
     <!-- GPS Link-->
     <!-- Can be modified with environment variables in /etc/ros/setup.bash -->
-    <link name="${prefix}gps_link"/>
-    <joint name="${prefix}gps_joint" type="fixed">
+    <link name="gps_link"/>
+    <joint name="gps_joint" type="fixed">
       <origin xyz="0 0 0" rpy="0 0 0" />
-      <parent link="${prefix}base_link" />
-      <child link="${prefix}gps_link" />
+      <parent link="base_link" />
+      <child link="gps_link" />
     </joint>
 
     <!-- LASER Link-->
-    <link name="${prefix}base_scan">
+    <link name="base_scan">
       <inertial>
         <origin xyz="-0.052 0 0.111" rpy="0 0 0" />
-        <inertia>
-          <ixx>0.001</ixx>
-          <ixy>0.000</ixy>
-          <ixz>0.000</ixz>
-          <iyy>0.001</iyy>
-          <iyz>0.000</iyz>
-          <izz>0.001</izz>
-        </inertia>
-        <mass>0.125</mass>
+        <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001" />
+        <mass value="0.125"/>
       </inertial>
 
       <collision name="lidar_sensor_collision">
         <origin xyz="-0.052 0 0.111" rpy="0 0 0" />
         <geometry>
-          <cylinder>
-            <radius>0.0508</radius>
-            <length>0.055</length>
-          </cylinder>
+          <cylinder radius="0.0508" length="0.055" />
         </geometry>
       </collision>
 
-      <visual name="lidar_sensor_visual">
-        <origin xyz="-0.064 0 ${base_z_size}+0.1" rpy="0 0 0" />
+      <visual>
+        <origin xyz="-0.064 0 0.35" rpy="0 0 0" />
         <geometry>
-          <mesh>
-            <uri>model://turtlebot3_waffle/meshes/lds.dae</uri>
-            <scale>0.001 0.001 0.001</scale>
-          </mesh>
+          <mesh filename="package://nav2_bringup/meshes/accessories/lms1xx_mount.dae" />
         </geometry>
       </visual>
     </link>
     <joint name="lidar_joint" type="fixed">
-      <parent>base_link</parent>
-      <child>base_scan</child>
-      <pose>-0.064 0 0.121 0 0 0</pose>
-      <axis>
-        <xyz>0 0 1</xyz>
-      </axis>
+      <origin xyz="-0.064 0 0.121" rpy="0 0 0" />
+      <parent link="base_link" />
+      <child link="base_scan" />
+      <axis xyz="0 0 1" />
     </joint>
 
     <!-- beetle wheel macros -->
-    <xacro:wheel wheel_prefix="${prefix}front_left">
+    <xacro:wheel wheel_prefix="front_left">
       <origin xyz="${wheelbase/2} ${track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:wheel>
-    <xacro:wheel wheel_prefix="${prefix}front_right">
+    <xacro:wheel wheel_prefix="front_right">
       <origin xyz="${wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:wheel>
-    <xacro:wheel wheel_prefix="${prefix}rear_left">
+    <xacro:wheel wheel_prefix="rear_left">
       <origin xyz="${-wheelbase/2} ${track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:wheel>
-    <xacro:wheel wheel_prefix="${prefix}rear_right">
+    <xacro:wheel wheel_prefix="rear_right">
       <origin xyz="${-wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:wheel>
 

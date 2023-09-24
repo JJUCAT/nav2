@@ -4,7 +4,7 @@
     <xacro:macro name="sensor_arch" params="prefix parent size:=510 *origin">
 
         <!-- Spawn the sensor arch link -->
-        <link name="${prefix}sensor_arch_mount_link">
+        <link name="sensor_arch_mount_link">
              <origin xyz="0 0 0" rpy="0 0 0"/>
              <visual>
                  <geometry>
@@ -20,10 +20,10 @@
         </link>
 
         <!-- Attach the sensor arch to the top plate -->
-        <joint name="${prefix}sensor_arch_mount" type="fixed">
+        <joint name="sensor_arch_mount" type="fixed">
              <xacro:insert_block name="origin"/>
              <parent link="${parent}"/>
-             <child link="${prefix}sensor_arch_mount_link"/>
+             <child link="sensor_arch_mount_link"/>
         </joint>
 
     </xacro:macro>

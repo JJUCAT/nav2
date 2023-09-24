@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="beetle_wheel">
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="wheel">
 
   <xacro:macro name="wheel" params="wheel_prefix *joint_pose">
     <link name="${wheel_prefix}_wheel">

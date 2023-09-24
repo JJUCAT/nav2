@@ -142,7 +142,7 @@ def generate_launch_description():
         cmd=['gzclient'],
         cwd=[launch_dir], output='screen')
 
-    urdf = os.path.join(bringup_dir, 'urdf', 'beetle.urdf')
+    urdf = os.path.join(bringup_dir, 'urdf', 'beetle', 'beetle.urdf')
 
     start_robot_state_publisher_cmd = Node(
         condition=IfCondition(use_robot_state_pub),

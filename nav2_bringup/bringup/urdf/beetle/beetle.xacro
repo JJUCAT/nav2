@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="beetle_sensor">
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="beetle">
   <!-- robot name parameter -->
   <!-- <xacro:arg name="name" default="" /> -->
 
@@ -27,12 +27,12 @@
       <broadcastTF>false</broadcastTF>
 
       <!-- output -->
-      <publish_odom>true</publish_odom>
+      <!-- <publish_odom>true</publish_odom>
       <publish_odom_tf>true</publish_odom_tf>
       <publish_wheel_tf>false</publish_wheel_tf>
       <odometry_topic>odom</odometry_topic>
       <odometry_frame>odom</odometry_frame>
-      <robot_base_frame>base_footprint</robot_base_frame>
+      <robot_base_frame>base_footprint</robot_base_frame> -->
 
     </plugin>
   </gazebo>
