@@ -156,29 +156,6 @@ def generate_launch_description():
         remappings=remappings,
         arguments=[urdf])
 
-    # 控制器
-    lrw_vel_ctrl = 'left_rear_wheel_velocity_controller'
-    rrw_vel_ctrl = 'right_rear_wheel_velocity_controller'
-    lfw_vel_ctrl = 'left_front_wheel_velocity_controller'
-    rfw_vel_ctrl = 'right_front_wheel_velocity_controller'
-    lshp_ctrl = 'left_steering_hinge_position_controller'
-    rshp_ctrl = 'right_steering_hinge_position_controller'
-    joint_state_ctrl = 'joint_state_controller'
-    controller_manager_cmd = Node(
-        condition=IfCondition(use_robot_state_pub),
-        package='controller_manager',
-        executable='spawner',
-        name='controller_manager',
-        namespace=namespace,
-        output='screen',
-        parameters=[{'use_sim_time': use_sim_time}],
-        remappings=remappings,
-        arguments=[lrw_vel_ctrl, rrw_vel_ctrl, lfw_vel_ctrl, rfw_vel_ctrl,
-                   lshp_ctrl, rshp_ctrl, joint_state_ctrl, controller_manager_cmd])
-
-
-
-
     rviz_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(launch_dir, 'rviz_launch.py')),
         condition=IfCondition(use_rviz),
