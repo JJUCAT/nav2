@@ -104,6 +104,14 @@
       <!-- left front wheel link -->
       <link name="left_front_wheel">
         <inertial>
+          <!-- <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0.000</ixy>
+            <ixz>0.000</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0.000</iyz>
+            <izz>0.01</izz>
+          </inertia> -->
           <mass>1.0</mass>
         </inertial>
         <collision name="left_front_wheel_collision">
@@ -141,51 +149,29 @@
           </geometry>
         </visual>
       </link>
-      <joint name="left_front_wheel_joint" type="revolute">
-        <parent>left_front_axle</parent>
+      <joint name="left_front_wheel_joint" type="universal">
+        <parent>chassis</parent>
         <child>left_front_wheel</child>
         <pose>0.13 0.08 0.04 0 0 0</pose>
         <axis>
           <xyz>0 1 0</xyz>
         </axis>
-      </joint>
-      <link name="left_front_axle">
-        <inertial>
-          <pose>0.13 0.08 0.04 0 0 0</pose>
-          <mass>0.1</mass>
-        </inertial>
-      </link>
-      <joint name="left_steering_joint" type="revolute">
-        <parent>left_steering</parent>
-        <child>left_front_axle</child>
-        <pose>0.13 0.08 0.05 0 0 0</pose>
-        <axis>
+        <axis2>
           <xyz>0 0 1</xyz>
-        </axis>
+        </axis2>
       </joint>
-      <link name="left_steering">
-        <inertial>
-          <pose>0.13 0.08 0.05 0 0 0</pose>
-          <mass>0.1</mass>
-        </inertial>
-      </link>
-      <joint name="left_joint" type="fixed">
-        <parent>chassis</parent>
-        <child>left_steering</child>
-        <pose>0.13 0.08 0.05 0 0 0</pose>
-      </joint>
-      <!-- <joint name="left_front_wheel_joint" type="revolute">
-        <parent>chassis</parent>
-        <child>left_front_wheel</child>
-        <pose>0.13 0.08 0.04 0 0 0</pose>
-        <axis>
-          <xyz>0 0 1</xyz>
-        </axis>
-      </joint> -->
 
       <!-- right front wheel link -->
       <link name="right_front_wheel">
         <inertial>
+          <!-- <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0.000</ixy>
+            <ixz>0.000</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0.000</iyz>
+            <izz>0.01</izz>
+          </inertia> -->
           <mass>1.0</mass>
         </inertial>
         <collision name="right_front_wheel_collision">
@@ -223,80 +209,42 @@
           </geometry>
         </visual>
       </link>
-      <joint name="right_front_wheel_joint" type="revolute">
-        <parent>right_front_axle</parent>
+      <joint name="right_front_wheel_joint" type="universal">
+        <parent>chassis</parent>
         <child>right_front_wheel</child>
         <pose>0.13 -0.08 0.04 0 0 0</pose>
         <axis>
           <xyz>0 1 0</xyz>
         </axis>
-      </joint>
-      <link name="right_front_axle">
-        <inertial>
-          <pose>0.13 -0.08 0.04 0 0 0</pose>
-          <mass>0.1</mass>
-        </inertial>
-      </link>
-      <joint name="right_steering_joint" type="revolute">
-        <parent>right_steering</parent>
-        <child>right_front_axle</child>
-        <pose>0.13 -0.08 0.05 0 0 0</pose>
-        <axis>
+        <axis2>
           <xyz>0 0 1</xyz>
-        </axis>
+        </axis2>
       </joint>
-      <link name="right_steering">
-        <inertial>
-          <pose>0.13 -0.08 0.05 0 0 0</pose>
-          <mass>0.1</mass>
-        </inertial>
-      </link>
-      <joint name="right_joint" type="fixed">
-        <parent>chassis</parent>
-        <child>right_steering</child>
-        <pose>0.13 -0.08 0.05 0 0 0</pose>
-      </joint>
-      <!-- <joint name="right_front_wheel_joint" type="revolute">
-        <parent>chassis</parent>
-        <child>right_front_wheel</child>
-        <pose>0.13 -0.08 0.04 0 0 0</pose>
-        <axis>
-          <xyz>0 0 1</xyz>
-        </axis>
-      </joint> -->
 
       <!-- steering joint -->
-      <!-- <link name="front_wheel">
+      <link name="front_wheel">
         <inertial>
+          <!-- <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0.000</ixy>
+            <ixz>0.000</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0.000</iyz>
+            <izz>0.01</izz>
+          </inertia> -->
           <mass>1.0</mass>
         </inertial>
         <collision name="front_wheel_collision">
-          <pose>0.13 0.0 0.04 -1.57 0 0</pose>
+          <pose>0.13 0 0.04 -1.57 0 0</pose>
           <geometry>
             <cylinder>
               <length>0.04</length>
               <radius>0.04</radius>
             </cylinder>
           </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1.1</mu>
-                <mu2>1.1</mu2>
-                <slip1>0.0</slip1>
-                <slip2>0.0</slip2>
-              </ode>
-            </friction>
-            <contact>
-              <ode>
-                <min_depth>0.001</min_depth>
-                <kp>1e9</kp>
-              </ode>
-            </contact>
-          </surface>
         </collision>
         <visual name="front_wheel_visual">
-          <pose>0.13 0.0 0.04 -1.57 0 0</pose>
+          <pose>0.13 0 0.04 -1.57 0 0</pose>
           <geometry>
             <cylinder>
               <length>0.04</length>
@@ -308,18 +256,26 @@
       <joint name="steering_joint" type="revolute">
         <parent>chassis</parent>
         <child>front_wheel</child>
-        <pose>0.13 0.0 0.04 0 0 0</pose>
+        <pose>0.13 0 0.04 0 0 0</pose>
         <axis>
           <xyz>0 0 1</xyz>
           <dynamics>
             <friction>18.0474092253</friction>
           </dynamics>
         </axis>
-      </joint> -->
+      </joint>
 
       <!-- left rear wheel link -->
       <link name="left_rear_wheel">
         <inertial>
+          <!-- <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0.000</ixy>
+            <ixz>0.000</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0.000</iyz>
+            <izz>0.01</izz>
+          </inertia> -->
           <mass>1.0</mass>
         </inertial>
         <collision name="left_rear_wheel_collision">
@@ -372,6 +328,14 @@
       <!-- right rear wheel link -->
       <link name="right_rear_wheel">
         <inertial>
+          <!-- <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0.000</ixy>
+            <ixz>0.000</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0.000</iyz>
+            <izz>0.01</izz>
+          </inertia> -->
           <mass>1.0</mass>
         </inertial>
         <collision name="right_rear_wheel_collision">
@@ -435,9 +399,9 @@
         <front_right_joint>right_front_wheel_joint</front_right_joint>
         <rear_left_joint>left_rear_wheel_joint</rear_left_joint>
         <rear_right_joint>right_rear_wheel_joint</rear_right_joint>
-        <left_steering_joint>left_steering_joint</left_steering_joint>
-        <right_steering_joint>right_steering_joint</right_steering_joint>
-        <!-- <steering_wheel_joint>steering_joint</steering_wheel_joint> -->
+        <left_steering_joint>left_front_wheel_joint</left_steering_joint>
+        <right_steering_joint>right_front_wheel_joint</right_steering_joint>
+        <steering_wheel_joint>steering_joint</steering_wheel_joint>
         <!-- Max absolute steer angle for tyre in radians-->
         <!-- Any cmd_vel angular z greater than this would be capped -->
         <max_steer>0.6458</max_steer>
