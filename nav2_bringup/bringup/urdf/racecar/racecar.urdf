@@ -231,31 +231,17 @@ limitations under the License.
   <gazebo reference="right_battery">
     <material>Gazebo/Blue</material>
   </gazebo>
-  <joint name="left_front_shock" type="prismatic">
-    <parent link="chassis"/>
-    <child link="left_steering_link"/>
-    <origin xyz="0.1675                    0.1525                    -0.0235"/>
-    <axis xyz="0 0 -1"/>
-    <limit effort="12.5106" lower="-0.042" upper="0.042" velocity="1000"/>
-  </joint>
-  <transmission name="left_front_shock_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="left_front_shock">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="left_front_shock_act">
-      <!-- This hardwareInterface element exists for compatibility
-             with ROS Hydro. -->
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
   <link name="left_steering_link">
     <inertial>
       <mass value="0.001"/>
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
   </link>
+  <joint name="left_front_w_joint" type="fixed">
+    <parent link="chassis"/>
+    <child link="left_steering_link"/>
+    <origin rpy="0 0 0" xyz="0.1675                    0.1525                    -0.0235"/>
+  </joint>
   <joint name="left_steering_joint" type="revolute">
     <parent link="left_steering_link"/>
     <child link="left_front_axle_carrier"/>
@@ -299,31 +285,17 @@ limitations under the License.
   <gazebo reference="left_front_wheel">
     <material>Gazebo/Black</material>
   </gazebo>
-  <joint name="right_front_shock" type="prismatic">
-    <parent link="chassis"/>
-    <child link="right_steering_link"/>
-    <origin xyz="0.1675                    -0.1525                    -0.0235"/>
-    <axis xyz="0 0 -1"/>
-    <limit effort="12.5106" lower="-0.042" upper="0.042" velocity="1000"/>
-  </joint>
-  <transmission name="right_front_shock_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_front_shock">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="right_front_shock_act">
-      <!-- This hardwareInterface element exists for compatibility
-             with ROS Hydro. -->
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
   <link name="right_steering_link">
     <inertial>
       <mass value="0.001"/>
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
   </link>
+  <joint name="right_front_w_joint" type="fixed">
+    <parent link="chassis"/>
+    <child link="right_steering_link"/>
+    <origin rpy="0 0 0" xyz="0.1675                    -0.1525                    -0.0235"/>
+  </joint>
   <joint name="right_steering_joint" type="revolute">
     <parent link="right_steering_link"/>
     <child link="right_front_axle_carrier"/>
@@ -367,25 +339,6 @@ limitations under the License.
   <gazebo reference="right_front_wheel">
     <material>Gazebo/Black</material>
   </gazebo>
-  <joint name="left_rear_shock" type="prismatic">
-    <parent link="chassis"/>
-    <child link="left_rear_axle_carrier"/>
-    <origin xyz="-0.1675                    0.1525                    -0.0235"/>
-    <axis xyz="0 0 -1"/>
-    <limit effort="12.5106" lower="-0.042" upper="0.042" velocity="1000"/>
-  </joint>
-  <transmission name="left_rear_shock_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="left_rear_shock">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="left_rear_shock_act">
-      <!-- This hardwareInterface element exists for compatibility
-             with ROS Hydro. -->
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
   <link name="left_rear_axle_carrier">
     <inertial>
       <mass value="0.001"/>
@@ -423,25 +376,11 @@ limitations under the License.
   <gazebo reference="left_rear_wheel">
     <material>Gazebo/Black</material>
   </gazebo>
-  <joint name="right_rear_shock" type="prismatic">
+  <joint name="left_rear_w_joint" type="fixed">
     <parent link="chassis"/>
-    <child link="right_rear_axle_carrier"/>
-    <origin xyz="-0.1675                    -0.1525                    -0.0235"/>
-    <axis xyz="0 0 -1"/>
-    <limit effort="12.5106" lower="-0.042" upper="0.042" velocity="1000"/>
+    <child link="left_rear_axle_carrier"/>
+    <origin rpy="0 0 0" xyz="-0.1675                    0.1525                    -0.0235"/>
   </joint>
-  <transmission name="right_rear_shock_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_rear_shock">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="right_rear_shock_act">
-      <!-- This hardwareInterface element exists for compatibility
-             with ROS Hydro. -->
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
   <link name="right_rear_axle_carrier">
     <inertial>
       <mass value="0.001"/>
@@ -479,6 +418,11 @@ limitations under the License.
   <gazebo reference="right_rear_wheel">
     <material>Gazebo/Black</material>
   </gazebo>
+  <joint name="right_rear_w_joint" type="fixed">
+    <parent link="chassis"/>
+    <child link="right_rear_axle_carrier"/>
+    <origin rpy="0 0 0" xyz="-0.1675                    -0.1525                    -0.0235"/>
+  </joint>
   <plugin filename="libgazebo_ros_ackermann_drive.so" name="gazebo_ros_ackermann_drive">
     <ros>
       <!-- <namespace>demo</namespace>

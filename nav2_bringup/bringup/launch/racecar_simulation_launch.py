@@ -125,14 +125,13 @@ def generate_launch_description():
         'headless',
         default_value='False',
         description='Whether to execute gzclient)')
-    # 声明参数 world
+
     declare_world_cmd = DeclareLaunchArgument(
         'world',
         default_value=os.path.join(bringup_dir, 'worlds', 'racecar.model'),
         description='Full path to world model file to load')
 
     # Specify the actions
-    # gazebo 服务端加载世界模型
     start_gazebo_server_cmd = ExecuteProcess(
         condition=IfCondition(use_simulator),
         cmd=['gzserver', '-s', 'libgazebo_ros_init.so', world],
