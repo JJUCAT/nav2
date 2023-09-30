@@ -461,10 +461,60 @@
         <robot_base_frame>base_footprint</robot_base_frame>
       </plugin>
 
-
-
-
-
+      <link name="base_scan">
+        <inertial>
+          <pose>0 0 0.1 0 0 0</pose>
+          <mass>0.125</mass>
+        </inertial>
+        <visual name="lidar_sensor_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.002</length>
+              <radius>0.01</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <sensor name="hls_lfcd_lds" type="ray">
+          <always_on>true</always_on>
+          <visualize>true</visualize>
+          <pose>0 0 0.1 0 0 0</pose>
+          <update_rate>5</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>360</samples>
+                <resolution>1.000000</resolution>
+                <min_angle>0.000000</min_angle>
+                <max_angle>6.280000</max_angle>
+              </horizontal>
+            </scan>
+            <range>
+              <min>0.120000</min>
+              <max>3.5</max>
+              <resolution>0.015000</resolution>
+            </range>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.01</stddev>
+            </noise>
+          </ray>
+          <plugin name="racecar_laserscan" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+                <!-- <namespace>/tb3</namespace> -->
+                <remapping>~/out:=scan</remapping>
+            </ros>
+            <output_type>sensor_msgs/LaserScan</output_type>
+            <frame_name>base_scan</frame_name>
+          </plugin>
+        </sensor>
+      </link>
+      <joint name="lidar_joint" type="fixed">
+        <parent>base_link</parent>
+        <child>base_scan</child>
+        <pose>0 0 0.1 0 0 0</pose>
+      </joint>
     </model>
 
 
