@@ -428,7 +428,7 @@
           <!-- <namespace>/tb3</namespace> -->
         </ros>
 
-        <update_rate>30</update_rate>
+        <update_rate>100</update_rate>
 
         <!-- wheels -->
         <front_left_joint>left_front_wheel_joint</front_left_joint>
@@ -446,11 +446,11 @@
         <!-- Max absolute linear speed in m/s -->
         <max_speed>1.2</max_speed>
         <!-- PID tuning -->
-        <left_steering_pid_gain>1500 0 1</left_steering_pid_gain>
+        <left_steering_pid_gain>800 1 5</left_steering_pid_gain>
         <left_steering_i_range>0 0</left_steering_i_range>
-        <right_steering_pid_gain>1500 0 1</right_steering_pid_gain>
+        <right_steering_pid_gain>800 1 5</right_steering_pid_gain>
         <right_steering_i_range>0 0</right_steering_i_range>
-        <linear_velocity_pid_gain>1000 0 1</linear_velocity_pid_gain>
+        <linear_velocity_pid_gain>1000 0 3</linear_velocity_pid_gain>
         <linear_velocity_i_range>0 0</linear_velocity_i_range>
         <!-- output -->
         <publish_odom>true</publish_odom>
