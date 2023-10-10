@@ -316,8 +316,8 @@ DWBLocalPlanner::prepareGlobalPlan(
 
 nav_2d_msgs::msg::Twist2DStamped
 DWBLocalPlanner::computeVelocityCommands(
-  const nav_2d_msgs::msg::Pose2DStamped & pose,
-  const nav_2d_msgs::msg::Twist2D & velocity,
+  const nav_2d_msgs::msg::Pose2DStamped & pose, // 机器当前位置
+  const nav_2d_msgs::msg::Twist2D & velocity,   // 当前速度
   std::shared_ptr<dwb_msgs::msg::LocalPlanEvaluation> & results)
 {
   if (results) {
@@ -377,8 +377,8 @@ DWBLocalPlanner::computeVelocityCommands(
 
 dwb_msgs::msg::TrajectoryScore
 DWBLocalPlanner::coreScoringAlgorithm(
-  const geometry_msgs::msg::Pose2D & pose,
-  const nav_2d_msgs::msg::Twist2D velocity,
+  const geometry_msgs::msg::Pose2D & pose, // 机器当前位姿
+  const nav_2d_msgs::msg::Twist2D velocity, // 当前速度
   std::shared_ptr<dwb_msgs::msg::LocalPlanEvaluation> & results)
 {
   nav_2d_msgs::msg::Twist2D twist;
@@ -390,11 +390,11 @@ DWBLocalPlanner::coreScoringAlgorithm(
 
   traj_generator_->startNewIteration(velocity); // 轨迹采样初始化
   while (traj_generator_->hasMoreTwists()) { // 还有轨迹能采样生成
-    twist = traj_generator_->nextTwist(); // 最终期望的线速度和角速度
-    traj = traj_generator_->generateTrajectory(pose, velocity, twist);
+    twist = traj_generator_->nextTwist(); // 下一个线速度和角速度
+    traj = traj_generator_->generateTrajectory(pose, velocity, twist);// 生成采样轨迹
 
     try {
-      dwb_msgs::msg::TrajectoryScore score = scoreTrajectory(traj, best.total);
+      dwb_msgs::msg::TrajectoryScore score = scoreTrajectory(traj, best.total); // 轨迹评分
       tracker.addLegalTrajectory();
       if (results) {
         results->twists.push_back(score);
@@ -464,7 +464,7 @@ DWBLocalPlanner::scoreTrajectory(
     double critic_score = critic->scoreTrajectory(traj);
     cs.raw_score = critic_score;
     score.scores.push_back(cs);
-    score.total += critic_score * cs.scale;
+    score.total += critic_score * cs.scale; // 各个评价权重不同
     if (short_circuit_trajectory_evaluation_ && best_score > 0 && score.total > best_score) {
       // since we keep adding positives, once we are worse than the best, we will stay worse
       break;

@@ -115,7 +115,7 @@ nav_2d_msgs::msg::Twist2D StandardTrajectoryGenerator::nextTwist()
 {
   return velocity_iterator_->nextTwist();
 }
-
+// 获取以 cmd_vel 目标速度在仿真时间内的采样时间步进，这里忽略了加速度的影响
 std::vector<double> StandardTrajectoryGenerator::getTimeSteps(
   const nav_2d_msgs::msg::Twist2D & cmd_vel)
 {
@@ -132,6 +132,8 @@ std::vector<double> StandardTrajectoryGenerator::getTimeSteps(
     double projected_angular_distance = fabs(cmd_vel.theta) * sim_time_;
 
     // Pick the maximum of the two
+    // projected_linear_distance 和 projected_angular_distance 是以目标速度计算的，所以会比实际更大
+    // 最后得到的 steps.size() 是满足将当前速度提升到 cmd_vel 目标速度要求的
     int num_steps = ceil(
       std::max(
         projected_linear_distance / linear_granularity_,
@@ -147,8 +149,8 @@ std::vector<double> StandardTrajectoryGenerator::getTimeSteps(
 
 dwb_msgs::msg::Trajectory2D StandardTrajectoryGenerator::generateTrajectory(
   const geometry_msgs::msg::Pose2D & start_pose,
-  const nav_2d_msgs::msg::Twist2D & start_vel,
-  const nav_2d_msgs::msg::Twist2D & cmd_vel)
+  const nav_2d_msgs::msg::Twist2D & start_vel, // 当前线速度角速度
+  const nav_2d_msgs::msg::Twist2D & cmd_vel) // 目标线速度角速度
 {
   dwb_msgs::msg::Trajectory2D traj;
   traj.velocity = cmd_vel;
@@ -156,7 +158,7 @@ dwb_msgs::msg::Trajectory2D StandardTrajectoryGenerator::generateTrajectory(
   geometry_msgs::msg::Pose2D pose = start_pose;
   nav_2d_msgs::msg::Twist2D vel = start_vel;
   double running_time = 0.0;
-  std::vector<double> steps = getTimeSteps(cmd_vel);
+  std::vector<double> steps = getTimeSteps(cmd_vel); // 每个采样的时间步进
   traj.poses.push_back(start_pose);
   for (double dt : steps) {
     //  calculate velocities

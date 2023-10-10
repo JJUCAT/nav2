@@ -117,12 +117,12 @@ bool XYThetaIterator::isValidVelocity()
     th_it_->getVelocity());
 }
 
-bool XYThetaIterator::hasMoreTwists()
+bool XYThetaIterator::hasMoreTwists() // x 轴方向的速度已经采样到限制值了
 {
   return x_it_ && !x_it_->isFinished();
 }
 
-nav_2d_msgs::msg::Twist2D XYThetaIterator::nextTwist()
+nav_2d_msgs::msg::Twist2D XYThetaIterator::nextTwist() // 下一个采样的目标线速度角速度
 {
   nav_2d_msgs::msg::Twist2D velocity;
   velocity.x = x_it_->getVelocity();
