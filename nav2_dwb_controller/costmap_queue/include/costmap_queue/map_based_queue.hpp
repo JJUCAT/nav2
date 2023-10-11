@@ -57,6 +57,8 @@ namespace costmap_queue
  * set reset_bins = false, such that the priority bins are not reset and will not have to be recreated
  * on each iteration.
  */
+
+// 素材箱子，装有带着各种优先级的素材组
 template<class item_t>
 class MapBasedQueue
 {
@@ -83,19 +85,20 @@ public:
   }
 
   /**
-   * @brief Add a new item to the queue with a set priority
-   * @param priority Priority of the item
-   * @param item Payload item
+   * @brief Add a new item to the queue with a set priority，添加素材
+   * @param priority Priority of the item，优先级
+   * @param item Payload item，单个素材
    */
   void enqueue(const double priority, item_t item)
   {
     // We keep track of the last priority we inserted. If this items priority
     // matches the previous insertion we can avoid searching through all the
     // bins.
+    // 空素材，或者上个素材的优先级不同
     if (last_insert_iter_ == item_bins_.end() || last_insert_iter_->first != priority) {
       last_insert_iter_ = item_bins_.find(priority);
 
-      // If not found, create a new bin
+      // If not found, create a new bin，是一个新的优先级，创建新的优先级素材组
       if (last_insert_iter_ == item_bins_.end()) {
         auto map_item = std::make_pair(priority, std::move(std::vector<item_t>()));
 
@@ -111,6 +114,7 @@ public:
     item_count_++;
 
     // Use short circuiting to check if we want to update the iterator
+    // iter_ 指向低优先级的素材组
     if (iter_ == item_bins_.end() || priority < iter_->first) {
       iter_ = last_insert_iter_;
     }
@@ -129,6 +133,7 @@ public:
 
   /**
    * @brief Return the item at the front of the queue
+   * 返回当前优先级下的素材组最后一个素材，是按优先级从低到高检查的
    * @return The item at the front of the queue
    */
   item_t & front()
@@ -149,7 +154,8 @@ public:
       iter_->second.pop_back();
       item_count_--;
     }
-
+    // map 是有序容器，默认按 key 从小到大排序，find_if 是有序遍历 map 的
+    // 上面弹出一个素材后，如果当前的优先级素材空了，iter_ 会指向下一个优先级素材组
     auto not_empty = [](const typename ItemMap::value_type & key_val) {
         return !key_val.second.empty();
       };
@@ -157,14 +163,15 @@ public:
   }
 
 protected:
-  using ItemMap = std::map<double, std::vector<item_t>>;
+  // map 容器，包含多个“带优先级的一组素材”，称为素材箱子
+  using ItemMap = std::map<double, std::vector<item_t>>; 
   using ItemMapIterator = typename ItemMap::iterator;
 
   bool reset_bins_;
 
-  ItemMap item_bins_;
-  unsigned int item_count_;
-  ItemMapIterator iter_;
+  ItemMap item_bins_; // 素材箱子
+  unsigned int item_count_; // 不同优先级素材的总数量
+  ItemMapIterator iter_; // 因为 map 是默认 key 从小到大排序的，所以 iter_ 默认指向低优先级素材组
   ItemMapIterator last_insert_iter_;
 };
 }  // namespace costmap_queue

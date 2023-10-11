@@ -80,7 +80,7 @@ public:
     return (x > y) ? (x - y) : (y - x);
   }
 
-  double distance_;
+  double distance_; // 地图栅格到最近障碍物距离
   unsigned int index_;
   unsigned int x_, y_;
   unsigned int src_x_, src_y_;
@@ -94,16 +94,21 @@ public:
  * perform some operation on all the other cells based on which cell in the original set
  * the other cells are closest to. This operation is done in the inflation layer to figure out
  * how far each cell is from an obstacle, and is also used in a number of Trajectory cost functions.
- *
+ * 使用costmaps的一个常见操作是在costmap中定义一组单元格，
+ * 然后根据原始集中其他单元格最接近的单元格对所有其他单元格执行一些操作
+ * 这个操作是在膨胀层中完成的，用来计算每个单元离障碍物的距离，也用于许多轨迹成本函数。
  * It is implemented with a queue. The standard operation is to enqueueCell the original set, and then
  * retreive the other cells with the isEmpty/getNextCell iterator-like functionality. getNextCell
  * returns an object that contains the coordinates of this cell and the origin cell, as well as
  * the distance between them. By default, the Euclidean distance is used for ordering, but passing in
  * manhattan=true to the constructor will use the Manhattan distance.
- *
+ * 它是用队列实现的。标准操作是enqueueCell初始集合，然后使用类似于isEmpty/getNextCell迭代器的功能检索其他单元格
+ * getNextCell返回一个对象，该对象包含该单元格和原始单元格的坐标，以及它们之间的距离
+ * 默认情况下，欧几里得距离用于排序，但将manhattan=true传递给构造函数将使用曼哈顿距离。
  * The validCellToQueue overridable-function allows for deriving classes to limit the queue traversal
  * to a subset of all costmap cells. LimitedCostmapQueue does this by ignoring distances above a limit.
- *
+ * validCellToQueue 函数允许派生类将队列遍历限制为所有成本映射单元格的一个子集
+ * LimitedCostmapQueue 通过忽略超过限制的距离来实现这一点。
  */
 class CostmapQueue : public MapBasedQueue<CellData>
 {
