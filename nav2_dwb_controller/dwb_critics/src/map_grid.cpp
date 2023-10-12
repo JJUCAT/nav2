@@ -69,11 +69,12 @@ void MapGridCritic::onInit()
   std::string aggro_str;
   nh_->get_parameter(dwb_plugin_name_ + "." + name_ + ".aggregation_type", aggro_str);
   std::transform(aggro_str.begin(), aggro_str.end(), aggro_str.begin(), ::tolower);
-  if (aggro_str == "last") {
+  // 评分类型
+  if (aggro_str == "last") { // 最新值
     aggregationType_ = ScoreAggregationType::Last;
-  } else if (aggro_str == "sum") {
+  } else if (aggro_str == "sum") { // 累积和
     aggregationType_ = ScoreAggregationType::Sum;
-  } else if (aggro_str == "product") {
+  } else if (aggro_str == "product") { // 乘积
     aggregationType_ = ScoreAggregationType::Product;
   } else {
     RCLCPP_ERROR(
@@ -117,21 +118,21 @@ double MapGridCritic::scoreTrajectory(const dwb_msgs::msg::Trajectory2D & traj)
     start_index = traj.poses.size() - 1;
   }
   double grid_dist;
-
+  // 从头到尾遍历轨迹点
   for (unsigned int i = start_index; i < traj.poses.size(); ++i) {
     grid_dist = scorePose(traj.poses[i]);
     if (stop_on_failure_) {
-      if (grid_dist == obstacle_score_) {
+      if (grid_dist == obstacle_score_) { // 轨迹点在障碍物中
         throw dwb_core::
               IllegalTrajectoryException(name_, "Trajectory Hits Obstacle.");
-      } else if (grid_dist == unreachable_score_) {
+      } else if (grid_dist == unreachable_score_) { // 轨迹点在未知区
         throw dwb_core::
               IllegalTrajectoryException(name_, "Trajectory Hits Unreachable Area.");
       }
     }
 
     switch (aggregationType_) {
-      case ScoreAggregationType::Last:
+      case ScoreAggregationType::Last: 
         score = grid_dist;
         break;
       case ScoreAggregationType::Sum:

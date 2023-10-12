@@ -40,14 +40,14 @@ using std::hypot;
 
 namespace costmap_queue
 {
-
+// 在构造函数的初始化列表中顺序初始化所有变量
 CostmapQueue::CostmapQueue(nav2_costmap_2d::Costmap2D & costmap, bool manhattan)
 : MapBasedQueue(), costmap_(costmap), max_distance_(-1), manhattan_(manhattan),
   cached_max_distance_(-1)
 {
   reset();
 }
-
+// 子类需要用到父类的函数，同时又有自己特殊的函数处理，这就是多态
 void CostmapQueue::reset()
 {
   unsigned int size_x = costmap_.getSizeInCellsX(), size_y = costmap_.getSizeInCellsY();
@@ -94,6 +94,7 @@ CellData CostmapQueue::getNextCell()
   unsigned int sy = current_cell.src_y_;
 
   // attempt to put the neighbors of the current cell onto the queue
+  // 保存相邻栅格到 src 栅格的数据
   unsigned int size_x = costmap_.getSizeInCellsX();
   if (mx > 0) {
     enqueueCell(index - 1, mx - 1, my, sx, sy);
@@ -110,13 +111,13 @@ CellData CostmapQueue::getNextCell()
 
   return current_cell;
 }
-
+// 更新用于查表地图上两点之间距离的表，因此最大距离既是地图的对角大小
 void CostmapQueue::computeCache()
 {
   if (max_distance_ == -1) {
     max_distance_ = std::max(costmap_.getSizeInCellsX(), costmap_.getSizeInCellsY());
   }
-  if (max_distance_ == cached_max_distance_) {return;}
+  if (max_distance_ == cached_max_distance_) {return;} // 和上次地图最大边一样就不需要更新了
   cached_distances_.clear();
 
   cached_distances_.resize(max_distance_ + 2);
@@ -124,6 +125,8 @@ void CostmapQueue::computeCache()
   for (unsigned int i = 0; i < cached_distances_.size(); ++i) {
     cached_distances_[i].resize(max_distance_ + 2);
     for (unsigned int j = 0; j < cached_distances_[i].size(); ++j) {
+      // 该表是用于快速查询两点距离的，又因为距离是相对的，与点坐标的绝对位置无关
+      // 这里等效把 i 看做两点 x 的差，j 看做两点 y 的差
       if (manhattan_) {
         cached_distances_[i][j] = i + j;
       } else {

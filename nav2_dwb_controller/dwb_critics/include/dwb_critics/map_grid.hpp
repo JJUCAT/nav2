@@ -51,7 +51,7 @@ namespace dwb_critics
  * with the source points are marked with some initial score, and then every other cell
  * is updated with a score based on its relation to the closest source cell, based on a
  * breadth-first exploration of the cells of the costmap.
- *
+ * 根据到地图某些资源栅格的距离来评分。其他栅格会根据到最近的资源栅格的关系更新一个分数，是对代价地图的广度优先搜索
  * This approach was chosen for computational efficiency, such that each trajectory
  * need not be compared to the list of source points.
  */
@@ -101,7 +101,7 @@ protected:
   enum class ScoreAggregationType {Last, Sum, Product};
 
   /**
-   * @class MapGridQueue
+   * @class MapGridQueue 嵌套类
    * @brief Subclass of CostmapQueue that avoids Obstacles and Unknown Values
    */
   class MapGridQueue : public costmap_queue::CostmapQueue
@@ -128,7 +128,7 @@ protected:
 
   std::shared_ptr<MapGridQueue> queue_;
   nav2_costmap_2d::Costmap2D * costmap_;
-  std::vector<double> cell_values_;
+  std::vector<double> cell_values_; // 代价地图各个栅格分数
   double obstacle_score_, unreachable_score_;  ///< Special cell_values
   bool stop_on_failure_;
   ScoreAggregationType aggregationType_;

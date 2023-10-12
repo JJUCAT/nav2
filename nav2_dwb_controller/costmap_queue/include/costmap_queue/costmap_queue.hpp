@@ -165,13 +165,14 @@ protected:
   void computeCache();
 
   nav2_costmap_2d::Costmap2D & costmap_;
-  std::vector<bool> seen_;
+  std::vector<bool> seen_; // costmap 栅格访问记录
   int max_distance_;
-  bool manhattan_;
+  bool manhattan_; // 保存曼哈顿距离，即 x 轴 y 轴距离之和
 
 protected:
   /**
    * @brief  Lookup pre-computed distances
+   *        查表 (cur_x, cur_y) 和 (src_x, src_y) 的距离
    * @param cur_x The x coordinate of the current cell
    * @param cur_y The y coordinate of the current cell
    * @param src_x The x coordinate of the source cell
@@ -184,10 +185,10 @@ protected:
   {
     unsigned int dx = CellData::absolute_difference(cur_x, src_x);
     unsigned int dy = CellData::absolute_difference(cur_y, src_y);
-    return cached_distances_[dx][dy];
+    return cached_distances_[dx][dy]; // 查表快速得到距离
   }
-  std::vector<std::vector<double>> cached_distances_;
-  int cached_max_distance_;
+  std::vector<std::vector<double>> cached_distances_; // 记录 costmap 栅格距离最近障碍物距离
+  int cached_max_distance_; // 上次 costmap 地图的最大边大小，单位栅格
 };
 }  // namespace costmap_queue
 
