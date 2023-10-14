@@ -41,7 +41,7 @@ namespace nav_2d_utils
 {
 /**
  * @brief Increase plan resolution to match that of the costmap by adding points linearly between points
- *
+ *        在原路径之间线性插入点以适配地图分辨率
  * @param global_plan_in input plan
  * @param resolution desired distance between waypoints
  * @return Higher resolution plan

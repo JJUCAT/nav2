@@ -45,11 +45,11 @@ namespace dwb_critics
 /**
  * @class OscillationCritic
  * @brief Checks to see whether the sign of the commanded velocity flips frequently
- *
+ *        检查速度命令的符号是否频繁翻转
  * This critic figures out if the commanded trajectories are oscillating by seeing
  * if one of the dimensions (x,y,theta) flips from positive to negative and then back
  * (or vice versa) without moving sufficiently far or waiting sufficiently long.
- *
+ * 通过观察其中一个维度(x,y，)在没有移动足够远或等待足够长的情况下就改变维度符号，来判断命令轨迹是否振荡。
  * Scenario 1: Robot moves one meter forward, and then two millimeters backward.
  * Another forward motion would be considered oscillating, since the x dimension would then
  * flip from positive to negative and then back to negative. Hence, when scoring different
