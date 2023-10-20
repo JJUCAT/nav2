@@ -120,8 +120,8 @@ struct MotionTable
 
   MotionPoses projections;
   unsigned int size_x;
-  unsigned int num_angle_quantization;
-  float num_angle_quantization_float;
+  unsigned int num_angle_quantization; // TODO@LMR???角度归一化，转换为有限数量的角度
+  float num_angle_quantization_float; // TODO@LMR???角度归一化分辨率
   float bin_size;
   float change_penalty;
   float non_straight_penalty;
@@ -153,6 +153,7 @@ public:
 
     /**
      * @brief A constructor for smac_planner::NodeSE2::Coordinates
+     *        在地图中的坐标，左下角原点同 costmap
      * @param x_in X coordinate
      * @param y_in Y coordinate
      * @param theta_in Theta coordinate
@@ -306,6 +307,8 @@ public:
 
   /**
    * @brief Get index at coordinates
+   *        类似 x y z 地图，用 z 轴来存储 angle 角度信息
+   *        把连续的角度范围量化为有限的离散角度值范围
    * @param x X coordinate of point
    * @param y Y coordinate of point
    * @param angle Theta coordinate of point

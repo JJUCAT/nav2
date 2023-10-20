@@ -43,6 +43,7 @@ public:
 
   /**
    * @class smac_planner::Node2D::Coordinates
+   *        在地图中的坐标，左下角原点同 costmap
    * @brief Node2D implementation of coordinate structure
    */
   struct Coordinates
@@ -121,6 +122,7 @@ public:
 
   /**
    * @brief Sets if cell has been visited in search
+   *        节点已经搜索过了
    */
   inline void visited()
   {
@@ -130,6 +132,7 @@ public:
 
   /**
    * @brief Gets if cell is currently queued in search
+  *          是否在搜索队列中
    * @param If cell was queued
    */
   inline bool & isQueued()
@@ -164,6 +167,7 @@ public:
 
   /**
    * @brief get traversal cost from this node to child node
+   *        当前节点到下一个子节点的遍历代价
    * @param child Node pointer to this node's child
    * @return traversal cost
    */
@@ -232,15 +236,15 @@ public:
     NodeVector & neighbors);
 
   Node2D * parent;
-  static double neutral_cost;
+  static double neutral_cost; // 遍历的中性代价
   static std::vector<int> _neighbors_grid_offsets;
 
 private:
-  float _cell_cost;
-  float _accumulated_cost;
-  unsigned int _index;
-  bool _was_visited;
-  bool _is_queued;
+  float _cell_cost; // costmap 代价地图中的原始代价
+  float _accumulated_cost; // 累计的遍历代价，总代价
+  unsigned int _index; // 栅格地图内存中的下标
+  bool _was_visited; // 节点访问标记
+  bool _is_queued; // 节点入队待访问标记
 };
 
 }  // namespace smac_planner

@@ -22,10 +22,10 @@ namespace smac_planner
 enum class MotionModel
 {
   UNKNOWN = 0,
-  VON_NEUMANN = 1,
-  MOORE = 2,
-  DUBIN = 3,
-  REEDS_SHEPP = 4,
+  VON_NEUMANN = 1, // 2D 搜索，栅格地图 4 连通
+  MOORE = 2, // 2D 搜索，栅格地图 8 连通
+  DUBIN = 3, // SE2 搜索，DUBINS 曲线，只支持前向搜索
+  REEDS_SHEPP = 4, // SE2 搜索，RS 曲线，支持前向和后退搜索
 };
 
 inline std::string toString(const MotionModel & n)

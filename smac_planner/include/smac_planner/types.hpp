@@ -29,12 +29,12 @@ typedef std::pair<float, unsigned int> NodeHeuristicPair;
  */
 struct SearchInfo
 {
-  float minimum_turning_radius;
-  float non_straight_penalty;
-  float change_penalty;
-  float reverse_penalty;
-  float cost_penalty;
-  float analytic_expansion_ratio;
+  float minimum_turning_radius;   // 最小转弯半径，SE2
+  float non_straight_penalty;     // 非直线惩罚
+  float change_penalty;           // 转向惩罚
+  float reverse_penalty;          // 后退惩罚
+  float cost_penalty;             // 代价(障碍物距离)惩罚
+  float analytic_expansion_ratio; // TODO@LMR ???
 };
 
 }  // namespace smac_planner
