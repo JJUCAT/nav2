@@ -93,13 +93,13 @@ public:
 
   /**
    * @brief Smoother cost function evaluation
-   * @param parameters X,Y pairs of points
+   * @param parameters X,Y pairs of points，一系列 xy 点
    * @param cost total cost of path
    * @param gradient of path at each X,Y pair from cost function derived analytically
    * @return if successful in computing values
    */
   virtual bool Evaluate(
-    const double * parameters,
+    const double * parameters, // TODO@LMR???已经处理了的路径点
     double * cost,
     double * gradient) const
   {
@@ -119,23 +119,24 @@ public:
     CurvatureComputations curvature_params;
 
     for (int i = 0; i != NumParameters() / 2; i++) {
-      x_index = 2 * i;
+      x_index = 2 * i;         // 遍历的路径点下标
       y_index = 2 * i + 1;
-      gradient[x_index] = 0.0;
+      gradient[x_index] = 0.0; // 梯度
       gradient[y_index] = 0.0;
-      if (i < 1 || i >= NumParameters() / 2 - 1) {
+      if (i < 1 || i >= NumParameters() / 2 - 1) { // 跳过第一个路径点后最后一个路径点
         continue;
       }
 
       xi = Eigen::Vector2d(parameters[x_index], parameters[y_index]);
-      xi_p1 = Eigen::Vector2d(parameters[x_index + 2], parameters[y_index + 2]);
-      xi_m1 = Eigen::Vector2d(parameters[x_index - 2], parameters[y_index - 2]);
+      xi_p1 = Eigen::Vector2d(parameters[x_index + 2], parameters[y_index + 2]); // 后一个点
+      xi_m1 = Eigen::Vector2d(parameters[x_index - 2], parameters[y_index - 2]); // 前一个点
 
       // compute cost
-      addSmoothingResidual(_params.smooth_weight, xi, xi_p1, xi_m1, cost_raw);
-      addCurvatureResidual(_params.curvature_weight, xi, xi_p1, xi_m1, curvature_params, cost_raw);
-      addDistanceResidual(_params.distance_weight, xi, _original_path->at(i), cost_raw);
-
+      addSmoothingResidual(_params.smooth_weight, xi, xi_p1, xi_m1, cost_raw); // 路径平滑度残差
+      addCurvatureResidual(_params.curvature_weight, xi, xi_p1, xi_m1, curvature_params, cost_raw); // 曲率残差
+      addDistanceResidual(_params.distance_weight, xi, _original_path->at(i), cost_raw); // 与原路径点距离残差
+      
+      // 地图成本残差，检查处理后的路径点
       if (valid_coords = _costmap->worldToMap(xi[0], xi[1], mx, my)) {
         costmap_cost = _costmap->getCost(mx, my);
         addCostResidual(_params.costmap_weight, costmap_cost, cost_raw);
@@ -175,7 +176,7 @@ public:
 
 protected:
   /**
-   * @brief Cost function term for smooth paths
+   * @brief Cost function term for smooth paths      // 平滑度的成本函数
    * @param weight Weight to apply to function
    * @param pt Point Xi for evaluation
    * @param pt Point Xi+1 for calculating Xi's cost
@@ -189,6 +190,8 @@ protected:
     const Eigen::Vector2d & pt_m,
     double & r) const
   {
+    // a·b，点乘表示 a 在 b 上面投影长度乘以 b 的长度
+    // 点乘表示两个向量在方向上的相似度，越大约相近
     r += weight * (
       pt_p.dot(pt_p) -
       4 * pt_p.dot(pt) +
@@ -346,6 +349,7 @@ protected:
     const Eigen::Vector2d & xi_original,
     double & r) const
   {
+    // 相当于 r += weight * (欧氏距离)
     r += weight * (xi - xi_original).dot(xi - xi_original);  // objective function value
   }
 
@@ -370,18 +374,18 @@ protected:
 
 
   /**
-   * @brief Cost function term for steering away from costs
+   * @brief Cost function term for steering away from costs 成本项，用来避开高成本
    * @param weight Weight to apply to function
    * @param value Point Xi's cost'
    * @param params computed values to reduce overhead
-   * @param r Residual (cost) of term
+   * @param r Residual (cost) of term 残差项
    */
   inline void addCostResidual(
     const double & weight,
     const double & value,
     double & r) const
   {
-    if (value == FREE) {
+    if (value == FREE) { // 路径点在地图自由区则没有成本
       return;
     }
 
