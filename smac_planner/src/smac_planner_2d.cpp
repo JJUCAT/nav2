@@ -186,7 +186,7 @@ nav_msgs::msg::Path SmacPlanner2D::createPlan(
   const geometry_msgs::msg::PoseStamped & start,
   const geometry_msgs::msg::PoseStamped & goal)
 {
-  steady_clock::time_point a = steady_clock::now();
+  steady_clock::time_point a = steady_clock::now(); // C++11 单调时钟
 
   std::unique_lock<nav2_costmap_2d::Costmap2D::mutex_t> lock(*(_costmap->getMutex()));
 
@@ -262,7 +262,7 @@ nav_msgs::msg::Path SmacPlanner2D::createPlan(
     if (_smoother && i % downsample_ratio != 0) {
       continue;
     }
-
+    // 没有角度信息
     path_world.push_back(getWorldCoords(path[i].x, path[i].y, costmap));
     pose.pose.position.x = path_world.back().x();
     pose.pose.position.y = path_world.back().y();
@@ -303,6 +303,7 @@ nav_msgs::msg::Path SmacPlanner2D::createPlan(
   removeHook(path_world);
 
   // populate final path
+  // 平滑后没有补充角度信息
   for (unsigned int i = 0; i != path_world.size(); i++) {
     pose.pose.position.x = path_world[i][0];
     pose.pose.position.y = path_world[i][1];
@@ -316,6 +317,7 @@ void SmacPlanner2D::removeHook(std::vector<Eigen::Vector2d> & path)
 {
   // Removes the end "hooking" since goal is locked in place
   Eigen::Vector2d interpolated_second_to_last_point;
+  // vector.end()[] 是 C++11 新特性，可以用负数索引来直接获取元素并修改元素
   interpolated_second_to_last_point = (path.end()[-3] + path.end()[-1]) / 2.0;
   if (
     squaredDistance(path.end()[-2], path.end()[-1]) >

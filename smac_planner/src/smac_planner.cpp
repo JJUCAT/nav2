@@ -76,8 +76,8 @@ void SmacPlanner::configure(
   nav2_util::declare_parameter_if_not_declared(
     node, name + ".angle_quantization_bins", rclcpp::ParameterValue(72));
   node->get_parameter(name + ".angle_quantization_bins", angle_quantizations);
-  _angle_bin_size = 2.0 * M_PI / angle_quantizations;
-  _angle_quantizations = static_cast<unsigned int>(angle_quantizations);
+  _angle_bin_size = 2.0 * M_PI / angle_quantizations; // 单个归一化角度的度数大小
+  _angle_quantizations = static_cast<unsigned int>(angle_quantizations); // 360° 量化数量
 
   nav2_util::declare_parameter_if_not_declared(
     node, name + ".allow_unknown", rclcpp::ParameterValue(true));
@@ -239,6 +239,7 @@ nav_msgs::msg::Path SmacPlanner::createPlan(
   while (orientation_bin < 0.0) {
     orientation_bin += static_cast<float>(_angle_quantizations);
   }
+  // 获取归一化后的角度
   unsigned int orientation_bin_id = static_cast<unsigned int>(floor(orientation_bin));
   _a_star->setStart(mx, my, orientation_bin_id);
 
@@ -294,7 +295,7 @@ nav_msgs::msg::Path SmacPlanner::createPlan(
   // We're going to downsample by 4x to give terms room to move.
   const int downsample_ratio = 4;
   std::vector<Eigen::Vector2d> path_world;
-  path_world.reserve(path.size());
+  path_world.reserve(path.size()); // 先确定好内存大小，可以避免 vector 自动调整内存大小的开销
   plan.poses.reserve(path.size());
 
   for (int i = path.size() - 1; i >= 0; --i) {
@@ -340,6 +341,7 @@ nav_msgs::msg::Path SmacPlanner::createPlan(
 
   // populate final path
   // TODO(stevemacenski): set orientation to tangent of path
+  // 平滑后的 path 失去了角度信息，需要重新补充切线方向的角度
   for (unsigned int i = 0; i != path_world.size(); i++) {
     pose.pose.position.x = path_world[i][0];
     pose.pose.position.y = path_world[i][1];
