@@ -75,7 +75,7 @@ bool Node2D::isNodeValid(
 
   return true;
 }
-
+// 代价地图上的移动代价，与子节点位置的障碍物代价相关
 float Node2D::getTraversalCost(const NodePtr & child)
 {
   // cost to travel will be the cost of the cell's code
@@ -84,7 +84,7 @@ float Node2D::getTraversalCost(const NodePtr & child)
   // 0.8 is a scale factor to remap costs [0, 252] evenly from [50, 252]
   return Node2D::neutral_cost + 0.8 * child->getCost();
 }
-
+// 启发代价，基本迭代代价
 float Node2D::getHeuristicCost(
   const Coordinates & node_coords,
   const Coordinates & goal_coordinates)
@@ -95,7 +95,7 @@ float Node2D::getHeuristicCost(
 }
 
 void Node2D::initNeighborhood(
-  const unsigned int & x_size_uint,
+  const unsigned int & x_size_uint, // 地图 x 方向长度
   const MotionModel & neighborhood)
 {
   int x_size = static_cast<int>(x_size_uint);
