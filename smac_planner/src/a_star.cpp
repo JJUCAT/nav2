@@ -230,7 +230,7 @@ bool AStarAlgorithm<NodeT>::createPath(
   _tolerance = tolerance * NodeT::neutral_cost;
   _best_heuristic_node = {std::numeric_limits<float>::max(), 0};
   clearQueue();
-
+  // 检查起点，终点是否有效
   if (!areInputsValid()) {
     return false;
   }
@@ -279,6 +279,7 @@ bool AStarAlgorithm<NodeT>::createPath(
 
     // 2.a) Use an analytic expansion (if available) to generate a path
     // to the goal.
+    // 选择搜索方向，找下一个节点
     NodePtr result = tryAnalyticExpansion(
       current_node, neighborGetter, analytic_iterations,
       closest_distance);
@@ -287,9 +288,10 @@ bool AStarAlgorithm<NodeT>::createPath(
     }
 
     // 3) Check if we're at the goal, backtrace if required
-    if (isGoal(current_node)) {
+    // 精确到达或者模糊到达终点了，那么从终点搜索到起点
+    if (isGoal(current_node)) { // 精确到达
       return backtracePath(current_node, path);
-    } else if (_best_heuristic_node.first < getToleranceHeuristic()) {
+    } else if (_best_heuristic_node.first < getToleranceHeuristic()) { // 模糊到达
       // Optimization: Let us find when in tolerance and refine within reason
       approach_iterations++;
       if (approach_iterations > getOnApproachMaxIterations() ||
@@ -301,6 +303,7 @@ bool AStarAlgorithm<NodeT>::createPath(
     }
 
     // 4) Expand neighbors of Nbest not visited
+    // 在方向节点附近搜索有效的相邻节点到队列
     neighbors.clear();
     NodeT::getNeighbors(
       current_node, neighborGetter, _collision_checker, _traverse_unknown, neighbors);
@@ -311,14 +314,16 @@ bool AStarAlgorithm<NodeT>::createPath(
       neighbor = *neighbor_iterator;
 
       // 4.1) Compute the cost to go to this node
+      // 累积的代价 + 当前节点到相邻节点的跨越代价地图代价
       g_cost = getAccumulatedCost(current_node) + getTraversalCost(current_node, neighbor);
 
       // 4.2) If this is a lower cost than prior, we set this as the new cost and new approach
       if (g_cost < getAccumulatedCost(neighbor)) {
-        neighbor->setAccumulatedCost(g_cost);
+        neighbor->setAccumulatedCost(g_cost); // 累积代价累积的是代价地图的跨越代价
         neighbor->parent = current_node;
 
         // 4.3) If not in queue or visited, add it, `getNeighbors()` handles
+        // 除了跨越地图的代价外，还需要补充启发代价，启发代价表示是否往终点靠近
         neighbor->queued();
         addNode(g_cost + getHeuristicCost(neighbor), neighbor);
       }
@@ -613,6 +618,8 @@ typename AStarAlgorithm<NodeT>::NodePtr AStarAlgorithm<NodeT>::tryAnalyticExpans
     // See if we are closer and should be expanding more often
     const Coordinates node_coords =
       NodeT::getCoords(current_node->getIndex(), getSizeX(), getSizeDim3());
+    // 启发代价 = 距离 * 中立代价(NodeT::neutral_cost)
+    // 这里的距离单位是节点
     closest_distance =
       std::min(
       closest_distance,
@@ -620,7 +627,7 @@ typename AStarAlgorithm<NodeT>::NodePtr AStarAlgorithm<NodeT>::tryAnalyticExpans
         node_coords,
         _goal_coordinates) / NodeT::neutral_cost)
       );
-    // We want to expand at a rate of d/expansion_ratio,
+    // We want to expand at a rate of d/expansion_ratio, 
     // but check to see if we are so close that we would be expanding every iteration
     // If so, limit it to the expansion ratio (rounded up)
     int desired_iterations = std::max(
