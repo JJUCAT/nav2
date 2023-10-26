@@ -12,6 +12,55 @@
 
 namespace edge_planner_ns
 {
+bool MapEditor::Costmap2ImageWithBoundary(
+  const nav2_costmap_2d::Costmap2D& map, const nav_msgs::msg::Path& boundary) {
+  RCLCPP_INFO(*_logger, "[WPP] Costmap2ImageWithBoundary");
+
+  int mx = map.getSizeInCellsX(), my = map.getSizeInCellsY();
+  resolution_ = map.getResolution();
+  RCLCPP_INFO(*_logger, "[WPP] map x:%d, y:%d, res:%f", mx, my, resolution_);
+  if (mx == 0 || my == 0) {
+    RCLCPP_ERROR(*_logger, "[WPP] map error, x:%d, y:%d", mx, my);
+    return false;
+  }
+
+  std::vector<cv::Point> counter;
+  nav2_costmap_2d::MapLocation mp;
+  for (auto pose : boundary.poses) {
+    if (!map.worldToMap(pose.pose.position.x, pose.pose.position.y, mp.x, mp.y)) {
+      RCLCPP_ERROR(*_logger, "[WPP] Polygon point [%f,%f] lies outside map bounds !",
+                   pose.pose.position.x, pose.pose.position.y);
+      return false;
+    }
+    cv::Point cvp;
+    cvp.x = mp.x; cvp.y = map.getSizeInCellsY() - mp.y - 1;
+    counter.push_back(cvp);
+  }
+
+  *mat_ = cv::Mat(map.getSizeInCellsY(), map.getSizeInCellsX(), CV_8UC1, 255);
+  std::vector<std::vector<cv::Point>> cs;
+  cs.push_back(counter);
+  unsigned char marker = 233;
+  cv::drawContours(*mat_, cs, 0, marker, -1);
+
+  for(unsigned int x = 0; x < map.getSizeInCellsX(); x ++) {
+    for(unsigned int y = 0; y < map.getSizeInCellsY(); y ++) {
+      if (mat_->at<uchar>(map.getSizeInCellsY() - y - 1, x) == marker) {
+        mat_->at<uchar>(map.getSizeInCellsY() - y - 1, x) = 
+          map.getCost(x, y) >= nav2_costmap_2d::LETHAL_OBSTACLE ? 255 : 0;        
+      }
+      if (x == 0 || y == 0 || x == map.getSizeInCellsX()-1 ||
+          y == map.getSizeInCellsY()-1) {
+        mat_->at<uchar>(map.getSizeInCellsY() - y - 1, x) = 255;
+      }
+    }
+  }
+  RCLCPP_INFO(*_logger, "[WPP] mat x:%d, y:%d", mat_->cols,mat_->rows);
+  std::string save_path = getenv("HOME");
+  save_path = save_path + save_dir_ + "/wp_Costmap2Image.jpg";
+  cv::imwrite(save_path, *mat_);
+  return true;
+}
 
 void MapEditor::Costmap2Image(const nav2_costmap_2d::Costmap2D& map) {
   RCLCPP_INFO(*_logger, "[WPP] Costmap2Image");
@@ -98,9 +147,14 @@ bool MapEditor::GetOuterCounter(float close_inflation, float path_inflation,
   return true;
 }
 
-bool MapEditor::GetInnerCounter(float close_inflation, float path_inflation,
+bool MapEditor::GetInnerCounter(float close_inflation, float path_inflation, float area_filter,
   std::vector<std::vector<cv::Point>>& inner_counters) {
   RCLCPP_INFO(*_logger, "[WPP] GetInnerCounter");
+
+  unsigned int dr = std::ceil(close_inflation / resolution_);
+  cv::Mat element = getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(2*dr, 2*dr));
+  cv::morphologyEx(*mat_, *mat_, cv::MORPH_CLOSE, element);  
+
   Separation();
   Inflat(*mediterranean_mat_, path_inflation, resolution_);
 
@@ -119,6 +173,17 @@ bool MapEditor::GetInnerCounter(float close_inflation, float path_inflation,
     std::string save_path = getenv("HOME");
     save_path = save_path + save_dir_ + "/inner_counters.jpg";
     cv::imwrite(save_path, cm);    
+  }
+
+  for (size_t i = 0; i < cs.size(); ) {
+    double area = cv::contourArea(cs.at(i)) * resolution_ * resolution_;
+    RCLCPP_INFO(*_logger, "[WPP] cs[%d] area is %.3f", i, area);
+    if (area <= area_filter) {
+      RCLCPP_INFO(*_logger, "[WPP] area <= %f, remove cs[%d]", area_filter, i);
+      cs.erase(cs.begin()+i);
+    } else {
+      i ++;
+    }
   }
 
   inner_counters = cs;

@@ -116,13 +116,11 @@ std::vector<nav_msgs::msg::Path> EdgePlanner::createPlan(
     return plans;
   }
   
-  std::shared_ptr<nav2_costmap_2d::Costmap2D> filled_map;
-  if (!FillSuburb(edge, map_window, filled_map)) {
-    RCLCPP_ERROR(_logger, "[EP] fill failed !");
+  if (!map_editor_->Costmap2ImageWithBoundary(map_window, edge)) {
+    RCLCPP_ERROR(_logger, "[EP] get costmap with boundary failed !");
     return plans;
   }
 
-  map_editor_->Costmap2Image(*filled_map);
   std::vector<std::vector<cv::Point>> counters;
   // if (scene == "outer") {
     map_editor_->GetOuterCounter(
@@ -135,7 +133,7 @@ std::vector<nav_msgs::msg::Path> EdgePlanner::createPlan(
   //       std::reverse(counter.begin(), counter.end());
   //   }
   // }
-  Counter2Path(counters, *filled_map, plans);
+  Counter2Path(counters, map_window, plans);
   return plans;
 }
 
