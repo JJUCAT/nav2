@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>edge_follow_controller</name>
+  <name>edge_follower</name>
   <version>0.4.7</version>
   <description>Edge follow Controller</description>
   <maintainer email="lmr2887@163.com">LMR</maintainer>

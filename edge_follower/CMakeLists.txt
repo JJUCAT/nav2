@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(edge_follow_controller)
+project(edge_follower)
 
 find_package(ament_cmake REQUIRED)
 find_package(nav2_common REQUIRED)
@@ -17,7 +17,7 @@ find_package(OpenCV REQUIRED)
 nav2_package()
 
 include_directories(
-  thirdparty
+  3rdparty
   include
   ${OpenCV_INCLUDE_DIRS}
 )
@@ -33,15 +33,17 @@ set(dependencies
   tf2
 )
 
-
-
-set(library_name edge_follow_controller)
+set(library_name edge_follower)
 
 add_library(${library_name} SHARED
-        src/edge_follow_controller_ros.cpp
+        src/edge_follower_ros.cpp
         src/nanoflann_port.cpp
+        src/bspine_port.cpp
         src/path_watcher.cpp
         src/edge_follower.cpp
+        src/carrot_track.cpp
+        src/common.cpp
+        src/motion.cpp
         src/config.cpp)
 
 target_link_libraries(${library_name}
@@ -78,7 +80,7 @@ ament_export_libraries(${library_name})
 ament_export_dependencies(${dependencies})
 ament_export_definitions("PLUGINLIB__DISABLE_BOOST_FUNCTIONS")
 
-pluginlib_export_plugin_description_file(nav2_core edge_follow_controller_plugin.xml)
+pluginlib_export_plugin_description_file(nav2_core edge_follower_plugin.xml)
 
 ament_package()
 

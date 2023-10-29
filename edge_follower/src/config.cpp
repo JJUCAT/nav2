@@ -1,10 +1,10 @@
-#include "edge_follow_controller/config.hpp"
+#include "edge_follower/config.hpp"
 #include "nav2_util/node_utils.hpp"
 #include "nav2_core/exceptions.hpp"
 
 using nav2_util::declare_parameter_if_not_declared;
 
-namespace edge_follow_controller_ns {
+namespace edge_follower_ns {
 
 void Config::LoadConfig(ef_params_t& params)
 {
@@ -314,5 +314,5 @@ void Config::UpdatePolygon(const ef_mode_t mode, ef_params_t& params)
 }
 
 
-} // namespace edge_follow_controller_ns
+} // namespace edge_follower_ns
 

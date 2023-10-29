@@ -485,6 +485,95 @@ void Costmap2D::convexFillCells(
   }
 }
 
+void Costmap2D::convexFillCellsSparsely(
+  const std::vector<MapLocation> & polygon,
+  const float sparsely_size,
+  std::vector<MapLocation> & polygon_cells)
+{
+  // we need a minimum polygon of a triangle
+  if (polygon.size() < 3)
+    return;
+
+  // first get the cells that make up the outline of the polygon
+  polygonOutlineCells(polygon, polygon_cells);
+
+  // quick bubble sort to sort points by x
+  MapLocation swap;
+  unsigned int i = 0;
+  while (i < polygon_cells.size() - 1)
+  {
+    if (polygon_cells[i].x > polygon_cells[i + 1].x)
+    {
+      swap = polygon_cells[i];
+      polygon_cells[i] = polygon_cells[i + 1];
+      polygon_cells[i + 1] = swap;
+
+      if (i > 0)
+        --i;
+    }
+    else
+      ++i;
+  }
+
+  i = 0;
+  MapLocation min_pt;
+  MapLocation max_pt;
+  unsigned int min_x = polygon_cells[0].x;
+  unsigned int max_x = polygon_cells[polygon_cells.size() - 1].x;
+  unsigned int jump_cnt = std::round(sparsely_size / getResolution());
+  unsigned int last_column = min_x;
+
+  // walk through each column and mark cells inside the polygon
+  for (unsigned int x = min_x; x <= max_x; ++x)
+  {
+    if (i >= polygon_cells.size() - 1)
+      break;
+
+    if (polygon_cells[i].y < polygon_cells[i + 1].y)
+    {
+      min_pt = polygon_cells[i];
+      max_pt = polygon_cells[i + 1];
+    }
+    else
+    {
+      min_pt = polygon_cells[i + 1];
+      max_pt = polygon_cells[i];
+    }
+
+    i += 2;
+    while (i < polygon_cells.size() && polygon_cells[i].x == x)
+    {
+      if (polygon_cells[i].y < min_pt.y)
+        min_pt = polygon_cells[i];
+      else if (polygon_cells[i].y > max_pt.y)
+        max_pt = polygon_cells[i];
+      ++i;
+    }
+    
+    bool jump_this_column = false;
+    if (x - last_column > jump_cnt) last_column = x;
+    else {
+      if (x != min_x && x != max_x) jump_this_column = true;
+    }
+
+    MapLocation pt;
+    unsigned int cnt = 0;
+    // loop though cells in the column
+    for (unsigned int y = min_pt.y; y <= max_pt.y; ++y)
+    {
+      if (y != min_pt.y && y != max_pt.y)
+      {
+        if (jump_this_column) continue;
+        if (cnt++ < jump_cnt) continue;
+        else cnt = 0;
+      }
+      pt.x = x;
+      pt.y = y;
+      polygon_cells.push_back(pt);
+    }
+  }
+}
+
 unsigned int Costmap2D::getSizeInCellsX() const
 {
   return size_x_;

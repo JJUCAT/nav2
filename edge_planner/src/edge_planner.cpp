@@ -133,6 +133,8 @@ std::vector<nav_msgs::msg::Path> EdgePlanner::createPlan(
   //       std::reverse(counter.begin(), counter.end());
   //   }
   // }
+
+  // TODO@LMR 平滑路径，补充切线角度
   Counter2Path(counters, map_window, plans);
   return plans;
 }

@@ -1,0 +1,10 @@
+<class_libraries>
+    <library path="edge_follower">
+        <class type="edge_follower_ns::EdgeFollowController" base_class_type="nav2_core::ControllerPlus">
+            <description>
+                edge_follower
+            </description>
+        </class>
+    </library>
+</class_libraries>
+

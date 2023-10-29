@@ -303,6 +303,16 @@ public:
     std::vector<MapLocation> & polygon_cells);
 
   /**
+   * @brief  Get the map cells that fill a convex polygon
+   * @param polygon The polygon in map coordinates to rasterize
+   * @param polygon_cells Will be set to the cells that fill the polygon
+   */
+  void convexFillCellsSparsely(
+    const std::vector<MapLocation> & polygon,
+    const float sparsely_size,
+    std::vector<MapLocation> & polygon_cells);
+
+  /**
    * @brief  Move the origin of the costmap to a new location.... keeping data when it can
    * @param  new_origin_x The x coordinate of the new origin
    * @param  new_origin_y The y coordinate of the new origin

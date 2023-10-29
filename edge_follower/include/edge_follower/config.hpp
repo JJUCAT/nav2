@@ -3,10 +3,10 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "nav2_util/lifecycle_node.hpp"
-#include "edge_follow_controller/type.h"
+#include "edge_follower/type.h"
 
 
-namespace edge_follow_controller_ns {
+namespace edge_follower_ns {
 
 class Config
 {
@@ -36,7 +36,7 @@ class Config
 
 };
 
-} // namespace edge_follow_controller_ns
+} // namespace edge_follower_ns
 
 
 #endif // CONFIG_H
