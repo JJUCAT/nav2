@@ -19,7 +19,7 @@ float get_diff_angle(const float angle_start, const float angle_end)
 bool in_polygon(const geometry_msgs::msg::Polygon& polygon, const geometry_msgs::msg::Point p)
 {
   bool in = false;
-  for (int i = 0, j = polygon.points.size() - 1; i < polygon.points.size(); j = i, i++) {
+  for (unsigned int i = 0, j = polygon.points.size() - 1; i < polygon.points.size(); j = i, i++) {
     geometry_msgs::msg::Point32 start = polygon.points.at(i), end = polygon.points.at(j);
     // 点与多边形顶点重合
     if ((start.x == p.x && start.y == p.y) || (end.x == p.x && end.y == p.y))
@@ -59,7 +59,7 @@ void create_ellipse_polygon(geometry_msgs::msg::PolygonStamped& polygon,
   const float a, const float b, const float offset)
 {
   auto GetY = [=](const float x) { return sqrt((1-(x*x)/(b*b))*(a*a)); };
-  auto GetX = [=](const float y) { return sqrt((1-(y*y)/(a*a))*(b*b)); };
+  // auto GetX = [=](const float y) { return sqrt((1-(y*y)/(a*a))*(b*b)); };
   polygon.header.frame_id = "base_link";
   polygon.header.stamp = rclcpp::Time();
   polygon.polygon.points.clear();

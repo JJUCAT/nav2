@@ -48,7 +48,7 @@ bool CarrotTrack::tracking(nav2_costmap_2d::Costmap2D* map,
   //   visualization_msgs::Marker::CUBE, 0.3, 0, 1.0, 0, 1.0);
 
   geometry_msgs::msg::PoseStamped carrot;
-  if (!getCarrot(path, steering_pose, 0.2, 0.0, carrot)) {
+  if (!getCarrot(path, steering_pose, 0.0, carrot)) {
     RCLCPP_ERROR(logger_, "[EF] can't find carrot !");
     return false;
   }
@@ -56,10 +56,10 @@ bool CarrotTrack::tracking(nav2_costmap_2d::Costmap2D* map,
   //   0.3, 1.0, 0, 0, 1.0);
 
   float steering = motion_->StanleyFollow(steering_pose, carrot,
-    params_->stanley_head, params_->stanley_mu, params_->stanley_lambda,
+    params_->stanley_mu, params_->stanley_lambda,
     params_->stanley_ks, cmd_vel.linear.x);
-  steering = std::clamp(steering, 
-    -params_->steering_angle_max, params_->steering_angle_max);
+  steering = std::min(std::max(steering, -params_->steering_angle_max),
+    params_->steering_angle_max);
 
   float speed = motion_->GetSpeed(cmd_vel.linear.x, steering, road_condition.straight);    
   // float speed = motion_->GetTurnSpeed(steering);
@@ -71,7 +71,7 @@ bool CarrotTrack::tracking(nav2_costmap_2d::Costmap2D* map,
 // -------------------- private methods --------------------
 bool CarrotTrack::getCarrot(const nav_msgs::msg::Path& path,
   const geometry_msgs::msg::PoseStamped pose,
-  const float in_range, const float len, geometry_msgs::msg::PoseStamped& carrot)
+  const float len, geometry_msgs::msg::PoseStamped& carrot)
 {
   if (path.poses.empty()) {
     RCLCPP_ERROR(logger_, "[EF], path error !");
@@ -79,13 +79,9 @@ bool CarrotTrack::getCarrot(const nav_msgs::msg::Path& path,
   }
   float dist = 0, dist_min = std::numeric_limits<float>::max();
   int index_min = -1;
-  for (int i = 0; i < path.poses.size(); i ++) {
+  for (unsigned int i = 0; i < path.poses.size(); i ++) {
     dist = std::hypot(path.poses.at(i).pose.position.x - pose.pose.position.x,
                       path.poses.at(i).pose.position.y - pose.pose.position.y);
-    // if (dist < in_range) {
-    //   index_min = i;
-    //   break; 
-    // }
     if (dist < dist_min) {
       dist_min = dist;
       index_min = i;
@@ -94,7 +90,7 @@ bool CarrotTrack::getCarrot(const nav_msgs::msg::Path& path,
 
   if (len > 0) {
     float dist_sum = 0.0;
-    int i = index_min+1;
+    unsigned int i = index_min+1;
     for (; i < path.poses.size(); i ++) {
       dist_sum += std::hypot(path.poses.at(i).pose.position.x - path.poses.at(i-1).pose.position.x,
                             path.poses.at(i).pose.position.y - path.poses.at(i-1).pose.position.y);

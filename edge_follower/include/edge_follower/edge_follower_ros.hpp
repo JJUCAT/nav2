@@ -129,7 +129,7 @@ private:
   bool CopyMap(nav2_costmap_2d::Costmap2D& map, nav2_costmap_2d::Costmap2D& copy);
 
   bool UpdateCheckPosesOnPath(const nav_msgs::msg::Path& path, const float step, const float len, const int start_idx = 0);
-  bool EdgeFollow(geometry_msgs::msg::Twist& cmd_vel, const ef_dir_t dir);
+  bool EdgeFollow(geometry_msgs::msg::Twist& cmd_vel);
 
   void SetExcuteTime();
   bool IsExcuteFailed();
@@ -143,6 +143,7 @@ private:
   std::mutex th_mutex_;
   std::condition_variable th_cond_;
   bool suspend_ = true;
+  void RecvStaticMap(const nav_msgs::msg::OccupancyGrid::SharedPtr new_map);
   void ThreadSuspend() {
     std::unique_lock<std::mutex> lock(th_mutex_);
     suspend_ = true;
@@ -184,6 +185,7 @@ private:
   bool finish_plan_;
   bool leave_ = false;
   double last_time_;
+  bool map_received_;
   float hz_;
   std::shared_ptr<edge_follower_ns::Config> sp_cfg_;
 
@@ -193,6 +195,7 @@ private:
   geometry_msgs::msg::Twist last_cmd_vel_;
   std::shared_ptr<rclcpp_lifecycle::LifecyclePublisher<sensor_msgs::msg::PointCloud>> ref_collision_cells_pub_;
   std::shared_ptr<rclcpp_lifecycle::LifecyclePublisher<nav_msgs::msg::Path>> ref_path_pub_;
+  rclcpp::Subscription<nav_msgs::msg::OccupancyGrid>::SharedPtr map_sub_;
 };
 
 }  // namespace edge_follower_ns

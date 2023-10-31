@@ -25,7 +25,7 @@ float MotionAckerman::GetSpeed(const float cur_speed, const float cur_steering,
   }
   // ROS_INFO("[%s,%d] get speed, cur_speed:%f, speed:%f, min:%f, max:%f",
   //   __FUNCTION__, __LINE__, cur_speed, speed, params_->min_speed, params_->max_speed);
-  speed = std::clamp(speed, params_->min_speed, params_->max_speed);
+  speed = std::min(std::max(speed, params_->min_speed), params_->max_speed);
   return speed;
 }
 
@@ -60,7 +60,7 @@ ef_point_t MotionAckerman::PredictPose(const ef_point_t& pose,
 float MotionAckerman::StanleyFollow(
   const geometry_msgs::msg::PoseStamped steering_pose,
   const geometry_msgs::msg::PoseStamped target,
-  const float wheel_base, const float mu, const float lambda,
+  const float mu, const float lambda,
   const float ks, const float linear_x)
 {
   float steer_yaw = tf2::getYaw(steering_pose.pose.orientation);

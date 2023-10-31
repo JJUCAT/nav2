@@ -26,7 +26,7 @@ namespace edge_follower_ns
     virtual float StanleyFollow(
       const geometry_msgs::msg::PoseStamped steering_angular,
       const geometry_msgs::msg::PoseStamped target,
-      const float wheel_base, const float mu, const float lambda,
+      const float mu, const float lambda,
       const float ks, const float linear_x) = 0;
 
     virtual float PurepursuitFollow(
@@ -58,7 +58,7 @@ namespace edge_follower_ns
     virtual float StanleyFollow(
       const geometry_msgs::msg::PoseStamped steering_pose,
       const geometry_msgs::msg::PoseStamped target,
-      const float wheel_base, const float mu, const float lambda,
+      const float mu, const float lambda,
       const float ks, const float linear_x) override;
     
     virtual float PurepursuitFollow(

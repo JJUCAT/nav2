@@ -37,7 +37,7 @@ class CarrotTrack
  private:
   bool getCarrot(const nav_msgs::msg::Path& path,
     const geometry_msgs::msg::PoseStamped pose,
-    const float in_range, const float len, geometry_msgs::msg::PoseStamped& carrot);
+    const float len, geometry_msgs::msg::PoseStamped& carrot);
 
   rclcpp_lifecycle::LifecyclePublisher<visualization_msgs::msg::Marker>::SharedPtr steer_pub_;
   rclcpp_lifecycle::LifecyclePublisher<visualization_msgs::msg::Marker>::SharedPtr anchor_pub_;

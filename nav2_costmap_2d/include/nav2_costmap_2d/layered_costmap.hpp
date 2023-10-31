@@ -164,6 +164,7 @@ public:
 
 private:
   Costmap2D costmap_;
+  Costmap2D costmap_static_;
   std::string global_frame_;
 
   bool rolling_window_;  /// < @brief Whether or not the costmap should roll with the robot

@@ -4,6 +4,8 @@
 
 #include "edge_follower/edge_follower_ros.hpp"
 #include "nav2_core/exceptions.hpp"
+#include "nav2_costmap_2d/cost_values.hpp"
+#include "nav2_costmap_2d/costmap_2d.hpp"
 #include "nav2_util/node_utils.hpp"
 #include "nav2_util/geometry_utils.hpp"
 #include <boost/thread.hpp>
@@ -27,10 +29,9 @@ void EdgeFollowerROS::configure(
   
   costmap_ros_ptr_ = costmap_ros;
   costmap_ptr_ = costmap_ros_ptr_->getCostmap();
-  // static_costmap_ptr_ = costmap_ros_ptr_->getStaticCostmap() ;
 
   sp_cfg_ = std::make_shared<edge_follower_ns::Config>(node, plugin_name_);
-  sp_cfg_->LoadConfig(params_);
+  sp_cfg_->LoadConfig(node, params_);
 
   path_watcher_ = std::make_shared<PathWatcher>(node, &params_);
   edge_follower_ = std::make_shared<EdgeFollower>(node, &params_);
@@ -39,6 +40,14 @@ void EdgeFollowerROS::configure(
   opt_map_ptr_ = std::make_shared<nav2_costmap_2d::Costmap2D>(*costmap_ptr_);
   opt_map_pub_ = std::make_shared<nav2_costmap_2d::Costmap2DPublisher>(
       node, opt_map_ptr_.get(), "map", "opt_map", true);
+
+  rclcpp::QoS map_qos(10);
+  map_qos.transient_local();
+  map_qos.reliable();
+  map_qos.keep_last(1);
+  map_sub_ = node->create_subscription<nav_msgs::msg::OccupancyGrid>(
+    "/map", map_qos,
+    std::bind(&EdgeFollowerROS::RecvStaticMap, this, std::placeholders::_1));
 
   sp_thread_ = std::make_shared<std::thread>(
       std::mem_fun(&EdgeFollowerROS::FindDirThread), this);
@@ -65,6 +74,7 @@ void EdgeFollowerROS::cleanup()
   path_watcher_.reset();
   edge_follower_.reset();
   carrot_track_.reset();
+  map_received_ = false;
 }
 
 void EdgeFollowerROS::activate()
@@ -92,13 +102,12 @@ void EdgeFollowerROS::deactivate()
 
   ThreadSuspend();
   boundary_map_.reset();
+  map_received_ = false;
 }
 
 void EdgeFollowerROS::setBoundary(const nav_msgs::msg::Path & boundary)
 {
-  nav2_costmap_2d::Costmap2D* static_map =
-    costmap_ros_ptr_->getStaticCostmap();
-  initBoundary(*static_map, boundary);
+  initBoundary(*static_costmap_ptr_, boundary);
 
   UpdateMode();
   create_circle_polygon(ref_circle_polygon_, params_.counter_close2-0.1);
@@ -127,6 +136,28 @@ geometry_msgs::msg::TwistStamped EdgeFollowerROS::computeVelocityCommands(
 }
 
 // -------------------- private methods --------------------
+void EdgeFollowerROS::RecvStaticMap(const nav_msgs::msg::OccupancyGrid::SharedPtr new_map)
+{
+  if (!map_received_) {
+    map_received_ = true;
+    auto map = std::make_shared<nav2_costmap_2d::Costmap2D>(
+      new_map->info.width, new_map->info.height, new_map->info.resolution,
+      new_map->info.origin.position.x, new_map->info.origin.position.y);
+    static_costmap_ptr_ = map.get();
+    unsigned int index = 0;
+    unsigned char* map_data = static_costmap_ptr_->getCharMap();
+    for (unsigned int i = 0; i < new_map->info.height; ++i) {
+      for (unsigned int j = 0; j < new_map->info.width; ++j) {
+        int value = new_map->data[index];
+        unsigned char cost = value < 0 ? NO_INFORMATION :
+          value >= 100 ? nav2_costmap_2d::LETHAL_OBSTACLE : nav2_costmap_2d::FREE_SPACE;
+        map_data[index] = cost;
+        ++index;
+      }
+    }
+  }
+}
+
 void EdgeFollowerROS::FindDirThread()
 {
   rclcpp::Rate r(params_.map_update_hz);
@@ -182,8 +213,7 @@ bool EdgeFollowerROS::UpdateOptMap()
 bool EdgeFollowerROS::CopyMap(
   nav2_costmap_2d::Costmap2D& map, nav2_costmap_2d::Costmap2D& copy)
 {
-  auto map_mutex = map.getMutex();
-  boost::recursive_mutex::scoped_lock lock(*map_mutex);
+  std::unique_lock<nav2_costmap_2d::Costmap2D::mutex_t> lock(*(map.getMutex()));
   if (params_.opt_map_size > 0) {
     double ox = map.getOriginX(), oy = map.getOriginY();
     double d = std::hypot(robot_.x - ox, robot_.y - oy);
@@ -300,7 +330,7 @@ bool EdgeFollowerROS::UpdateRobotPose()
 
 bool EdgeFollowerROS::UpdateHz()
 {
-  double cur_time = rclcpp::Time();
+  double cur_time = rclcpp::Clock().now().seconds();
   bool update = false;
   if (last_time_ != 0) {
       float dt = static_cast<float>(cur_time - last_time_);
@@ -358,7 +388,7 @@ bool EdgeFollowerROS::IsBlockedOnRefPath(const nav_msgs::msg::Path& path, const 
   return false;
 }
 
-bool EdgeFollowerROS::EdgeFollow(geometry_msgs::msg::Twist& cmd_vel, const ef_dir_t dir)
+bool EdgeFollowerROS::EdgeFollow(geometry_msgs::msg::Twist& cmd_vel)
 {
   nav_msgs::msg::Path path_ahead = path_watcher_->getPathAhead();
   nanoflann_port_ns::KDTIndex kdi = ref_path_kdt_.FindClosestPoint(robot_.x, robot_.y, 0.f);

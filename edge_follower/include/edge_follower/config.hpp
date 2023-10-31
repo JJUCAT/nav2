@@ -11,16 +11,17 @@ namespace edge_follower_ns {
 class Config
 {
  public:
-  Config(rclcpp_lifecycle::LifecycleNode::SharedPtr& node,
-    const std::string name) : node_(node), name_(name) {
-    logger_ = node_->get_logger();
+  Config(const rclcpp_lifecycle::LifecycleNode::SharedPtr& node,
+    const std::string name) : name_(name) {
+    logger_ = node->get_logger();
   }
   ~Config() {}
 
   // 初始化配置
   // @nh: 节点句柄
   // @param: 返回的配置参数
-  void LoadConfig(ef_params_t& params);
+  void LoadConfig(const rclcpp_lifecycle::LifecycleNode::SharedPtr& node,
+    ef_params_t& params);
 
   // 更新 polygon 参数
   // @mode: 左/右沿边模式
@@ -29,8 +30,7 @@ class Config
 
 
  private:
-  rclcpp_lifecycle::LifecycleNode::SharedPtr node_;
-  rclcpp::Logger logger_{rclcpp::get_logger("EdgeFollowController")};
+  rclcpp::Logger logger_{rclcpp::get_logger("EdgeFollower")};
   std::string name_;
   ef_polygon_params_t polygon_;
 
