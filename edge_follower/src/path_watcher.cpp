@@ -98,10 +98,10 @@ void PathWatcher::Counters2Path(const nav2_costmap_2d::Costmap2D& map,
 {
   nav_msgs::msg::Path path;
   path.header.frame_id = "map";
-  path.header.stamp = rclcpp::Time();
+  path.header.stamp = rclcpp::Clock().now();
   geometry_msgs::msg::PoseStamped p;
   p.header.frame_id = "map";
-  p.header.stamp = rclcpp::Time();
+  p.header.stamp = rclcpp::Clock().now();
 
   for (unsigned int i = 0; i < counters.size(); i++) {
     for (unsigned int j = 0; j < counters.at(i).size(); j++) {
@@ -127,7 +127,7 @@ bool PathWatcher::FindPathAhead(const std::vector<nav_msgs::msg::Path>& contours
     CutPath(tmp_path, path_ahead, params_->preview_dist, idx);
     // UpdateOrientation(path_ahead);
     path_ahead.header.frame_id = "map";
-    path_ahead.header.stamp = rclcpp::Time();
+    path_ahead.header.stamp = rclcpp::Clock().now();
     bspine_port_ns::BspinePort bspine_port(path_ahead);
     if (!bspine_port.twoOrderSmooth(0.2, 0.05, path_ahead)) {
       RCLCPP_ERROR(logger_, "[EF] smooth failed !");
@@ -268,7 +268,7 @@ ef_road_condition_t PathWatcher::GetDir(const nav_msgs::msg::Path& path_ahead, c
 
   transform_polygon(robot_, base_polygon, horizon_polygon);
   horizon_polygon.header.frame_id = "map";
-  horizon_polygon.header.stamp = rclcpp::Time();
+  horizon_polygon.header.stamp = rclcpp::Clock().now();
   // sp_vizer_->VizPolygon(horizon_polygon_pub_, horizon_polygon);
 
   geometry_msgs::msg::Point p;

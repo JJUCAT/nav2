@@ -413,6 +413,48 @@
         </axis>
       </joint>
 
+      <!-- left brush -->
+      <link name="left_brush">
+        <inertial>
+          <mass>1.0</mass>
+        </inertial>
+        <visual name="left_brush_visual">
+          <pose>0.16 0.1 0.02 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.02</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+      <joint name="left_brush_joint" type="fixed">
+        <parent>base_link</parent>
+        <child>left_brush</child>
+        <pose>0.16 0.1 0.01 0 0 0</pose>
+      </joint>
+
+      <!-- right brush -->
+      <link name="right_brush">
+        <inertial>
+          <mass>1.0</mass>
+        </inertial>
+        <visual name="right_brush_visual">
+          <pose>0.16 -0.1 0.02 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.02</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+      <joint name="right_brush_joint" type="fixed">
+        <parent>base_link</parent>
+        <child>right_brush</child>
+        <pose>0.16 -0.1 0.01 0 0 0</pose>
+      </joint>
+
       <!-- ackermann drive -->
       <plugin name="racecar_ackermann_drive" filename="libgazebo_ros_ackermann_drive.so">
 

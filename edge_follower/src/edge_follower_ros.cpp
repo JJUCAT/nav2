@@ -172,7 +172,7 @@ void EdgeFollowerROS::FindDirThread()
       r.sleep();
       continue;
     }
-    rclcpp::Time st = rclcpp::Time();
+    rclcpp::Time st = rclcpp::Clock().now();
     #if 0
     costmap_2d::Costmap2D map;
     if (!CopyMap(*static_costmap_ptr_, map)) {
@@ -415,7 +415,7 @@ bool EdgeFollowerROS::EdgeFollow(geometry_msgs::msg::Twist& cmd_vel)
   }
 
   // edge follow
-  rclcpp::Time st = rclcpp::Time();
+  rclcpp::Time st = rclcpp::Clock().now();
   edge_follower_->updateRobotPose(robot_pose_, robot_);
   edge_follower_->useLeavePolygon(IsLeave());
   edge_follower_->findLighthouse(ref_path_, kdi.idx, 4.f);
@@ -450,7 +450,7 @@ bool EdgeFollowerROS::IsLeave()
 
 void EdgeFollowerROS::SetExcuteTime()
 {
-  excute_time_ = rclcpp::Time();
+  excute_time_ = rclcpp::Clock().now();
 }
 
 bool EdgeFollowerROS::IsExcuteFailed()

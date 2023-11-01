@@ -55,7 +55,7 @@ bool EdgeFollower::following(nav2_costmap_2d::Costmap2D* map,
   geometry_msgs::msg::PolygonStamped follow_polygon, avoidance_polygon, viz_polygon;
   ef_dir_t dir = kDirN;
   std::vector<ef_traj_t> trajectorys;
-  rclcpp::Time ct = rclcpp::Time();
+  rclcpp::Time ct = rclcpp::Clock().now();
 
   // 沿边
   if (params_->mode == kLeft) dir = kDirL;

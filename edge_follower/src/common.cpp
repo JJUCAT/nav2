@@ -45,7 +45,7 @@ void create_circle_polygon(geometry_msgs::msg::PolygonStamped& polygon,
   const float radius)
 {
   polygon.header.frame_id = "base_link";
-  polygon.header.stamp = rclcpp::Time();
+  polygon.header.stamp = rclcpp::Clock().now();
   polygon.polygon.points.clear();
   geometry_msgs::msg::Point32 p32;
   for (float a = 0; a <= 6.28; a += 0.51) {
@@ -61,7 +61,7 @@ void create_ellipse_polygon(geometry_msgs::msg::PolygonStamped& polygon,
   auto GetY = [=](const float x) { return sqrt((1-(x*x)/(b*b))*(a*a)); };
   // auto GetX = [=](const float y) { return sqrt((1-(y*y)/(a*a))*(b*b)); };
   polygon.header.frame_id = "base_link";
-  polygon.header.stamp = rclcpp::Time();
+  polygon.header.stamp = rclcpp::Clock().now();
   polygon.polygon.points.clear();
   float d = 0.001, axis = b;
   geometry_msgs::msg::Point32 p32; // nan 2, 6
