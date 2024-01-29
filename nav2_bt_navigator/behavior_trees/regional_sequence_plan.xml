@@ -1,28 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="3"
+      main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <ComputeRegionalPath boundary="{boundary}"
+                           path_list="{path_list}"
+                           planner_id="ep"/>
+      <DoUntilSuccess>
+        <SequencePathsExport path="{path}"
+                             path_list="{path_list}">
+          <MovePathStart jump_dist="0.3"
+                         path_in="{path}"
+                         path_out="{path2go}"
+                         pose="{global_robot_pose}"/>
+        </SequencePathsExport>
+        <RegionalFollowPath controller_id="FollowPath"
+                            path="{path2go}"
+                            boundary="{boundary}"/>
+      </DoUntilSuccess>
+    </Sequence>
+  </BehaviorTree>
 
-<!--
-  This Behavior Tree replans the global path periodically at 1 Hz and it also has
-  recovery actions.
--->
-<root main_tree_to_execute="MainTree">
-    <BehaviorTree ID="MainTree">
-        <Sequence>
-            <ComputeRegionalPath boundary="{boundary}" path_list="{path_list}" planner_id="ep"/>
-            <Control ID="DoUntilSuccess">
-                <SequencePathsExport path="{path}" path_list="{path_list}">
-                    <MovePathStart jump_dist="0.3" path_in="{path}" path_out="{path2go}" pose="{global_robot_pose}"/>
-                </SequencePathsExport>
-                <FollowPath controller_id="FollowPath" path="{path2go}"/>
-            </Control>
-        </Sequence>
-    </BehaviorTree>
-    <TreeNodesModel>
-        <Action ID="MovePathStart">
-            <input_port name="jump_dist"/>
-            <input_port name="path_in"/>
-            <output_port name="path_out"/>
-            <input_port name="pose"/>
-        </Action>
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Action ID="ComputeRegionalPath"
+            editable="true">
+      <input_port name="boundary"/>
+      <input_port name="path_list"/>
+      <input_port name="planner_id"/>
+    </Action>
+    <Control ID="DoUntilSuccess"/>
+    <Action ID="MovePathStart">
+      <input_port name="jump_dist"/>
+      <input_port name="path_in"/>
+      <output_port name="path_out"/>
+      <input_port name="pose"/>
+    </Action>
+    <Action ID="RegionalFollowPath"
+            editable="true">
+      <input_port name="controller_id"/>
+      <input_port name="path"/>
+      <input_port name="boundary"/>
+    </Action>
+    <Decorator ID="SequencePathsExport"
+               editable="true">
+      <input_port name="path"/>
+      <input_port name="path_list"/>
+    </Decorator>
+  </TreeNodesModel>
 
-        <Control ID="DoUntilSuccess"/>
-    </TreeNodesModel>
 </root>

@@ -60,7 +60,8 @@ public:
 
   /**
    * @struct CurvatureComputations
-   * @brief Cache common computations between the curvature terms to minimize recomputations
+   * @brief Cache common computations between the curvature terms to minimize recomputations\
+   * 缓存曲率项之间的公共计算，以最小化重新计算
    */
   struct CurvatureComputations
   {
@@ -92,14 +93,14 @@ public:
   };
 
   /**
-   * @brief Smoother cost function evaluation
-   * @param parameters X,Y pairs of points，一系列 xy 点
+   * @brief Smoother cost function evaluation，代价函数
+   * @param parameters X,Y pairs of points
    * @param cost total cost of path
    * @param gradient of path at each X,Y pair from cost function derived analytically
    * @return if successful in computing values
    */
   virtual bool Evaluate(
-    const double * parameters, // TODO@LMR???已经处理了的路径点
+    const double * parameters,
     double * cost,
     double * gradient) const
   {
@@ -119,9 +120,9 @@ public:
     CurvatureComputations curvature_params;
 
     for (int i = 0; i != NumParameters() / 2; i++) {
-      x_index = 2 * i;         // 遍历的路径点下标
+      x_index = 2 * i;
       y_index = 2 * i + 1;
-      gradient[x_index] = 0.0; // 梯度
+      gradient[x_index] = 0.0;
       gradient[y_index] = 0.0;
       if (i < 1 || i >= NumParameters() / 2 - 1) { // 跳过第一个路径点后最后一个路径点
         continue;

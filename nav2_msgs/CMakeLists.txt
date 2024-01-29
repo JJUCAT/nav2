@@ -31,6 +31,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "action/ComputePathToPose.action"
   "action/ComputeRegionalPath.action"
   "action/FollowPath.action"
+  "action/RegionalFollowPath.action"
   "action/NavigateToPose.action"
   "action/RegionalPlan.action"
   "action/Wait.action"
